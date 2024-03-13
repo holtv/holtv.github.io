@@ -108,16 +108,35 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">l11</span> <span class="o">=</span> <span class="s1">&#39;I&#39;</span>
 <span class="n">l12</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span>
 <span class="n">l13</span> <span class="o">=</span> <span class="s1">&#39;h&#39;</span>
-<span class="n">l21</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span>
-<span class="n">l22</span> <span class="o">=</span> <span class="s1">&#39;i&#39;</span>
-<span class="n">l23</span> <span class="o">=</span> <span class="s1">&#39;n&#39;</span>
-<span class="n">l31</span> <span class="o">=</span> <span class="s1">&#39;h&#39;</span>
-<span class="n">l32</span> <span class="o">=</span> <span class="s1">&#39;i&#39;</span>
-<span class="n">l33</span> <span class="o">=</span> <span class="s1">&#39;e&#39;</span>
-<span class="n">l34</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="s1">&#39;auch&#39;</span>
 <span class="n">space</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
 
-<span class="n">s</span> <span class="o">=</span> <span class="n">l11</span> <span class="o">+</span> <span class="n">l12</span> <span class="o">+</span> <span class="n">l13</span> <span class="o">+</span> <span class="n">space</span> <span class="o">+</span> <span class="n">l21</span> <span class="o">+</span> <span class="n">l22</span> <span class="o">+</span> <span class="n">l23</span> <span class="o">+</span> <span class="n">space</span> <span class="o">+</span> <span class="n">l31</span> <span class="o">+</span> <span class="n">l32</span> <span class="o">+</span> <span class="n">l33</span> <span class="o">+</span> <span class="n">l34</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">l11</span> <span class="o">+</span> <span class="n">l12</span> <span class="o">+</span> <span class="n">l13</span> <span class="o">+</span> <span class="n">space</span> <span class="o">+</span> <span class="s1">&#39;bin&#39;</span> <span class="o">+</span> <span class="n">space</span> <span class="o">+</span> <span class="n">s3</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="o">+</span> <span class="s1">&#39;ein String&#39;</span>
+</pre></div>
+</div>
+<p>Wir können Strings aber nicht nur aus einzelnen Zeichen und aus anderen Strings zusammensetzen, sondern wir können umgekehrt Strings auch wieder in einzelne Buchstaben oder in Teilstrings zerlegen. Und, wir können auch auf die einzelnen Zeichen eines Strings zugreifen.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Ich bin ein sieben Worte langer String&#39;</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">In String fängt die Positionsindizierung bei 0 an. Die Indizes eines String mit der Länge n</span>
+<span class="sd">sind also 0...n-1.</span>
+<span class="sd">(Und dies ist ein mehrzeiliger Kommentar, den man in dreifache &quot; setzt.)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>       <span class="c1"># 1. Zeichen des Strings s an Position 0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>       <span class="c1"># 2. Zeichen des Strings s an Position 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>       <span class="c1"># 3. Zeichen des Strings s an Position 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">7</span><span class="p">])</span>     <span class="c1"># Zeichen des Strings s an den Positionen 4...6</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>      <span class="c1"># 1. Zeichen des Strings vom Ende her, also an Position n-1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># jedes 2. Zeichen von s zwischen den Positionen 0...9</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[::</span><span class="mi">2</span><span class="p">])</span>     <span class="c1"># jedes 2. Zeichen von s von 0...n-1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>    <span class="c1"># jedes Zeichen von s von n-1...0</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Die allgemeine Syntax lautet also:</span>
+<span class="sd">[Anfang : Ende+1 : Schrittweite und Schrittrichtung]</span>
+<span class="sd">Defaultwerte:</span>
+<span class="sd">[0 : n : +1]  (n = Länge des Strings)</span>
+<span class="sd">&quot;&quot;&quot;</span>
 </pre></div>
 </div>
 <section id="beispiel-2-1">

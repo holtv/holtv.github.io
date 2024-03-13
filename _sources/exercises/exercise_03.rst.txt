@@ -21,21 +21,38 @@ in unser Programm schreiben, dann legen wir **EINE** ZeichenKETTE unter dem Name
   l11 = 'I'
   l12 = 'c'
   l13 = 'h'
-  l21 = 'b'
-  l22 = 'i'
-  l23 = 'n'
-  l31 = 'h'
-  l32 = 'i'
-  l33 = 'e'
-  l34 = 'r'
+  s3 = 'auch'
   space = ' '
 
-  s = l11 + l12 + l13 + space + l21 + l22 + l23 + space + l31 + l32 + l33 + l34
+  s = l11 + l12 + l13 + space + 'bin' + space + s3 + ' '+ 'ein String'
 
+Wir können Strings aber nicht nur aus einzelnen Zeichen und aus anderen Strings zusammensetzen, sondern wir können umgekehrt Strings auch wieder in einzelne Buchstaben oder in Teilstrings zerlegen. Und, wir können auch auf die einzelnen Zeichen eines Strings zugreifen.
 
+.. code-block:: python
 
+  s = 'Ich bin ein sieben Worte langer String'
 
+  """
+  In String fängt die Positionsindizierung bei 0 an. Die Indizes eines String mit der Länge n 
+  sind also 0...n-1.
+  (Und dies ist ein mehrzeiliger Kommentar, den man in dreifache " setzt.)
+  """
+  print(s[0])       # 1. Zeichen des Strings s an Position 0
+  print(s[1])       # 2. Zeichen des Strings s an Position 1
+  print(s[2])       # 3. Zeichen des Strings s an Position 2
+  print(s[4:7])     # Zeichen des Strings s an den Positionen 4...6
+  print(s[-1])      # 1. Zeichen des Strings vom Ende her, also an Position n-1
+  print(s[0:10:2])  # jedes 2. Zeichen von s zwischen den Positionen 0...9
+  print(s[::2])     # jedes 2. Zeichen von s von 0...n-1
+  print(s[::-1])    # jedes Zeichen von s von n-1...0
 
+  """
+  Die allgemeine Syntax lautet also:
+  [Anfang : Ende+1 : Schrittweite und Schrittrichtung]
+  Defaultwerte:
+  [0 : n : +1]  (n = Länge des Strings)
+  """
+    
 
 Beispiel 2.1
 ------------
