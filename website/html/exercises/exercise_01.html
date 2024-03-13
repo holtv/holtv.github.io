@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. Übung &mdash; IPP - Ingenieurwissenschaftliches Programmieren mit Python 0.1 Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=9d4e32a3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="2. Übung" href="exercise_02.html" />
+    <link rel="prev" title="Übungen" href="../exer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            IPP - Ingenieurwissenschaftliches Programmieren mit Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhalt:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Grundlagen der Programmierung</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../exer.html">Übungen</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. Übung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-1-1">Beispiel 1.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-1-2">Beispiel 1.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-1-1">Aufgabe 1.1</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_02.html">2. Übung</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IPP - Ingenieurwissenschaftliches Programmieren mit Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../exer.html">Übungen</a></li>
+      <li class="breadcrumb-item active">1. Übung</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/exercises/exercise_01.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ubung">
+<h1>1. Übung<a class="headerlink" href="#ubung" title="Permalink to this heading"></a></h1>
+<section id="beispiel-1-1">
+<h2>Beispiel 1.1<a class="headerlink" href="#beispiel-1-1" title="Permalink to this heading"></a></h2>
+<p>Aus der Theorie wissen wir, dass wir in der Informationsverarbeitung 2 Dinge brauchen:</p>
+<ol class="arabic simple">
+<li><p>Daten, die wir als Eingangs-Daten verarbeiten und als Ausgangs-Daten als Ergebnis liefern</p></li>
+<li><p>Verfahren (auch Algorithmen genannt) zur Verarbeitung der Daten</p></li>
+</ol>
+<p>Im ersten Beispiel wollen wir ein paar Datenelemente definieren und diese anschliessend auf der Konsole augeben:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Zunächst weisen wir den Datenelementen Werte zu ...</span>
+<span class="linenos"> 2</span><span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>                  <span class="c1"># ein Integer-Datenwert</span>
+<span class="linenos"> 3</span><span class="n">b</span> <span class="o">=</span> <span class="mf">3.14</span>                <span class="c1"># ein Float-Datenwert</span>
+<span class="linenos"> 4</span><span class="n">c</span> <span class="o">=</span> <span class="kc">True</span>                <span class="c1"># ein Boolescher Datenwert</span>
+<span class="linenos"> 5</span><span class="n">d</span> <span class="o">=</span> <span class="s1">&#39;Python ist toll!&#39;</span>  <span class="c1"># ein String-Datenwert</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1"># ... und dann geben wir die Daten mit dem print()-Verfahren aus</span>
+<span class="linenos"> 8</span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Wir können den Code einfach mit dem Clipboard-Symbol, das rechts oben erscheint, wenn wir die Maus dorthin bewegen, kopieren und in die Entwicklungsumgebung einfügen. Anschließend speichern wir dann die Datei unter dem Namen ‚example_1_1.py‘ ab und führen Sie diese in der Konsole aus (in gleicher Weise verfahren wir mit den weiteren Beispielen und Aufgaben):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python example_1_1.py
+</pre></div>
+</div>
+<p>Mit diesem Aufruf übergeben wir unser Python-Programm an den Python-Interpreter. Dieser arbeitet die Programmanweisungen zeilenweise von oben nach unten ab. Wir sehen, dass die Werte, die wir den Datenelementen zugewiesen haben, zeilenweise ausgegeben werden. Damit haben wir gerade unser erstes Python-Programm geschrieben und ausgeführt!</p>
+<p>Bislang haben wir allgemein von Datenelementen gesprochen. In der Programmierung werden Datenelemente in unterschiedlichen Rollen verwendet. In der Rolle, wie wir sie verwenden, bezeichnet man sie als <em>Variablen</em>.
+Dieser Ausdruck ist der Mathematik entlehnt, in der eine Variable einen  Platzhalter für einen noch nicht bestimmten Wert bezeichnet. Entsprechend bezeichnet man einen Ausdruck wie 'print(x)‘ als eine Funktion ähnlich wie 'sinus(x)‘, 'log(x)‘ oder allgemein 'f(x)‘ Funktionen im Sinne der Mathematik  darstellen. Wir werden den Umgang mit Variablen und Funktionen gleich noch weiter vertiefen.</p>
+<p>Die Bezeichnungen der Variablen mit 'a‘, 'b‘, 'c‘ und 'd‘ ist reichlich knapp und beliebig. In der Regel sollte man Variablen aussagefähigere (und damit i.d.R. längere) Namen geben.</p>
+<div class="admonition important">
+<p class="admonition-title">Wichtig</p>
+<p>Variablen- und Funktionsbezeichnungen dürfen aus den Buchstaben 'A‘-'Z‘ und 'a‘-'z‘, den Ziffern '0‘-'9‘ sowie Unterstrichen '_‘ bestehen. In Python gibt es darüberhinaus weitere Konventionen zur Benennung, die teilweise bindend sind, teilweise auch nur zur besseren Verständlichkeit des Codes üblich aber nicht verpflichtend sind. Diese Konventionen werden wir später kennenlernen.</p>
+</div>
+<p>Interessant an der Ausgabe ist noch, dass wir den Variablen Werte aus ganz unterschiedlichen Wertemengen zugewiesen haben. Diese Werte werden (ohne das uns dies im Detail interessieren muss) im Rechner in unterschiedlicherweise repräsentiert und verarbeitet. Es macht nämlich sehr wohl einen Unterschied, ob ich zwei ganzzahlige Integer-Werte addiere, zwei Fließkomma-Werte addiere und erst recht zwei Zeichenketten (Strings) addiere! Ebenfalls interessant ist, dass die verwendete 'print()‘-Funktion ganz offensichtlich weiß, von welchem Datentyp die auszugebenden Werte sind und wie diese auszugeben sind.</p>
+<div class="admonition important">
+<p class="admonition-title">Wichtig</p>
+<p>Python erkennt bei der Zuweisung eines Wertes an eine Variable den Datentyp des Wertes und merkt sich diesen zusammen mit dem Wert selber unter dem Namen der Variablen. Bei Übergabe einer Variablen an die 'print()‘ kann diese dann ebenfalls einfach erkennen, welchen Datentyp der unter dem Namen der Variablen gespeicherte Wert hat und so die Ausgabe entsprechend steuern.</p>
+</div>
+<p>Wir wollen noch etwas bei unserem obigen Beispiel bleiben und die Ausgabe etwas modifizieren. Dazu ändern wir den Code etwas ab:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Zunächst weisen wir den Datenelementen Werte zu ...</span>
+<span class="linenos">2</span><span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>                  <span class="c1"># ein Integer-Datenwert</span>
+<span class="linenos">3</span><span class="n">b</span> <span class="o">=</span> <span class="mf">3.14</span>                <span class="c1"># ein Float-Datenwert</span>
+<span class="linenos">4</span><span class="n">c</span> <span class="o">=</span> <span class="kc">True</span>                <span class="c1"># ein Boolescher Datenwert</span>
+<span class="linenos">5</span><span class="n">d</span> <span class="o">=</span> <span class="s1">&#39;Python ist toll!&#39;</span>  <span class="c1"># ein String-Datenwert</span>
+<span class="linenos">6</span>
+<span class="linenos">7</span><span class="c1"># ... und dann geben wir die Daten mit dem print()-Verfahren aus</span>
+<span class="linenos">8</span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Wir geben jetzt die 4 Variablen mit einem einzige Aufruf von 'print()‘ aus. Wenn wir unser Beispiel ausführen, sehen wir, dass nunmehr alle Werte in einer Zeile ausgegeben werden.</p>
+<p>Wir können die Ausgabe aber durch Hinzufügen von erläuterndem Text noch etwas verständlicher machen, indem wir Zeile 8 wie folgt erweitern:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ein Integer-Wert=&#39;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="s1">&#39;Ein Float-Wert=&#39;</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="s1">&#39;Ein Boolescher Wert=:&#39;</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">EinString</span><span class="o">-</span><span class="n">Wert</span><span class="o">=</span><span class="s1">&#39;,d)</span>
+</pre></div>
+</div>
+<p>Und wenn wir doch lieber jeden Wert in einer separaten Zeile ausgeben möchten, müssen wir dazu nicht wieder 4 verschiedene Aufrufe von 'print()‘ einfügen, sondern fügen einfach nach jeder Ausgabe einen Zeilenvorschub '\n‘ (n=newline) ein.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ein Integer-Wert=&#39;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Ein Float-Wert=&#39;</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Ein Boolescher Wert=:&#39;</span><span class="p">,</span><span class="n">c</span><span class="p">,</span>\<span class="n">nEin</span> <span class="n">String</span><span class="o">-</span><span class="n">Wert</span><span class="o">=</span><span class="s1">&#39;,d)</span>
+</pre></div>
+</div>
+<p>Die Kombination '\n‘ bezeichnet man als sog. 'Esacpe-Sequenz‘. Diese werden durch einen '\‘ eingeleitet, welcher der 'print()‘-Funktion signalisiert, dass das nachfolgende 'n‘ nicht als Zeichen auszugeben ist, sondern eine Anweisung zur Formatierung der Ausgabe darstellen soll. Neben 'n‘ gibt es weitere Esacpe-Sequenzen, die wir bei Gelegenheit kennenlernen werden.</p>
+</section>
+<section id="beispiel-1-2">
+<h2>Beispiel 1.2<a class="headerlink" href="#beispiel-1-2" title="Permalink to this heading"></a></h2>
+<p>Natürlich können wir mit den unseren in Variablen gespeicherten Daten auch Operationen durchführen (&quot;Rechnen“):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">#-----------------</span>
+<span class="linenos"> 2</span><span class="c1"># Addition eines festen Wertes zur Integer-Variablen a</span>
+<span class="linenos"> 3</span><span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="linenos"> 4</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">73</span>
+<span class="linenos"> 5</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="c1">#-----------------</span>
+<span class="linenos"> 7</span><span class="c1"># Addition der Float-Variablen a und b und Zuweisung an c</span>
+<span class="linenos"> 8</span><span class="n">a</span> <span class="o">=</span> <span class="mf">3.1415</span>
+<span class="linenos"> 9</span><span class="n">b</span> <span class="o">=</span> <span class="mf">1.2345</span>
+<span class="linenos">10</span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;c =&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="linenos">12</span><span class="c1">#-----------------</span>
+<span class="linenos">13</span><span class="c1"># Addition einer Float- und einer Integer-Variablen und Zuweisung an c</span>
+<span class="linenos">14</span><span class="n">a</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="linenos">15</span><span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="linenos">16</span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="linenos">17</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;c =&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="linenos">18</span><span class="c1">#-----------------</span>
+</pre></div>
+</div>
+<p>Bemerkenswert ist hier bei der dritten Rechnung der Datentyp des Ergebnis. Bei der Addition von 3.0 und 2 kommt eine glatte 5 als Ergebnis heraus, der Ergebniswert hätte also ohne Probleme in einer Integer-Variablen gespeichert werden können. Standardmäßig speichert Python das Ergebnis einer Rechnung aber im allgemeineren der beteiligten Datentypen und das ist in diesem Fall der Float-Wert.</p>
+<p>In diesem Fall können wir anhand der Print-Ausgabe in der Form '5.0‘ einfach schließen, dass es sich um eine Float-Variable handelt. Python stellt aber auch einen Befehl bereit, mit dem wir den Datentyp einer Variablen direkt feststellen können:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Addition einer Float- und einer Integer-Variablen und Zuweisung an c</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;c =&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Wenn wir erzwingen möchten, dass das Ergebnis einer Operation einen bestimmten Datentyp hat, gehen wir so vor:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#-----------------</span>
+<span class="c1"># Addition einer Float- und einer Integer-Variablen und Zuweisung an c als Integer-Wert</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;c =&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+<span class="c1">#-----------------</span>
+<span class="c1"># Addition zweier Integer-Variablen und Zuweisung an c als Float-Wert</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">73</span>
+<span class="n">c</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;c =&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+<span class="c1">#-----------------</span>
+</pre></div>
+</div>
+<p>Wie mag es aber bei Operationen mit den Boolescher Werten oder String-Werten aussehen?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">#-----------------</span>
+<span class="linenos"> 2</span><span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos"> 3</span><span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos"> 4</span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="linenos"> 5</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;c=&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="c1">#-----------------</span>
+<span class="linenos"> 7</span><span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos"> 8</span><span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos"> 9</span><span class="n">c</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos">10</span><span class="n">d</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;d =&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+<span class="linenos">12</span><span class="c1">#-----------------</span>
+</pre></div>
+</div>
+<p>Wie wir sehen, werden die Operationen von Python (ohne einen Fehler zu melden) durchgeführt, es ergeben sich aber keine Booleschen Werte als Ergebnis. Dies ist insofern konsequent als Operationen wie '+‘, '-‘, '*‘ und '/‘ für Wahrheitswerte nicht definiert sind. Python geht in diesem Fall 'pragmatisch‘ vor und wandelt den Wert 'True‘ in den numerischen Wert '1‘ und 'False‘ in '0‘ um und führt dann die Operationen durch. Das Ergebnis ist dann natürlich auch ein Integer-Wert und wird nicht in einen Booleschen Wert zurückumgewandelt.</p>
+<p>Um logische Operationen durchzuführen gibt es Operationen wie 'and‘, 'or‘ oder 'not‘:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">#-----------------</span>
+<span class="linenos"> 2</span><span class="n">a</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos"> 3</span><span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos"> 4</span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="ow">and</span> <span class="n">b</span>
+<span class="linenos"> 5</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;c =&#39;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="c1">#-----------------</span>
+<span class="linenos"> 7</span><span class="n">a</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos"> 8</span><span class="n">b</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos"> 9</span><span class="n">c</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos">10</span><span class="n">d</span> <span class="o">=</span> <span class="n">a</span> <span class="ow">or</span> <span class="n">b</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">c</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;d =&#39;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Auch hinsichtlich der Verarbeitung von Zeichenketten (Strings) geht Python pragmatisch vor und definiert die (eigentlich mathematischen) Operationen auch für Strings, die intuitiv sinnvoll erscheinen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">s1</span> <span class="o">=</span> <span class="s1">&#39;Ich&#39;</span>
+<span class="linenos">2</span><span class="n">s2</span> <span class="o">=</span> <span class="s1">&#39;bin&#39;</span>
+<span class="linenos">3</span><span class="n">s3</span> <span class="o">=</span> <span class="s1">&#39;hier&#39;</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="n">s_result_1</span> <span class="o">=</span> <span class="n">s1</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">s2</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">s3</span>
+<span class="linenos">6</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;String-Addition: &#39;</span><span class="p">,</span> <span class="n">s_result_1</span><span class="p">)</span>
+<span class="linenos">7</span>
+<span class="linenos">8</span><span class="n">s_result_2</span> <span class="o">=</span> <span class="n">s1</span> <span class="o">-</span> <span class="n">s2</span>
+<span class="linenos">9</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;String-Subtraktion:&#39;</span><span class="p">,</span> <span class="n">s_result_2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Bei der Aufruf der nicht definierten String-Subtraktion sehen wir auch, was Python in diesen Fällen macht. Es zeigt uns eine Fehlermeldung und bricht das Programm ab. Im eigentlichen Sinn passiert im Hintergrund noch mehr, denn Python löst bei nicht definierten Operationen (z.B. auch bei einer Division durch 0) eine sog. 'exception‘ aus. Diese 'exception‘ könnten wir programmtechnisch abfangen, was wir hier nicht gemacht haben, sondern erst später kennenlernen werden.</p>
+</section>
+<section id="aufgabe-1-1">
+<h2>Aufgabe 1.1<a class="headerlink" href="#aufgabe-1-1" title="Permalink to this heading"></a></h2>
+<p>Zur Abwechslung gibt es jetzt eine erste kleine Aufgabe für Sie. In dem folgenden kleinen Code-Block werden verschiedene Varianten des Divisionsoperators verwendet. Im ersten Abschnitt werden diese auf Integer-Werte, im zweiten Abschnitt auf Float-Werte angewendet.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">#-----------------</span>
+<span class="linenos"> 2</span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="linenos"> 3</span><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="linenos"> 4</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a/b=&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a//b=&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">//</span><span class="n">b</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a%b=&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="c1">#-----------------</span>
+<span class="linenos"> 8</span><span class="n">a</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="linenos"> 9</span><span class="n">b</span> <span class="o">=</span> <span class="mf">3.3</span>
+<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a/b =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">)</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a//b =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">//</span><span class="n">b</span><span class="p">)</span>
+<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a%b =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">)</span>
+<span class="linenos">13</span><span class="c1">#-----------------</span>
+</pre></div>
+</div>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Finden Sie heraus, welche Bedeutung die verschiedenen Varianten haben, d.h. welche mathematischen Operationen diese realiseren!</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../exer.html" class="btn btn-neutral float-left" title="Übungen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="exercise_02.html" class="btn btn-neutral float-right" title="2. Übung" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Prof. Dr.-Ing. Volker von Holt.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

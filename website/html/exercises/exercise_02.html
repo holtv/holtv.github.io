@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. Übung &mdash; IPP - Ingenieurwissenschaftliches Programmieren mit Python 0.1 Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=9d4e32a3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="prev" title="1. Übung" href="exercise_01.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            IPP - Ingenieurwissenschaftliches Programmieren mit Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhalt:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Grundlagen der Programmierung</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../exer.html">Übungen</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="exercise_01.html">1. Übung</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2. Übung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-2-1">Beispiel 2.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-2-1">Aufgabe 2.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-2-2">Beispiel 2.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-2-2">Aufgabe 2.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-2-3">Beispiel 2.3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-2-3">Aufgabe 2.3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IPP - Ingenieurwissenschaftliches Programmieren mit Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../exer.html">Übungen</a></li>
+      <li class="breadcrumb-item active">2. Übung</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/exercises/exercise_02.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ubung">
+<h1>2. Übung<a class="headerlink" href="#ubung" title="Permalink to this heading"></a></h1>
+<section id="beispiel-2-1">
+<h2>Beispiel 2.1<a class="headerlink" href="#beispiel-2-1" title="Permalink to this heading"></a></h2>
+<p>Bislang haben wir zwar einiges ausprobiert, um Python etwas näher kennenzulernen, haben aber noch keine richtige Aufgabe im Sinne der Informationsverarbeitung umgesetzt. Das wollen wir nun ändern, indem wir einen Algorithmus zur Berechnung der Sinus-Funktion programmieren. Vom Taschenrechner her ist man gewohnt, dass es eine dedizierte Taste mit der Aufschrift <em>sin()</em> zur Berechnung dieser Funktion gibt. Aber die wenigsten werden sich schon einmal gefragt haben, wie die Berechnung im Taschenrechner umgesetzt ist. Man könnte z.B. eine große Wertetabelle im Speicher ablegen, aber es geht viel einfacher und eleganter mit den für die trigonometrischen Funktionen bekannten Reihenentwicklungen. (Die hatten Sie bestimmt schon einmal in der Mathematik!)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray}
+  \sin(x) &amp;=&amp; \sum_{n=0}^{\infty} (-1)^n \frac{x^{(2n+1)}}{(2n+1)!} \tag{2.1} \\
+  \sin(x) &amp;=&amp; +\frac{x^1}{1!} - \frac{x^3}{3!} + \frac{x^5}{5!} - \dots \tag{2.2} \\
+  \sin(x) &amp;=&amp; +\frac{x^1}{1} - \frac{x^3}{1\cdot 2\cdot 3} + \frac{x^5}{1\cdot 2\cdot 3\cdot 4\cdot 5} - \dots \tag{2.3}
+\end{eqnarray}\end{split}\]</div>
+<p>Natürlich können wir nicht unendlich viele Reihenglieder aufsummieren, sondern müssen die Reihenentwicklung nach irgendeinem Glied abbrechen. Das ist schon deshalb kein reales Problem, weil unsere Berechnungen im Rechner sowieso nur eine begrenzte Genauigkeit aufweisen. Wir wollen uns der Sache aber zunächst ganz einfach und pragmatisch nähern und beschränken uns in unserem ersten Lösungsansatz auf die ersten 3 Reihenglieder, wie sie in Gleichung (2.3) zu sehen sind:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Kleinen Text ausgeben, damit der Nutzer weiß, was hier passiert</span>
+<span class="linenos"> 2</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Berechnung von sin(x) mittels endlicher Reihe&#39;</span><span class="p">)</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1"># x zunächst einmal einen festen Wert zuweisen</span>
+<span class="linenos"> 5</span><span class="n">x</span> <span class="o">=</span> <span class="mf">3.1415</span><span class="o">/</span><span class="mi">4</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1"># und dann die sin-Näherung mit den ersten 3 Reihengliedern berechnen</span>
+<span class="linenos"> 8</span><span class="n">sin_x</span> <span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># augeben sollten wir das Ergebnis natürlich auch noch</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;sin(&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;) = &#39;</span><span class="p">,</span> <span class="n">sin_x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(Wir denken natürlich auch immer daran, die Programmdatei unter dem entsprechenden Namen - hier: <em>example_2_1.py</em> - abzuspeichern.)</p>
+<p>Bevor wir uns Gedanken darüber machen, wie wir die eigentliche Sinus-Berechnung verbessern können, wollen wir das Programm etwas nutzerfreundlicher gestalten, indem wir das Argument <em>x</em> nicht fest vorgeben, sondern von der Konsole einlesen. Für einfache Benutzereingaben gibt es in Python die Funktion <em>input()</em>, die eine Konsoleneingabe entgegen nimmt und dabei solange wartet, bis die 'Return‘-Taste betätigt wird:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Kleinen Text ausgeben, damit der Nutzer weiß, was hier passiert</span>
+<span class="linenos"> 2</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Berechnung von sin(x) mittels endlicher Reihe&#39;</span><span class="p">)</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1"># Wir lesen x von der Konsole ein, dabei können wir &#39;input()&#39; einen</span>
+<span class="linenos"> 5</span><span class="c1"># String übergeben, mit dem wir dem Nutzer sagen, was wir von ihm wollen</span>
+<span class="linenos"> 6</span><span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Geben Sie x ein! &#39;</span><span class="p">)</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># und dann die sin-Näherung mit den ersten 3 Reihengliedern berechnen</span>
+<span class="linenos"> 9</span><span class="n">sin_x</span> <span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># augeben sollten wir das Ergebnis natürlich auch noch</span>
+<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;sin(&#39;</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;) = &#39;</span><span class="p">,</span> <span class="n">sin_x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Leider wird beim Ausführen des Skripts eine für uns zunächst unverständliche Fehlermeldung ausgegeben und das Programm wird abgebrochen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+<span class="linenos">2</span>  <span class="n">File</span> <span class="s2">&quot;c:/Users/holtv/Documents/IPP/ipp_1.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">396</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="linenos">3</span>    <span class="n">exercise_1_2_1</span><span class="p">()</span>
+<span class="linenos">4</span>  <span class="n">File</span> <span class="s2">&quot;c:/Users/holtv/Documents/IPP/ipp_1.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">133</span><span class="p">,</span> <span class="ow">in</span> <span class="n">exercise_1_2_1</span>
+<span class="linenos">5</span>    <span class="n">sin_x</span> <span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">6</span><span class="ne">TypeError</span><span class="p">:</span> <span class="n">unsupported</span> <span class="n">operand</span> <span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="o">/</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span> <span class="ow">and</span> <span class="s1">&#39;int&#39;</span>
+</pre></div>
+</div>
+<p>Python beschwert sich darüber, dass wir eine Operation mit einem nicht unterstützten Datentyp durchführen wollen. Wir haben nämlich leider vergessen, dass die Nutzereingabe, die <em>input()</em> uns liefert eine Zeichenkette (String) darstellt und keine Zahl ist! Dieses Problem lässt sich aber einfach beheben, denn in Python können wir einen String leicht in einen anderen Datentyp konvertieren. Wir müssen nur die Zeile 6 wie folgt abwandeln:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Geben Sie x ein! &#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Nun sollte unser Programm fehlerfrei einen Sinuswert berechnen … es sei denn, wir geben statt einer Zahl eine Zeichenkette ein, die auch andere Zeichen als Ziffern enthält. Dann bricht Python mit einer anderen Fehlermeldung ab, weil es den String nicht konvertieren kann (ausprobieren!).</p>
+</section>
+<section id="aufgabe-2-1">
+<h2>Aufgabe 2.1<a class="headerlink" href="#aufgabe-2-1" title="Permalink to this heading"></a></h2>
+<p>Unsere Sinus-Berechnung erwartet die Eingabe des Arguments bislang in Radiant. Für uns Menschen ist das Denken in Vielfachen von <span class="math notranslate nohighlight">\(\pi\)</span> aber i.d.R. eher unanschaulich. Darum wollen wir unser Programm so erweitern, dass die Eingabe von <em>x</em> in Grad erfolgen kann.</p>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Erweitern Sie das Beispiel 2.1 so, dass:</p>
+<ol class="arabic">
+<li><p>Die Nutzer darüber informiert werden, dass <em>x</em> in Grad einzugeben ist.</p></li>
+<li><div class="line-block">
+<div class="line">Das Argument von Grad in Radiant umgewandelt wird.</div>
+<div class="line"><span class="math notranslate nohighlight">\((x_{rad} = x_{grad} \cdot \frac{\pi}{180})\)</span></div>
+</div>
+</li>
+<li><p>Bei der Ausgabe am Ende wieder <em>sin(x in Grad)</em> erscheint.</p></li>
+</ol>
+</div>
+</section>
+<section id="beispiel-2-2">
+<h2>Beispiel 2.2<a class="headerlink" href="#beispiel-2-2" title="Permalink to this heading"></a></h2>
+<p>Wir knüpfen direkt an Beispiel 2.1 und Aufgabe 2.1 an. Zwei Dinge sind in unserer bisherigen Lösung noch sehr unelegant, wir berechnen nämlich sowohl die Potenzen von <em>x</em> wie auch die <em>n!</em> noch &quot;zu Fuß“, d.h. wir multiplizieren die Ausdrücke im Progammcode fest verdrahtet aus.</p>
+<p>Für die Potenzberechnung gibt es direkt einen Potenz-Operator in Python '**‘, den wir nun nutzen werden. Für die Fakultätsberechnung wollen wir aber unsere erste eigene Funktion schreiben.
+Bei der Nutzung von <em>print()</em> und <em>input()</em> haben wir schon gesehen, dass wir Funktionen Argumente übergeben, mit denen diese arbeiten können und das Funktionen uns auch Daten zurückliefern können. Eine eigene Funktion definieren wir in Python wie folgt:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">funktions_name</span><span class="p">(</span><span class="n">argument_1</span><span class="p">,</span> <span class="n">argument_2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+<span class="linenos"> 2</span>  <span class="c1"># die nun folgenden Anweisungen müssen einheitlich eingerückt sein!</span>
+<span class="linenos"> 3</span>  <span class="n">anweisung_1</span>
+<span class="linenos"> 4</span>  <span class="n">anweisung_2</span>
+<span class="linenos"> 5</span>  <span class="o">...</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>  <span class="c1"># mit &#39;return&#39; können wir keinen, einen oder mehrere Werte als Ergebnis zurückliefern</span>
+<span class="linenos"> 8</span>  <span class="k">return</span> <span class="n">Rückgabewert</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="c1"># ab hier gehört der Code nicht mehr zur Funktion, da er nicht eingerückt ist</span>
+<span class="linenos">11</span><span class="n">anweisung_3</span>
+<span class="linenos">12</span><span class="n">anweisung_4</span>
+<span class="linenos">13</span><span class="o">...</span>
+</pre></div>
+</div>
+<p>Die wesentlichen Hinweise zur Gestalt von Funktionen sind im o.a. Code-Ausschnitt in den Kommentaren enthalten. Im ersten Schritt wollen wir nun nicht gleich eine Funktion erstellen, die allgemein für jeden Wert die Fakultät berechnet, sondern verlagern nur unsere bisherige „zu-Fuß“-Berechnung in eine Funktion:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Das ist unsere neue Funktion zur Fakultätsberechnung</span>
+<span class="linenos"> 2</span><span class="k">def</span> <span class="nf">fak</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="linenos"> 3</span>  <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="linenos"> 4</span>    <span class="k">return</span> <span class="mi">1</span>
+<span class="linenos"> 5</span>  <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+<span class="linenos"> 6</span>    <span class="k">return</span> <span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span>
+<span class="linenos"> 7</span>  <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+<span class="linenos"> 8</span>    <span class="k">return</span> <span class="mi">5</span><span class="o">*</span><span class="mi">4</span><span class="o">*</span><span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="mi">1</span>
+<span class="linenos"> 9</span>  <span class="k">else</span><span class="p">:</span>
+<span class="linenos">10</span>    <span class="c1"># &#39;None&#39; ist ein vordefinierter Wert, der anzeigt, dass es kein (gültiges) Ergebnis gibt</span>
+<span class="linenos">11</span>    <span class="k">return</span> <span class="kc">None</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1"># Hier beginnt unser eigentliches Programm</span>
+<span class="linenos">14</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Berechnung von sin(x) mittels endlicher Reihe&#39;</span><span class="p">)</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="c1"># Einlesen von x in grad und umwandeln in rad</span>
+<span class="linenos">17</span><span class="o">...</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="c1"># Berechnung des Sinus unter Nutzung des Potenz-Operators &#39;**&#39; und der Funktion &#39;fak(n)&#39;</span>
+<span class="linenos">20</span><span class="n">sin_x</span> <span class="o">=</span> <span class="n">x_rad</span><span class="o">**</span><span class="mi">1</span><span class="o">/</span><span class="n">fak</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">x_rad</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="n">fak</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">x_rad</span><span class="o">**</span><span class="mi">5</span><span class="p">)</span><span class="o">/</span><span class="n">fak</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="c1"># Ausgabe des Ergebnis</span>
+<span class="linenos">23</span><span class="o">...</span>
+</pre></div>
+</div>
+<p>(Bei '…‘ ist der Code, den wir in Aufgabe 2.1 erstellt haben, einzusetzen. In Zeile 20 heißt das Argument hier <em>x_rad</em>.)</p>
+<p>Wir schauen uns zunächst die Funktion <em>fak(n)</em> an. Das Argument <em>n</em> ist hierbei ein Platzhalter für den numerischen Wert, den wir aktuell übergeben und von dem wir die Fakultät berechnen sollen. Die eigentliche Berechnung führen wir zunächst weiter &quot;zu Fuß“ durch, indem wir abfragen, welcher Wert für <em>n</em> der Funktion übergeben worden ist und dann die entsprechende Berechnung ausführen und mit <em>return</em> als Ergebnis zurückliefern. Für die Abfrage verwenden wir ein uns noch unbekanntes Programmierkonstrukt, ein <em>if-else</em>-Konstrukt:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span> <span class="n">Anweisungen</span> <span class="n">vor</span> <span class="n">dem</span> <span class="s1">&#39;if-else&#39;</span>
+
+<span class="c1"># nach der Bedingung muss am Ende ein &#39;:&#39; stehen</span>
+<span class="k">if</span> <span class="n">Bedingung</span><span class="p">:</span>
+  <span class="c1"># dieser eingerückte Progammabschnitt wird nur ausgeführt, wenn die</span>
+  <span class="c1"># Bedingung den Wert &#39;True&#39; ergab</span>
+  <span class="o">...</span> <span class="n">tue</span> <span class="n">dies</span>
+  <span class="o">...</span> <span class="n">und</span> <span class="n">noch</span> <span class="n">mehr</span>
+<span class="c1">#  auch hinter dem &#39;else&#39; ist ein &#39;:&#39; zwingend vorgeschrieben</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="c1"># dieser Block wird nur ausgeführt, wenn die Bedingung nicht erfüllt war</span>
+  <span class="o">...</span> <span class="n">tue</span> <span class="n">das</span>
+  <span class="o">...</span> <span class="n">und</span> <span class="n">noch</span> <span class="n">mehr</span>
+
+<span class="c1"># wenn die Einrückung zu Ende ist, geht der Progammablauf für alle</span>
+<span class="c1"># Ausführungszweige gemeinsam weiter</span>
+<span class="o">...</span> <span class="n">Anweisungen</span> <span class="n">nach</span> <span class="n">dem</span> <span class="s1">&#39;if-else&#39;</span>
+</pre></div>
+</div>
+<p>Als <em>Bedingung</em> kann ein beliebig komplizierter Ausdruck eingesetzt werden, der einen der Werte <em>True</em> oder <em>False</em> ergibt. Es können aber auch Berechnungen als Bedingung angegeben werden, die einen numerischen Wert liefern. Dann gilt</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray}
+  Wert &amp;==&amp; 0  \rightarrow \ False \\
+  Wert &amp;\ne&amp; 0 \rightarrow \ True
+\end{eqnarray}\end{split}\]</div>
+<p>In unserem Fall sind die Bedingung in der Form eines Vergleichs, z.B. 'n == 3‘, für den wir '==‘ als Vergleichszeichen verwenden, um dies von der Zuweisung mit '=‘ zu unterscheiden. Daneben gibt es viele weitere (Vergleichs-)Operatoren, die in Bedingungen verwendet werden können. Auf diese ziemlich stupide Weise haben wir die Berechnung der drei Fakultätswerte für 1, 3 und 5 in unsere Funktion <em>fak(n)</em> gepackt, können diese in Zeile 20 einfach aufrufen mit <em>fak(1)</em>, <em>fak(3)</em> und <em>fak(5)</em> und bekommen jeweils den passenden Wert zurückgeliefert. Der Aufruf unserer selbst geschriebenen Funktion sieht im Übrigen genauso aus, wie der Aufruf der vordefinierten Funktionen <em>print()</em> und <em>input()</em>.</p>
+<p>Wenn wir uns jetzt allerdings ins Gedächtnis rufen, dass der Python-Interpreter das Programm zeilenweise abarbeitet, können wir allerdings ins Grübeln geraten. Aber der Python-Interpreter ist durchaus clever, er erkennt die Funktionsdefinition von <em>fak()</em> und überspringt diese. Tatsächlich führt er nacheinander alle nicht eingerückten Zeilen unseres Programms aus, <strong>egal</strong> an welcher Stelle im Programmcode diese stehen. (Daraus folgt, dass wir im Prinzip unsere Funktionen - umfangreichere Programme vorausgesetzt - mehr oder weniger wild über die Datei verteilen könnten. Dies ist aber kein guter Programmierstil!)</p>
+<div class="admonition-merke admonition">
+<p class="admonition-title">Merke</p>
+<p>Wichtig bei der Definition von Funktionen ist, dass die Definition stets vor dem ersten Aufruf der Funktion erfolgen muss,damit diese an der Stelle des Aufrufs schon bekannt sind. (Der Python-Interpreter führt die Funktionen zwar nicht aus, aber er merkt sich, dass es sie gibt!)</p>
+</div>
+<p>Ein Testlauf unseres geänderten Programms sollte die gleiche Ausgabe wie vorher ergeben, da wir keine für die Nutzer sichtbaren Änderungen vorgenommmen, sondern nur intern umstrukturiert haben.</p>
+<p>Der nächste logische Schritt ist es nun, die wirklich unelegante hart codierte <em>fak()</em>-Funktion so zu modifizieren, dass wir die Fakultät ganz allgemein für beliebige Argumente <em>n</em> berechnen können. Um auf eine Idee zu kommen, wie wir die Berechnung in einen geschickten Algorithmus in Python umsetzen können, werfen wir mal einen Blick auf die Bestimmung für die ersten aufeinanderfolgenden Werte:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+0:  0! &amp;= 1 \\
+1:  1! &amp;= 1 \cdot 1 \\
+2:  2! &amp;= 1 \cdot 1 \cdot 2 \\
+3:  3! &amp;= 1 \cdot 1 \cdot 2 \cdot 3 \\
+4:  4! &amp;= 1 \cdot 1 \cdot 2 \cdot 3 \cdot 4 \\
+       &amp;\ \ \vdots \\
+n:  n! &amp;= 1 \cdot 1 \cdot 2 \cdot 3 \cdot 4 \cdots n\\
+\end{aligned}\end{split}\]</div>
+<p>Bei genauem Hinsehen fällt uns auf, dass sich <span class="math notranslate nohighlight">\(n!\)</span> auch wie folgt berechnen lässt:</p>
+<div class="math notranslate nohighlight">
+\[n! = (n-1)! \ n\]</div>
+<p>Eine solche Berechnungsvorschrift, bei der die Berechnung des n-ten Wertes auf die Berechnung des (n-1)-ten Wertes zurückgeführt wird, nennt man Rekursion. Man könnte jetzt auch in Python eine rekursive Programmlösung zur Berechnung der Fakultät implementieren. Wir wollen allerdings an dieser Stelle auf eine sog. iterative Lösung hinarbeiten. Dazu formulieren wir die Bestimmung der ersten aufeinanderfolgenden Werte mit unserer neuen Erkenntnis noch einmal um:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+0:  0! &amp;= 1 \\
+1:  1! &amp;= 0! \cdot 1 \\
+2:  2! &amp;= 1! \cdot 2 \\
+3:  3! &amp;= 2! \cdot 3 \\
+4:  4! &amp;= 3! \cdot 4 \\
+       &amp;\ \ \vdots \\
+n:  n! &amp;= (n-1)! \ n \\
+\end{aligned}\end{split}\]</div>
+<p>Damit machen wir einen ersten Ansatz, mit dem wir zumindest die Fakultät bis <em>n=5</em> berechnen können:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">fak</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="linenos"> 2</span>  <span class="c1"># Startwert der Berechnung</span>
+<span class="linenos"> 3</span>  <span class="c1"># Wir berechnen mindestens immer 0!</span>
+<span class="linenos"> 4</span>  <span class="n">i_n</span> <span class="o">=</span> <span class="mi">0</span>   <span class="c1"># i_n = Iterator i von 0 bis n</span>
+<span class="linenos"> 5</span>  <span class="c1"># Hiermit merken wir uns jeweils den zuletzt berechneten</span>
+<span class="linenos"> 6</span>  <span class="c1"># Fakultätswert</span>
+<span class="linenos"> 7</span>  <span class="n">n_fak</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># 0! = 1</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>  <span class="c1"># wir überprüfen, ob wir n schon erreicht haben ...</span>
+<span class="linenos">10</span>  <span class="k">if</span> <span class="n">i_n</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+<span class="linenos">11</span>    <span class="c1"># wenn nicht gehen wir eine &quot;Zeile weiter&quot; =&gt; n! = (n-1)! n</span>
+<span class="linenos">12</span>    <span class="n">i_n</span> <span class="o">=</span> <span class="n">i_n</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="linenos">13</span>    <span class="n">n_fak</span> <span class="o">=</span> <span class="n">n_fak</span> <span class="o">*</span> <span class="n">i_n</span> <span class="c1"># n_fak = 1!</span>
+<span class="linenos">14</span>  <span class="c1"># wir überprüfen, ob wir n schon erreicht haben ...</span>
+<span class="linenos">15</span>  <span class="k">if</span> <span class="n">i_n</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+<span class="linenos">16</span>    <span class="c1"># wenn nicht gehen wir eine &quot;Zeile weiter&quot; =&gt; n! = (n-1)! n</span>
+<span class="linenos">17</span>    <span class="n">i_n</span> <span class="o">=</span> <span class="n">i_n</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="linenos">18</span>    <span class="n">n_fak</span> <span class="o">=</span> <span class="n">n_fak</span> <span class="o">*</span> <span class="n">i_n</span> <span class="c1"># n_fak = 2!</span>
+<span class="linenos">19</span>  <span class="c1"># wir überprüfen, ob wir n schon erreicht haben ...</span>
+<span class="linenos">20</span>  <span class="k">if</span> <span class="n">i_n</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+<span class="linenos">21</span>    <span class="c1"># wenn nicht gehen wir eine &quot;Zeile weiter&quot; =&gt; n! = (n-1)! n</span>
+<span class="linenos">22</span>    <span class="n">i_n</span> <span class="o">=</span> <span class="n">i_n</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="linenos">23</span>    <span class="n">n_fak</span> <span class="o">=</span> <span class="n">n_fak</span> <span class="o">*</span> <span class="n">i_n</span> <span class="c1"># n_fak = 3!</span>
+<span class="linenos">24</span>  <span class="c1"># wir überprüfen, ob wir n schon erreicht haben ...</span>
+<span class="linenos">25</span>  <span class="k">if</span> <span class="n">i_n</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+<span class="linenos">26</span>    <span class="c1"># wenn nicht gehen wir eine &quot;Zeile weiter&quot; =&gt; n! = (n-1)! n</span>
+<span class="linenos">27</span>    <span class="n">i_n</span> <span class="o">=</span> <span class="n">i_n</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="linenos">28</span>    <span class="n">n_fak</span> <span class="o">=</span> <span class="n">n_fak</span> <span class="o">*</span> <span class="n">i_n</span> <span class="c1"># n_fak = 4!</span>
+<span class="linenos">29</span>  <span class="c1"># wir überprüfen, ob wir n schon erreicht haben ...</span>
+<span class="linenos">30</span>  <span class="k">if</span> <span class="n">i_n</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+<span class="linenos">31</span>    <span class="c1"># wenn nicht gehen wir eine &quot;Zeile weiter&quot; =&gt; n! = (n-1)! n</span>
+<span class="linenos">32</span>    <span class="n">i_n</span> <span class="o">=</span> <span class="n">i_n</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="linenos">33</span>    <span class="n">n_fak</span> <span class="o">=</span> <span class="n">n_fak</span> <span class="o">*</span> <span class="n">i_n</span> <span class="c1"># n_fak = 5!</span>
+<span class="linenos">34</span>  <span class="c1"># Wir könnten jetzt ewig so weiter machen um n! für n &gt; 5 zu berechnen,</span>
+<span class="linenos">35</span>  <span class="c1"># aber das machen wir gleich eleganter...</span>
+<span class="linenos">36</span>  <span class="k">return</span> <span class="n">n_fak</span>
+</pre></div>
+</div>
+<p>Wir testen unsere neue Version der <em>fak()</em>-Funktion und stellen hoffentlich fest, dass sie weiterhin die gleichen, verlässlichen Ergebnisse liefert.</p>
+<div class="admonition-merke admonition">
+<p class="admonition-title">Merke</p>
+<p>In der Funktion <em>fak()</em> benutzen wir die beiden Variablen <em>i_n</em> und <em>n_fak</em>. Weil wir diese Variablen innerhalb der Funktion (des eingerückten Abschnitts) definiert haben, sind beide auch nur innerhalb der Funktion bekannt! Wenn wir versuchen würden im Hauptprogramm, von dem aus wir die Funktion aufrufen, auf die Variablen zuzugreifen, sind diese dort unbekannt. Auch, wenn wir im Hauptprogramm 2 Variablen gleichen Namens anlegen, handelt es sich um getrennte Variablen mit ihnen eigenen Werten!</p>
+</div>
+<p>Bei der Implementierung ist uns natürlich aufgefallen, dass der Code für jeden Berechnungsschritt stets identisch ist. Nur die Variablenwerte von <em>i_n</em> und <em>n_fak</em> ändern sich in jedem Schritt. Da wäre es schön, wenn solche sich immer wiederholenden Berechnungen von Python direkt unterstützt würden durch ein entsprechendes Konstrukt. Und in der Tat gibt eine ganze Reihe verschiedener Programmierkonstrukte sowohl in Python wie in anderen Programmiersprachen, die solche oft auftretenden sich wiederholenden Berechnungen unterstützen. Wir lernen als erstes die <em>while</em>-Schleife kennen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span> <span class="n">Anweisungen</span> <span class="n">vor</span> <span class="n">der</span> <span class="s1">&#39;while&#39;</span><span class="o">-</span><span class="n">Schleife</span>
+
+<span class="c1"># nach der Bedingung muss am Ende ein &#39;:&#39; stehen</span>
+<span class="k">while</span> <span class="n">Bedingung</span><span class="p">:</span>
+  <span class="c1"># dieser eingerückte Progammabschnitt wird solange ausgeführt, wie die</span>
+  <span class="c1"># Bedingung den Wert &#39;True&#39; ergibt / erfüllt ist</span>
+  <span class="o">...</span> <span class="n">tue</span> <span class="n">dies</span>
+  <span class="o">...</span> <span class="n">und</span> <span class="n">noch</span> <span class="n">mehr</span>
+
+<span class="c1"># wenn die Einrückung zu Ende ist, geht der Progammablauf nach dem Ende der Schleife hier weiter</span>
+<span class="o">...</span> <span class="n">Anweisungen</span> <span class="n">nach</span> <span class="n">der</span> <span class="s1">&#39;while&#39;</span><span class="o">-</span><span class="n">Schleife</span>
+</pre></div>
+</div>
+<p>Wichtig ist, dass im Schleifenkörper (so heißt der eingerückte Programmabschnitt innerhalb der <em>while</em>-Schleife) eine Anweisung mit Bezug zur <em>Bedingung</em> enthalten ist. Wenn die Bedingung nie erfüllt wird, bleibt das Programm bis in alle Ewigkeit in der Schleife!</p>
+<p>Ahnen Sie schon, wie leicht der Übergang unserer bisherigen Lösung mit den <em>if-else</em>-Konstrukten auf eine <em>while</em>-Schleife ist? Wir packen einfach die sich immer wiederholenden Berechnungsschritte in den Schleifenkörper und die Bedingung können wir auch direkt übernehmen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">fak</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="linenos"> 2</span>  <span class="c1"># Startwert der Berechnung</span>
+<span class="linenos"> 3</span>  <span class="c1"># Wir berechnen mindestens immer 0!</span>
+<span class="linenos"> 4</span>  <span class="n">i_n</span> <span class="o">=</span> <span class="mi">0</span>   <span class="c1"># i_n = Iterator i von 0 bis n</span>
+<span class="linenos"> 5</span>  <span class="c1"># Hiermit merken wir uns jeweils den zuletzt berechneten</span>
+<span class="linenos"> 6</span>  <span class="c1"># Fakultätswert</span>
+<span class="linenos"> 7</span>  <span class="n">n_fak</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># 0! = 1</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>  <span class="c1"># wir überprüfen, ob wir n noch nicht erreicht haben ...</span>
+<span class="linenos">10</span>  <span class="k">while</span>  <span class="n">i_n</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+<span class="linenos">11</span>    <span class="c1"># ... und solange gehen wir eine &quot;Zeile weiter&quot; =&gt; n! = (n-1)! n</span>
+<span class="linenos">12</span>    <span class="n">i_n</span> <span class="o">=</span> <span class="n">i_n</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="linenos">13</span>    <span class="n">n_fak</span> <span class="o">=</span> <span class="n">n_fak</span> <span class="o">*</span> <span class="n">i_n</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>  <span class="k">return</span> <span class="n">n_fak</span>
+</pre></div>
+</div>
+<p>Diese Lösung sieht doch recht kompakt und verständlich aus, oder? Falls wir dem &quot;Frieden“ nicht so recht trauen und genauer wissen möchten, was in jedem Schritt passiert, könnten wir uns in jedem Schleifendurchlauf die Werte der Variablen ausgeben lassen.</p>
+<div class="admonition-anmerkung admonition">
+<p class="admonition-title">Anmerkung</p>
+<p>Eine alternative Möglichkeit, sich den Programmablauf Schritt für Schritt anzuschauen, besteht in der Verwendung eines sog. Debuggers. Mit dessen Hilfe kann man jede Anweisung einzeln nacheinander ausführen und sich dabei die Werte aller Variablen anschauen. In nahezu allen Entwicklungsumgebungen sind Debugger integriert. Da die Bedienung je nach Entwicklungsumgebung etwas anders aussieht, macht eine &quot;allgemeine“ Darstellung hier keinen Sinn. Wir werden aber im Labor einmal gemeinsam mit dem in VS Code integrierten Debugger durch das Programm laufen.</p>
+</div>
+</section>
+<section id="aufgabe-2-2">
+<h2>Aufgabe 2.2<a class="headerlink" href="#aufgabe-2-2" title="Permalink to this heading"></a></h2>
+<p>Nun ist der Zeitpunkt gekommen, um den letzten großen Schritt zu tun: die allgemeine Formulierung unseres Programms für die Reihenentwicklung der Sinus-Funktion.</p>
+<p>Auch, wenn wir es hier - anders als bei der Fakultät - mit einer Reihe zu tun haben, können wir bei der Überlegung zur Formulierung des Algorithmus sehr ähnlich vorgehen. In diesem Fall haben wir es nämlich mit einer - theoretisch unendlichen - Menge stets gleich zu berechnender Summanden zu tun. Das <em>n.</em> Reihenglied ergibt sich nämlich wie folgt:</p>
+<div class="math notranslate nohighlight">
+\[(-1)^n \frac{x^{(2n+1)}}{(2n+1)!}\]</div>
+<p>Um die Reihe zu berechnen können wir iterativ so vorgehen:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+0:  \sum_{i=0}^{0} &amp;= (-1)^0 \frac{x^{(2 \cdot 0+1)}}{(2 \cdot 0+1)!} \\
+1:  \sum_{i=0}^{1} &amp;= (-1)^1 \frac{x^{(2 \cdot 1+1)}}{(2 \cdot 1+1)!} + \sum_{i=0}^{0} \\
+2:  \sum_{i=0}^{2} &amp;= (-1)^2 \frac{x^{(2 \cdot 2+1)}}{(2 \cdot 2+1)!} + \sum_{i=0}^{1} \\
+3:  \sum_{i=0}^{3} &amp;= (-1)^3 \frac{x^{(2 \cdot 3+1)}}{(2 \cdot 3+1)!} + \sum_{i=0}^{2} \\
+&amp;\ \ \vdots \\
+n:  \sum_{i=0}^{n} &amp;= (-1)^n \frac{x^{(2 \cdot n+1)}}{(2 \cdot n+1)!} + \sum_{i=0}^{n-1} \\
+\end{aligned}\end{split}\]</div>
+<p>Hierbei stehen Ausdrücke wie <span class="math notranslate nohighlight">\(\sum_{i=0}^{n}\)</span> als Platzhalter für die Teilsumme der ersten <em>n</em> Reihenglieder.</p>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Ändern Sie den bisherigen Code so ab, dass die hart codierte Zeile zur Berechnung der Reihe durch eine <em>while</em>-Schleife ersetzt wird, die nach dem 10. Reihenglied abbricht.</p>
+<p>Lösungshinweise:</p>
+<ol class="arabic simple">
+<li><p>das o.a. Summenglied bildet den Kern des Schleifenkörpers</p></li>
+<li><p>die in den Formeln enthaltene Variable <em>i</em> muss in jedem Schleifendurchlauf inkrementiert werden</p></li>
+<li><p>die Variable <em>i</em> dient auch zur Überprüfung der Abbruchbedingung, ob das  10. Reihenglied erreicht ist</p></li>
+</ol>
+</div>
+</section>
+<section id="beispiel-2-3">
+<h2>Beispiel 2.3<a class="headerlink" href="#beispiel-2-3" title="Permalink to this heading"></a></h2>
+<p>Natürlich gibt es auch eine bereits fertige Implementierung der <em>sin()</em>-Funktion in Python. Diese lässt sich allerdings nicht einfach so verwenden wie wir es bei <em>print()</em> und <em>input()</em> getan haben. Die beiden letzteren gehören zu den fest in Python integrierten Funktionen, die standardmäßig zur Verfügung stehen. Die allermeisten Funktionen (und das sind wirklich sehr, sehr viele!) stehen als Module/Bibliotheken zur Verfügung. I.d.R. sind in einem Modul mehrere inhaltlich verwandte Funktionen zusammengefasst. Wir werden später auch selber Module erstellen, wollen aber zunächst einmal deren Nutzung ins Auge nehmen. Um ein Modul verwenden zu können, müssen wir es in unserem Programm importieren/laden. Die <em>sin()</em>-Funktion finden wir im Modul mit dem Namen <em>math</em>, daher müssen wir dieses importieren:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># der Import muss vor der ersten Verwendung stehen, kann ansonsten</span>
+<span class="c1"># aber an jeder Stelle im Programm stehen</span>
+<span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+</div>
+<p>Um eine Funktion aus dem Modul zu nutzen, müssen wir deren Namen und die Parameter kennen. Bei der <em>sin()</em> sieht das Ganze dann so aus:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># der Import muss vor der ersten Verwendung stehen, kann ansonsten</span>
+<span class="c1"># aber an jeder Stelle im Programm stehen</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">3.1415</span><span class="o">/</span><span class="mf">4.0</span>
+
+<span class="c1"># Aufruf einer Funktion aus dem Modul im Format &quot;Modulname.Funktionsname&quot;</span>
+<span class="n">sin_x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Anhand des Aufrufs mit vorangestelltem Modulnamen wird gleich deutlich zu welchem Modul die <em>sin()</em>-Funktion gehört. Das sieht auf den ersten Blick vieleicht etwas umständlich aus, hat aber den Vorteil, dass es keinen Konflikt mit u.U. gleichnamigen Funktione in anderen Modulen gibt. Man spricht in diesem Zusammenhang auch von sog. Namensräumen. Wenn uns das zu umständlich erscheint, können wir aber auch anders vorgehen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Wir importieren nur die sin()-Funktion aus dem Modul...</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">3.1415</span><span class="o">/</span><span class="mf">4.0</span>
+
+<span class="c1"># ... und können diese dann ohne Modulnamensvorsatz aufrufen</span>
+<span class="n">sin_x</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Wenn wir mehrere Funktionen aus dem Modul nutzen wollen, können wir mit einer Wildcard auch alle Funktionen des Moduls importieren und direkt aufrufen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Wir importieren alle Funktionen aus dem Modul...</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">3.1415</span><span class="o">/</span><span class="mf">4.0</span>
+
+<span class="c1"># ... und können diese dann ohne Modulnamensvorsatz aufrufen</span>
+<span class="n">sin_x</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">cos_x</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Das hat wiederum den Nachteil, dass sich gleichnamige Funktionen leichter ins Gehege kommen und nicht direkt ersichtlich ist, zu welchem Modul die Funktionen gehören. Daher hat der Aufruf mit vorangestelltem Modulnamen durchaus seinen Charme. Und falls uns nur das dauernde Schreiben von <em>math</em> zu lang ist, gibt es auch hier Abhilfe, denn man kann einem Modul beim Import einen anderen Namen zuweisen, sozusagen eine Art &quot;Spitznamen“:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="nn">m</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mf">3.1415</span><span class="o">/</span><span class="mf">4.0</span>
+
+<span class="c1"># Aufruf einer Funktion aus dem Modul im Format &quot;Modul(spitz)name.Funktionsname&quot;</span>
+<span class="n">sin_x</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Nun müssen wir nur noch aufpassen, dass wir keine Variable oder Funktion mit der Bezeichnung <em>m</em> anlegen, denn dann gibts Probleme.</p>
+<div class="admonition-merke admonition">
+<p class="admonition-title">Merke</p>
+<p>Für viele Module haben sich in der Python-Gemeinde Standards für die abkürzenden &quot;Kurz“-Bezeichnungen vieler Module herausgebildet. So wird beispielsweise die Numerik-Bibliothek <em>numpy</em> immer als <em>np</em> importiert und die Bildverarbeitungs-Bibliothek <em>opencv</em> als <em>cv</em>.</p>
+</div>
+<p>Mit diesem Wissen können wir unsere Aufgabenstellung zur Sinus-Berechnung nun so schreiben:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Modul importieren</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">math</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Berechnung von sin(x) mittels endlicher Reihe&#39;</span><span class="p">)</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="n">x_deg</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Geben Sie x in Grad ein! &#39;</span><span class="p">))</span>
+<span class="linenos"> 7</span><span class="c1"># im Modul &#39;math&#39; sind auch wichtige mathematische Konstanten wie PI definiert</span>
+<span class="linenos"> 8</span><span class="n">x_rad</span> <span class="o">=</span> <span class="n">x_deg</span><span class="o">/</span><span class="mf">180.0</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+<span class="linenos"> 9</span><span class="c1"># zur Berechnung nutzen wir nun die vordefinierte sin()-Funktion</span>
+<span class="linenos">10</span><span class="n">sin_x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x_rad</span><span class="p">)</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;sin(&#39;</span><span class="p">,</span><span class="n">x_deg</span><span class="p">,</span><span class="s1">&#39;) = &#39;</span><span class="p">,</span> <span class="n">sin_x</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="aufgabe-2-3">
+<h2>Aufgabe 2.3<a class="headerlink" href="#aufgabe-2-3" title="Permalink to this heading"></a></h2>
+<p>Zum Abschluss dieser Übungseinheit soll jetzt eine etwas umfangreichere Aufgabe möglichst eigenständig bearbeitet werden.</p>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Wir wollen das Ergebnis unserer selbst programmierten <em>sin()</em>-Funktion mit der im Modul <em>math</em> definierten Funktion einmal direkt vergleichen. Damit das auch programmiertechnisch elegant gelingt, soll im ersten Schritt unsere Sinusberechnung in eine Funktion gepackt werden:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_sin</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="o">...</span> <span class="c1"># hier muss die Berechnung hin</span>
+  <span class="k">return</span> <span class="n">sin_x</span>
+</pre></div>
+</div>
+<p>Dann muss das Hauptprogramm noch geändert werden:</p>
+<ol class="arabic simple">
+<li><p>Es muss sowohl <em>math.sin()</em> wie <em>my_sin()</em> aufgerufen werden und die Rückgabewerten in unterschiedlichen Variablen gespeichert werden.</p></li>
+<li><p>Es müssen 2 <em>print()</em>-Ausgaben für beide Ergebniswerte erfolgen.</p></li>
+</ol>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="exercise_01.html" class="btn btn-neutral float-left" title="1. Übung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Prof. Dr.-Ing. Volker von Holt.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

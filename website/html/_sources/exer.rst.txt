@@ -1,0 +1,12 @@
+
+
+Übungen
+=======
+
+
+.. toctree::
+   :maxdepth: 2
+
+   exercises/exercise_01
+   exercises/exercise_02
+
