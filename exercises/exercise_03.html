@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2. Übung &mdash; IPP - Ingenieurwissenschaftliches Programmieren mit Python 0.1 Dokumentation</title>
+  <title>3. Übung &mdash; IPP - Ingenieurwissenschaftliches Programmieren mit Python 0.1 Dokumentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,8 +26,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
-    <link rel="next" title="3. Übung" href="exercise_03.html" />
-    <link rel="prev" title="1. Übung" href="exercise_01.html" /> 
+    <link rel="prev" title="2. Übung" href="exercise_02.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,7 +54,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../theory.html">Grundlagen der Programmierung</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../exer.html">Übungen</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="exercise_01.html">1. Übung</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2. Übung</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exercise_02.html">2. Übung</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3. Übung</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#beispiel-2-1">Beispiel 2.1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#aufgabe-2-1">Aufgabe 2.1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#beispiel-2-2">Beispiel 2.2</a></li>
@@ -64,7 +64,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#aufgabe-2-3">Aufgabe 2.3</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="exercise_03.html">3. Übung</a></li>
 </ul>
 </li>
 </ul>
@@ -84,9 +83,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../exer.html">Übungen</a></li>
-      <li class="breadcrumb-item active">2. Übung</li>
+      <li class="breadcrumb-item active">3. Übung</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/exercises/exercise_02.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+            <a href="../_sources/exercises/exercise_03.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
       </li>
   </ul>
   <hr/>
@@ -95,7 +94,32 @@
            <div itemprop="articleBody">
              
   <section id="ubung">
-<h1>2. Übung<a class="headerlink" href="#ubung" title="Permalink to this heading"></a></h1>
+<h1>3. Übung<a class="headerlink" href="#ubung" title="Permalink to this heading"></a></h1>
+<p>In den ersten beiden Übungen haben wir schon einige der elementaren Datentypen, die Python - wie jede andere Programmiersprache auch - besitzt. Darunter waren mit <em>integer</em> und <em>float</em> zwei Datentypen, mit denen wir numerische Werte repräsentieren können. Wenn wir</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">f</span> <span class="o">=</span> <span class="mf">3.1415</span>
+</pre></div>
+</div>
+<p>codieren, so speichern wir <strong>EINEN</strong> numerischen Wert vom Typ <em>integer</em> unter dem Namen <em>a</em> ab und <strong>EINEN</strong> numerischen Wert vom Typ <em>float</em> unter dem Namen <em>f</em> ab. Wenn wir hingegen</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Ich bin ein String&#39;</span>
+</pre></div>
+</div>
+<p>in unser Programm schreiben, dann legen wir <strong>EINE</strong> ZeichenKETTE unter dem Namen <em>s</em> an, die aber aus mehreren einzelnen Zeichen aufgebaut sind, die jedes für sich auch einen eigenen Wert darstellen, der in einer getrennten Variablen gespeichert sein könnte:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">l11</span> <span class="o">=</span> <span class="s1">&#39;I&#39;</span>
+<span class="n">l12</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span>
+<span class="n">l13</span> <span class="o">=</span> <span class="s1">&#39;h&#39;</span>
+<span class="n">l21</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span>
+<span class="n">l22</span> <span class="o">=</span> <span class="s1">&#39;i&#39;</span>
+<span class="n">l23</span> <span class="o">=</span> <span class="s1">&#39;n&#39;</span>
+<span class="n">l31</span> <span class="o">=</span> <span class="s1">&#39;h&#39;</span>
+<span class="n">l32</span> <span class="o">=</span> <span class="s1">&#39;i&#39;</span>
+<span class="n">l33</span> <span class="o">=</span> <span class="s1">&#39;e&#39;</span>
+<span class="n">l34</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span>
+<span class="n">space</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">l11</span> <span class="o">+</span> <span class="n">l12</span> <span class="o">+</span> <span class="n">l13</span> <span class="o">+</span> <span class="n">space</span> <span class="o">+</span> <span class="n">l21</span> <span class="o">+</span> <span class="n">l22</span> <span class="o">+</span> <span class="n">l23</span> <span class="o">+</span> <span class="n">space</span> <span class="o">+</span> <span class="n">l31</span> <span class="o">+</span> <span class="n">l32</span> <span class="o">+</span> <span class="n">l33</span> <span class="o">+</span> <span class="n">l34</span>
+</pre></div>
+</div>
 <section id="beispiel-2-1">
 <h2>Beispiel 2.1<a class="headerlink" href="#beispiel-2-1" title="Permalink to this heading"></a></h2>
 <p>Bislang haben wir zwar einiges ausprobiert, um Python etwas näher kennenzulernen, haben aber noch keine richtige Aufgabe im Sinne der Informationsverarbeitung umgesetzt. Das wollen wir nun ändern, indem wir einen Algorithmus zur Berechnung der Sinus-Funktion programmieren. Vom Taschenrechner her ist man gewohnt, dass es eine dedizierte Taste mit der Aufschrift <em>sin()</em> zur Berechnung dieser Funktion gibt. Aber die wenigsten werden sich schon einmal gefragt haben, wie die Berechnung im Taschenrechner umgesetzt ist. Man könnte z.B. eine große Wertetabelle im Speicher ablegen, aber es geht viel einfacher und eleganter mit den für die trigonometrischen Funktionen bekannten Reihenentwicklungen. (Die hatten Sie bestimmt schon einmal in der Mathematik!)</p>
@@ -477,8 +501,7 @@ n:  \sum_{i=0}^{n} &amp;= (-1)^n \frac{x^{(2 \cdot n+1)}}{(2 \cdot n+1)!} + \sum
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="exercise_01.html" class="btn btn-neutral float-left" title="1. Übung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
-        <a href="exercise_03.html" class="btn btn-neutral float-right" title="3. Übung" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="exercise_02.html" class="btn btn-neutral float-left" title="2. Übung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
     </div>
 
   <hr/>

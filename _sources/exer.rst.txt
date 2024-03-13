@@ -9,4 +9,5 @@
 
    exercises/exercise_01
    exercises/exercise_02
+   exercises/exercise_03
 
