@@ -22,9 +22,11 @@
         <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../_static/copybutton.js?v=f281be69"></script>
         <script src="../_static/translations.js?v=70a09b52"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
     <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="4. Übung" href="exercise_04.html" />
     <link rel="prev" title="2. Übung" href="exercise_02.html" /> 
 </head>
 
@@ -61,8 +63,19 @@
 <li class="toctree-l4"><a class="reference internal" href="#for-schleifen"><em>for</em>-Schleifen</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-3-1">Aufgabe 3.1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#aufgabe-3-1-1">Aufgabe 3.1.1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#aufgabe-3-1-2">Aufgabe 3.1.2</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-3-2">Beispiel 3.2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dateiausgabe">Dateiausgabe</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-3-2">Aufgabe 3.2</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_04.html">4. Übung</a></li>
 </ul>
 </li>
 </ul>
@@ -325,6 +338,133 @@
 </div>
 </section>
 </section>
+<section id="aufgabe-3-1">
+<h2>Aufgabe 3.1<a class="headerlink" href="#aufgabe-3-1" title="Permalink to this heading"></a></h2>
+<section id="aufgabe-3-1-1">
+<h3>Aufgabe 3.1.1<a class="headerlink" href="#aufgabe-3-1-1" title="Permalink to this heading"></a></h3>
+<p>Wir greifen die Berechnung der Sinus-Funktion wieder auf, wollen dieses Mal aber keinen einzelnen Wert berechnen. Vielmehr wollen wir die Funktionswerte für ein ganzes Intervall berechnen und uns im nächsten Schritt ausgeben lassen.</p>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Es soll im ersten Schritt ein Programm erstellt werden, dass den Sinuswert für einen Reihe von Stützpunkten berechnet und in Form einer Liste abspeichert:</p>
+<ol class="arabic simple">
+<li><p>das Werteintervall soll <span class="math notranslate nohighlight">\(0...2\pi\)</span> beigetragen</p></li>
+<li><p>es sollen <span class="math notranslate nohighlight">\(n=100\)</span> Stützpunkte berechnet werden</p></li>
+<li><p>sowohl das Argument <span class="math notranslate nohighlight">\(x\)</span> wie das Ergebnis <span class="math notranslate nohighlight">\(sin(x)\)</span> sollen in jeweils einer Liste abgelegt werden</p></li>
+<li><p>die Berechnung soll mithilfe einer <em>for</em>-Schleife erfolgen</p></li>
+<li><p>nach Berechnung aller Werte sollen die Wertepaare <span class="math notranslate nohighlight">\((x, sin(x))\)</span>  zeilenweise auf der Konsole ausgegeben werden</p></li>
+</ol>
+</div>
+<p>Lösungshinweise:</p>
+<ul class="simple">
+<li><p>leere Listen werden mit <em>= []</em> erzeugt</p></li>
+<li><p>anhand der Anzahl der Stützpunkte und der Größe des Werteintervalls lässt sich eine Schrittweite berechnen, um die das Argument von Berechnung zu Berechnung wachsen muss</p></li>
+<li><p>es empfiehlt sich, sowohl das Werteintervall wie die Anzahl der Stützpunkte nicht &quot;hart“ zu codieren, sondern in Variablen abzulegen</p></li>
+</ul>
+</section>
+<section id="aufgabe-3-1-2">
+<h3>Aufgabe 3.1.2<a class="headerlink" href="#aufgabe-3-1-2" title="Permalink to this heading"></a></h3>
+<p>Unser Programm aus Aufgabe 3.1.1 soll nun etwas flexibler werden indem wir einige Parameter von den Nutzern abfragen.</p>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Das Programm aus Aufgabe 3.1.1 soll um folgende Merkmale ergänzt werden:</p>
+<ol class="arabic simple">
+<li><p>Abfrage des Namens für die Ausgabedatei</p></li>
+<li><p>Abfrage der Anzahl an Stützpunkten für die Sinus-Funktion</p></li>
+</ol>
+</div>
+</section>
+</section>
+<section id="beispiel-3-2">
+<h2>Beispiel 3.2<a class="headerlink" href="#beispiel-3-2" title="Permalink to this heading"></a></h2>
+<section id="dateiausgabe">
+<h3>Dateiausgabe<a class="headerlink" href="#dateiausgabe" title="Permalink to this heading"></a></h3>
+<p>Während die Konsole für die Ein- und Ausgabe &quot;einfach da ist“, müssen Dateien explizit für die Arbeit mit ihnen geöffnet und geschlossen werden:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Datei öffnen</span>
+<span class="linenos"> 2</span><span class="n">fd</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datei_1.txt&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>    <span class="c1"># open(filename, mode)</span>
+<span class="linenos"> 3</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dateiname: &#39;</span><span class="p">,</span> <span class="n">fd</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1"># mit write() können wir einen STRING in die Datei schreiben</span>
+<span class="linenos"> 6</span><span class="n">fd</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Eine sinnfreier Text&#39;</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="c1"># ... und noch einen</span>
+<span class="linenos"> 8</span><span class="n">fd</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Eine sinnfreier Text&#39;</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="c1"># ... und einer geht noch</span>
+<span class="linenos">10</span><span class="n">fd</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Eine sinnfreier Text&#39;</span><span class="p">)</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="c1"># Datei schließen</span>
+<span class="linenos">13</span><span class="n">fd</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>In dem vorstehenden Programm nutzen wir die &quot;normale“ Funktion <em>open()</em> um die Datei zu öffnen. Bei erfolgreichem Öffnen (wenn etwas schiefgeht wird eine <em>exception</em> ausgelöst) enthält die hier als <em>fd</em> bezeichnete Variable ein Objekt mit dem wir Dateifunktionen (in objektorientierter Notation) ausführen können. Mit <em>write(string)</em> schreiben wir dann den gleichen String dreimal nacheinander in die Datei und am Ende schließen wir diese wieder.</p>
+<p>Wenn wir nun die Datei im Editor öffnen und sie uns anschauen, sehen wir, dass alle drei Strings in eine Zeile geschrieben wurde. Ein Zeilenumbruch hat also nicht stattgefunden. Anders als die uns von der Konsole bekannte <em>print()</em>-Funktion gibt <em>write()</em> nicht automatisch am Ende einen Zeilenvorschub aus, vor allem aber verarbeitet <em>write()</em> in diesem Fall wirklich nur Zeichenketten, wie wir in diesem Fall sehen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Datei öffnen</span>
+<span class="n">fd</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datei_1.txt&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dateiname: &#39;</span><span class="p">,</span> <span class="n">fd</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># Versuch mit write() einen Integerwert in die Datei zu schreiben</span>
+<span class="n">fd</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="c1"># ... hierhin kommen wir schon gar nicht mehr</span>
+
+<span class="c1"># Datei schließen</span>
+<span class="n">fd</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Wir erinnern uns, dass wir beim Einlesen von der Konsole schon einmal den umgekehrten Fall hatten: <em>input()</em> lieferte uns einen String, den wir mit <em>float(input())</em> in einen Float-Wert umgewandelt haben - sofern der eingegebene String in eine Zahl umwandelbar war. Analog gibt es auch eine Funktion mit der wir aus einem Zahlenwert einen String machen können: <em>str(Zahlenwert)</em>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Datei öffnen</span>
+<span class="n">fd</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datei_1.txt&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dateiname: &#39;</span><span class="p">,</span> <span class="n">fd</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># Versuch mit write() einen Integerwert in die Datei zu schreiben</span>
+<span class="n">fd</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">42</span><span class="p">))</span>
+<span class="c1"># ... hierhin kommen wir schon gar nicht mehr</span>
+
+<span class="c1"># Datei schließen</span>
+<span class="n">fd</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Wir können aber der Funktion <em>write()</em> als Argument auch einen z.B. mittels '<em>+</em>‘ erzeugten String aus mehreren Bestandteilen übergeben. Und insbesondere können wir im String auch sog. Formatanweisungen übergeben: '\n‘ löst einen Zeilenumbruch aus, '\t‘ entspricht einem Tabulatorb (es gibt noch weitere Formatanweisungen für Strings):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Datei öffnen</span>
+<span class="n">fd</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datei_1.txt&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dateiname: &#39;</span><span class="p">,</span> <span class="n">fd</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># eine Zeile mit einem Zahlenwert</span>
+<span class="n">fd</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1"># eine Zeile mit einem komponierten String</span>
+<span class="n">fd</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mf">3.1415</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="o">+</span><span class="s1">&#39;gleich kommt einen Zeilenumbruch</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Datei schließen</span>
+<span class="n">fd</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Damit haben wir nun genug Wissen, um zumindest etwas in eine Datei schreiben zu können. Den umgekehrten Weg, das Einlesen von Daten aus einer Datei, werden wir uns etwas später anschauen.</p>
+<div class="admonition-merke admonition">
+<p class="admonition-title">Merke</p>
+<p>Bei Dateien unterscheidet man primär zwischen zwei unterschiedlichen Bearbeitungsformen: Textdateien und Binärdateien. Textdateien sind grundsätzlich für uns Menschen lesbar, während Binärdateien codierte Informationen enthalten und nur mit den entsprechenden Codier-/Decodierverfahren geschrieben und gelesen werden können (z.B. Office-Dateien im <em>*.docx</em> oder <em>*xlsx</em> Format). Die Funktionen zur Dateibearbeitung in Python sind für beide Formate die selben, wir müssen Python aber mitteilen in welchem Format die Datei sein soll. Dazu gibt es im Aufruf der Funktion <em>open(filename, mode)</em> den Parameter <em>mode</em>, der u.a. folgende Werte annehmen kann:</p>
+<ul class="simple">
+<li><p>'<em>wt</em>‘ (oder '<em>w</em>‘): Textdatei zum Schreiben öffnen</p></li>
+<li><p>'<em>rt</em>‘ (oder '<em>r</em>‘): Textdatei zum Lesen öffnen</p></li>
+<li><p>'<em>wb</em>‘: Binärdatei zum Schreiben öffnen</p></li>
+<li><p>'<em>rb</em>‘: Binärdatei zum Lesen öffnen</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="aufgabe-3-2">
+<h2>Aufgabe 3.2<a class="headerlink" href="#aufgabe-3-2" title="Permalink to this heading"></a></h2>
+<p>In Fortsetzung der Aufgabe 3.1. wollen wir unsere neu gewonnenen Erkenntnisse über den Umgang mit Dateien gleich in die Tat umsetzen.</p>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Das in Aufgabe 3.1 entstandene Programm ist so zu modifizieren, dass:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>die Ausgabe der Listen für <em>x</em> und <em>sin_x</em> in eine Textdatei geschrieben wird - jedes Wertepaar <em>(x, sin_x)</em> in einer separaten Zeile</p></li>
+<li><p>der Dateiname soll von den Nutzern erfragt werden</p></li>
+<li><p>nach dem Schreiben der Datei eine Meldung folgender Form auf der Konsole ausgegeben wird: &quot;<em>n</em> Datensätze in der Datei <em>filename</em> gespeichert“ (<em>n</em> und <em>filename</em> sind durch die aktuellen Werte zu ersetzen)</p></li>
+<li><p>die Ausgabe der Listen auf der Konsole soll im Gegenzug entfallen</p></li>
+</ol>
+</div></blockquote>
+</div>
+<p>Nach der Aufgabe kontrollieren wir das Ergebnis unserer Dateiausgabe - wenn alles in Ordnung ist, sollte unsere Datei über 100 Zeilen mit 2 Spalten verfügen.</p>
+</section>
 </section>
 
 
@@ -332,6 +472,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="exercise_02.html" class="btn btn-neutral float-left" title="2. Übung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+        <a href="exercise_04.html" class="btn btn-neutral float-right" title="4. Übung" accesskey="n" rel="next">Weiter <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

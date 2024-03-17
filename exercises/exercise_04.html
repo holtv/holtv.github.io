@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. Übung &mdash; IPP - Ingenieurwissenschaftliches Programmieren mit Python 0.1 Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=9d4e32a3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="prev" title="3. Übung" href="exercise_03.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            IPP - Ingenieurwissenschaftliches Programmieren mit Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhalt:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Grundlagen der Programmierung</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../exer.html">Übungen</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="exercise_01.html">1. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_02.html">2. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_03.html">3. Übung</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4. Übung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-4-1">Beispiel 4.1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dateieingabe">Dateieingabe</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-4-2">Beispiel 4.2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#grafische-ausgabe-mit-der-matplotlib">Grafische Ausgabe mit der Matplotlib</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-4-1">Aufgabe 4.1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IPP - Ingenieurwissenschaftliches Programmieren mit Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../exer.html">Übungen</a></li>
+      <li class="breadcrumb-item active">4. Übung</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/exercises/exercise_04.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ubung">
+<h1>4. Übung<a class="headerlink" href="#ubung" title="Permalink to this heading"></a></h1>
+<section id="beispiel-4-1">
+<h2>Beispiel 4.1<a class="headerlink" href="#beispiel-4-1" title="Permalink to this heading"></a></h2>
+<section id="dateieingabe">
+<h3>Dateieingabe<a class="headerlink" href="#dateieingabe" title="Permalink to this heading"></a></h3>
+<p>Das Einlesen einer Datei setzt sowohl bei Text- wie bei Binärdateien immer voraus, dass wir wissen in welchem Format die Daten in der Datei enthalten sind. Für unsere Sinus-Wertetabelle wissen wir, dass es sich um zwei Werte pro Zeile handelt, von denen der erste Wert das Arguments <em>x</em> ist und der zweite Wert der Funktionswert <em>sin(x)</em> ist. Aber wie müssen wir nun vorgehen, um mit unserem bisherigen Wissen die Datei einlesen zu können und die Werte für <em>x</em> und <em>sin(x)</em> zur weiteren Verarbeitung wieder in einer Dateistruktur abzulegen? Wir wollen uns dies zunächst noch nicht in echtem Python-Code anschauen, sondern wollen das Ganze in einer Art umgangssprachlichem Pseudo-Code schreiben:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Öffne Datei
+
+Für alle Zeilen der Datei:
+  Lese Zeile ein
+  Trenne die Zeile in ihre (String-)Bestandteile x und sin(x)
+  Wandle die (Teil-)Strings für x und sin(x) in Zahlenwerte um
+  Speichere die Zahlenwerte für x und sin(x) in einer Liste
+
+Schließe Datei
+
+Verarbeite die Daten
+</pre></div>
+</div>
+<p>Auf den ersten Blick mag das etwas aufwendig aussehen, tatsächlich ist es aber genau die Umkehrung der Aktionen, die wir beim Speichern der Daten durchgeführt haben. Obwohl wir den o.a. Pseudo-Code in der gegebenen Form in Python umsetzen könnten, wollen wir das &quot;Programm“ noch ein klein wenig abändern:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Öffne Datei
+
+Lese alle Zeilen der Datei in eine String-Liste ein
+
+Für alle Einträge in der String-Liste:
+  Trenne den Eintrag in seine (String-)Bestandteile x und sin(x)
+  Wandle die (Teil-)Strings für x und sin(x) in Zahlenwerte um
+  Speichere die Zahlenwerte für x und sin(x) in einer Liste
+
+Schließe Datei
+
+Verarbeite die Daten
+</pre></div>
+</div>
+<p>Mit dieser Änderung können wir es nämlich noch einfacher in Python realisieren:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Einlesen einer Werte-Tabelle&#39;</span><span class="p">)</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">file_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Wie lautet der Dateiname? &#39;</span><span class="p">)</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1"># Datei öffnen</span>
+<span class="linenos"> 6</span><span class="n">fd</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># Jetzt lesen wir alle Zeilen der Datei auf einmal ein. Die Funktion</span>
+<span class="linenos"> 9</span><span class="c1"># &#39;readlines()&#39; liefert uns eine Liste zurück, in der jeder Eintrag einer</span>
+<span class="linenos">10</span><span class="c1"># Zeile der Datei entspricht.</span>
+<span class="linenos">11</span><span class="n">Lines</span> <span class="o">=</span> <span class="n">fd</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1"># wir erzeugen 2 leere Liste für x und y ...</span>
+<span class="linenos">14</span><span class="n">x_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">15</span><span class="n">y_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="c1"># ... und arbeiten nun die Einträge der String-Liste</span>
+<span class="linenos">18</span><span class="c1"># nacheinander ab</span>
+<span class="linenos">19</span><span class="k">for</span> <span class="n">Line</span> <span class="ow">in</span> <span class="n">Lines</span><span class="p">:</span>
+<span class="linenos">20</span>  <span class="c1"># &#39;split()&#39; spaltet eine String in einzelne Wörter auf, als Trennzeichen</span>
+<span class="linenos">21</span>  <span class="c1"># werden alle sog. &quot;Whitespace-Character&quot; angenommen (&#39; &#39; und &#39;,&#39; und &#39;.&#39; etc.)</span>
+<span class="linenos">22</span>  <span class="n">line_elements</span> <span class="o">=</span> <span class="n">Line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="linenos">23</span>  <span class="c1"># jetzt wandeln wir die Teilstrings wieder in numerische Werte für x und y</span>
+<span class="linenos">24</span>  <span class="n">x_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">line_elements</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="linenos">25</span>  <span class="n">y_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">line_elements</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="c1"># und geben das Ganze zur Kontrolle auf der Konsole aus</span>
+<span class="linenos">28</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_list</span><span class="p">)):</span>
+<span class="linenos">29</span>  <span class="nb">print</span><span class="p">(</span><span class="n">x_list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">y_list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Eine interessante Variante für die <em>for</em>-Schleife in den Zeilen 28/29 ist der folgende Code (bei dem wir uns natürlich fragen, wie das wohl funktioniert):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x_list</span><span class="p">,</span> <span class="n">y_list</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="beispiel-4-2">
+<h2>Beispiel 4.2<a class="headerlink" href="#beispiel-4-2" title="Permalink to this heading"></a></h2>
+<section id="grafische-ausgabe-mit-der-matplotlib">
+<h3>Grafische Ausgabe mit der Matplotlib<a class="headerlink" href="#grafische-ausgabe-mit-der-matplotlib" title="Permalink to this heading"></a></h3>
+<p>Nachdem das bisher alles recht gut geklappt hat, werden wir etwas mutiger und wollen uns eine größere Herausforderung vornehmen - die grafische Darstellung von Kurvenverläufen. Für grafische Ausgaben, bei denen es darum mathematische Inhalte darzustellen, gibt es in Python das Modul <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>, das einen wirklich mächtigen Funktionsumfang bereitstellt. Das Modul gehört nicht zur Standard-Python-Distribution, die wir installiert haben, aber wir können es einfach nachinstallieren. Dazu gehen wir in eine Konsole, in der die virtuelle Umgebung aktiviert ist, in die wir das Paket installieren wollen.</p>
+<p>Unter Windows geben wir folgende Kommandozeile ein:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; pip install matplotlib
+</pre></div>
+</div>
+<p>Unter Linux und MacOS hingegen:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip3 install matplotlib
+</pre></div>
+</div>
+<p>Für den Einstieg nutzen wir natürlich nur einen Bruchteil der Funktionalität des Moduls und wollen uns auch gar nicht lange mit Erklärungen aufhalten, sondern gleich in die Vollen gehen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Import des Moduls</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1"># wir legen 2 Listen mit Testwerten an</span>
+<span class="linenos"> 5</span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="linenos"> 6</span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># dann folgt das Anlegen des Plot-Objekts</span>
+<span class="linenos"> 9</span><span class="c1"># fig (figure): Objekt, das das Plotfenster repräsentiert</span>
+<span class="linenos">10</span><span class="c1"># ax (axes):  Objekt, das das Koordinatensystem repräsentiert</span>
+<span class="hll"><span class="linenos">11</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span><span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1"># jetzt plotten wir unsere Testwerte in der Form &quot;y über x&quot;</span>
+<span class="hll"><span class="linenos">14</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span><span class="linenos">15</span>
+<span class="linenos">16</span><span class="c1"># und wenn alles fertig ist, dann erst &quot;veröffentlichen&quot; wir das Plotfenster</span>
+<span class="hll"><span class="linenos">17</span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></pre></div>
+</div>
+<p>Wenn wir das Programm laufen lassen, sollte das Ergebnis in etwa so aussehen:</p>
+<figure class="align-default" id="label-img-matplotlib-01">
+<a class="reference internal image-reference" href="../_images/matplotlib_01.png"><img alt="../_images/matplotlib_01.png" src="../_images/matplotlib_01.png" style="width: 513.6px; height: 427.20000000000005px;" /></a>
+</figure>
+<p>Wie wir sehen, &quot;zaubert“ die <em>Matplotlib</em> aus den wenigen Zeilen Code etwas druchaus ansehnliches: Es gibt einen Digrammrahmen, die Achsen besitzen Skalen, das Digramm wird auch passend zu den Daten skaliert und das Plotfenster kann beispielsweise vergrößert oder auch gespeichert werden und mehr. Und das Ganze mit nur drei Zeilen Python:</p>
+<dl class="simple">
+<dt>Zeile 11:</dt><dd><p>Wir lassen uns von der <em>Matplotlib</em> durch die Funktion <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots">plt.subplots()</a> ein Objekt zum Plotten erzeugen und erhalten <strong>zwei</strong> Rückgabewerte von <strong>einer</strong> Funktion:</p>
+<ol class="arabic simple">
+<li><p>ein Objekt zur Verwaltung des eigentlichen Plot-Fensters</p></li>
+<li><p>ein Objekt zum tatsächlichen Zeichnen in das Achsenkreuz des Plot-Objekts</p></li>
+</ol>
+</dd>
+<dt>Zeile 14:</dt><dd><p>Hier plotten wir unsere Testwerte, indem wir die Funktion <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot">ax.plot()</a> des <em>axes</em>-Objekts mit den darzustellenden Werten aufrufen.</p>
+</dd>
+<dt>Zeile 17:</dt><dd><p>Alle bisherigen Aktionen fanden für die Nutzer unsichtbar im Verborgenen statt. Mit <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show">plt.show()</a> wird der Plot zur Anzeige gebracht … und muss geschlossen werden, damit das Programm weiterläuft und sich beendet.</p>
+</dd>
+</dl>
+<div class="admonition-merke admonition">
+<p class="admonition-title">Merke</p>
+<p>Funktionen können in Python eine (theoretisch) unbegrenzte Zahl an Rückgabewerten liefern:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">funktion</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">):</span>
+<span class="linenos"> 2</span>  <span class="c1"># tue ein paar Dinge ...</span>
+<span class="linenos"> 3</span>  <span class="o">...</span>
+<span class="linenos"> 4</span>  <span class="c1"># ... und liefere 3 Werte zurück</span>
+<span class="linenos"> 5</span>  <span class="k">return</span> <span class="n">ret_1</span><span class="p">,</span> <span class="n">ret_2</span><span class="p">,</span> <span class="n">ret_3</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1"># Aufruf der Funktion:</span>
+<span class="linenos"> 8</span><span class="c1"># so...</span>
+<span class="hll"><span class="linenos"> 9</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="o">=</span> <span class="n">funktion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span><span class="linenos">10</span><span class="c1"># ...oder so...</span>
+<span class="hll"><span class="linenos">11</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">funktion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span><span class="linenos">12</span><span class="c1"># ...oder so</span>
+<span class="hll"><span class="linenos">13</span><span class="n">d</span> <span class="o">=</span> <span class="n">funktion</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span><span class="linenos">14</span><span class="c1"># d: (ret_1, ret_2, ret_3)</span>
+</pre></div>
+</div>
+<p>Auch wenn der Aufruf und die Übernahme der Rückgabewerte in allen drei Fällen (Zeilen 7, 9, 11) etwas anders aussieht, steckt dahinter tatsächlich immer der gleiche Mechanismus. Bei der Rückgabe von mehreren Werten, werden diese als sog. Tupel zurückgegeben. Ein Tupel in Python kann ähnlich wie eine Liste eine Reihe von Werten unterschiedlichen Datentyps enthalten. Die Werte eines Tupels werden durch <em>( )</em> eingeschlossen (zur Erinnerung: Listen durch <em>[ ]</em>). Der wesentliche Unterschied zwischen beiden Datenstrukturen ist, dass wir bei einem Tupel die Werte nachträglich nicht mehr verändern können, bei Listen hingegen schon.</p>
+</div>
+<p>Wir können den Plot noch in vielfältiger Weise anpassen oder um weitere Darstellungselemente ergänzen, z.B.:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Import des Moduls</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1"># wir legen 2 Listen mit Testwerten an</span>
+<span class="linenos"> 5</span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="linenos"> 6</span><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># dann folgt das Anlegen des Plot-Objekts</span>
+<span class="linenos"> 9</span><span class="c1"># fig (figure): Objekt, das das Plotfenster repräsentiert</span>
+<span class="linenos">10</span><span class="c1"># ax (axes):  Objekt, das das Koordinatensystem repräsentiert</span>
+<span class="linenos">11</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1"># jetzt plotten wir unsere Testwerte in der Form &quot;y über x&quot;</span>
+<span class="linenos">14</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="c1"># wir können selber die Grenzen der Achsen festlegen ...</span>
+<span class="linenos">17</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">+</span><span class="mi">10</span><span class="p">)</span>
+<span class="linenos">18</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+<span class="linenos">19</span><span class="c1"># ... und die Achsen beschriften ...</span>
+<span class="linenos">20</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="linenos">21</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="linenos">22</span><span class="c1"># ... und ein Gitter hinterlegen ...</span>
+<span class="linenos">23</span><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="linenos">24</span><span class="c1"># ... und am Ende das Ganze mit einer Überschrift garnieren</span>
+<span class="linenos">25</span><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Unser erster Plot mit Python&#39;</span><span class="p">)</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="c1"># und wenn alles fertig ist, dann erst &quot;veröffentlichen&quot; wir das Plotfenster</span>
+<span class="linenos">28</span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Das sieht immer noch alles sehr einfach aus, interessant wird es aber, wenn wir die Standardeinstellungen für den Plot verändern wollen, z.B. eine andere  Linienfarbe oder eine gestrichelte Linie haben möchten. Werfen wir einmal einen Blick auf die Definition der Funktion <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot">ax.plot()</a> (bitte dem Link zur Originaldokumentation folgen). Beim Blick darauf kann man schon mal die Orientierung verlieren, was man wie alles machen können soll. Hier nur einmal die &quot;Grundform“ des Funktionsaufrufs:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">scalex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">scaley</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>*args:</dt><dd><p>Mit den &quot;arguments“ sind die Daten gemeint, die geplotted werden sollen. '*‘ deshab, weil wir die Daten in unterschiedlicher Form übergeben können, ebenso wie einen oder mehrere Datensätze.</p>
+</dd>
+<dt>scalex=True, scaley=True, data=None:</dt><dd><p>Dies sind Argumente mit Defaultwerten. Übergeben wir diese Argumente nicht explizit, dann werden die Defaultwerte verwendet. (Zu dieser Form der Datenübergabe gleich mehr.)</p>
+</dd>
+<dt>**kwargs:</dt><dd><p>Mit den &quot;keyword-arguments“ ist eine Aufzählung variabler Länge von Modifikationsparametern gemeint. Auch diese Parameter haben Standardwerte hinterlegt, die wir ändern können, z.B. ändern wir durch das 'kwarg‘ <code class="code docutils literal notranslate"><span class="pre">color='r'</span></code> die Farbe der zu plottenden Kurve in 'red‘.</p>
+</dd>
+</dl>
+<p>Die Mächtigkeit des Funktionsaufruf ist tatsächlich so, dass wir als Anfänger uns am besten immer an Beispielen orientieren, um von da aus weiterzukommen. Daneben ist es wichtig, bei Unklarheiten einfach ein kleines Testprogramm zu schreiben und die Parameter auszuprobieren. Das wollen wir gleich einmal tun und ändern dazu die Zeile 14 im o.a. Programm wie folgt ab:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Und weil diese drei 'Keyword‘-Parameter so oft gesetzt werden, können wir die drei sogar ohne Angabe der Argumentnamen einfach in einem String zusammen übergeben:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;r:o&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Um noch etwas mehr zu erproben, wollen wir einen zweiten Kurvenverlauf mit etwas anderem Darstellungsstil nach dem ersten <em>plot()</em>-Aufruf hinzufügen (Zeile 15 folgende):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># einen 2.Kurvenverlauf kann man ganz problemlos &quot;hinzu&quot;-plotten</span>
+<span class="n">z</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>     <span class="c1"># x bleibt in diesem Fall gleich</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition-fur-matlab-erfahrene admonition">
+<p class="admonition-title">Für MATLAB-Erfahrene</p>
+<p>Die (Grund-)Funktionalität der <em>Matplotlib</em> war ursprünglich eng an MATLAB und die dortigen Plotbefehle angelehnt. So gibt es neben den Befehlen, die wir oben verwendet haben, noch andere Funktionsaufrufe, die den MATLAB-Befehlen noch ähnlicher sind. Die Verwandtschaft sieht man z.B. sehr gut bei den &quot;keyword arguments“ wie <em>color=‘r‘</em>. Wir haben hier stattdessen die &quot;modernen“ objektorientierten Plotbefehle verwendet, die in sich konsistenter und nachvollziehbarer sind als die &quot;Original“-Plotbefehle.</p>
+</div>
+</section>
+</section>
+<section id="aufgabe-4-1">
+<h2>Aufgabe 4.1<a class="headerlink" href="#aufgabe-4-1" title="Permalink to this heading"></a></h2>
+<p>In dieser Aufgabe wollen wir die bisher gewonnenen Erkenntnisse zum Einlesen von Dateien und zum Plotten zusammenbringen und unsere &quot;Sinus-Aufgabe“ fortsetzen.</p>
+<div class="admonition-to-dokumentation admonition">
+<p class="admonition-title">To Dokumentation</p>
+<p>Zu erstellen ist ein Programm, welches auf der Basis der vorherigen Beispiele die Wertetabelle für eine Funktion (x,y) aus einer Datei einliest und die Funktionswerte grafisch darstellt. Dabei gelten im Detail folgende Vorgaben:</p>
+<ol class="arabic simple">
+<li><p>Das Einlesen der Datei soll mit einer Funktion realisiert werden, die folgende Signatur aufweist (so nennt man die Aufrufdefinition auch):</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">read_fct_values</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Die grafische Ausgabe der Funktionswert soll ebenfalls mit einer Funktion realisiert werden:</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_fct_values</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Die grafische Darstellung soll folgende Merkmale haben:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Die Kurve soll in rot mit gepunkteter Linie dargestellt werden.</p></li>
+<li><p>Die Achsen sollen beschriftet werden.</p></li>
+<li><p>Es soll ein Grid hinterlegt werden.</p></li>
+<li><p>Der Plot soll einen passenden Titel (Dateiname) erhalten.</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>Das &quot;Hauptprogramm“ (der nicht eingerückte Programmabschnitt) soll:</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>eine Meldung über den Zweck des Programms ausgeben</p></li>
+<li><p>den Dateinamen einlesen</p></li>
+<li><p>die Datei einlesen durch Aufruf von <code class="code docutils literal notranslate"><span class="pre">read_fct_values()</span></code></p></li>
+<li><p>die Funktionswerte ausgeben durch Aufruf von <code class="code docutils literal notranslate"><span class="pre">plot_fct_values()</span></code></p></li>
+</ul>
+</div></blockquote>
+</div>
+<p>Lösungshinweise:</p>
+<ol class="arabic simple">
+<li><p>Programme mit mehreren Funktionen werden immer schrittweise Funktion-für-Funktion entwickelt und getestet, um potentielle Fehler leicht einkreisen zu können.</p></li>
+<li><p>Die o.a. Beispiele enthalten alle wesentlichen Programmanweisungen bereits.</p></li>
+<li><p>Gute Programme sind mit sinnvollen Kommentaren versehen.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="exercise_03.html" class="btn btn-neutral float-left" title="3. Übung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Prof. Dr.-Ing. Volker von Holt - Fahrzeuginformatik - Ostfalia Hochschule.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
