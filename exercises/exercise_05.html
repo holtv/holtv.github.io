@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5. Übung &mdash; IPP - Ingenieurwissenschaftliches Programmieren mit Python 0.1 Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=9d4e32a3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="prev" title="4. Übung" href="exercise_04.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            IPP - Ingenieurwissenschaftliches Programmieren mit Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhalt:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Grundlagen der Programmierung</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../exer.html">Übungen</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="exercise_01.html">1. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_02.html">2. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_03.html">3. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_04.html">4. Übung</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5. Übung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-5-1">Beispiel 5.1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#numerical-python-numpy">Numerical Python (NumPy)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IPP - Ingenieurwissenschaftliches Programmieren mit Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../exer.html">Übungen</a></li>
+      <li class="breadcrumb-item active">5. Übung</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/exercises/exercise_05.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ubung">
+<h1>5. Übung<a class="headerlink" href="#ubung" title="Permalink to this heading"></a></h1>
+<section id="beispiel-5-1">
+<h2>Beispiel 5.1<a class="headerlink" href="#beispiel-5-1" title="Permalink to this heading"></a></h2>
+<section id="numerical-python-numpy">
+<h3>Numerical Python (NumPy)<a class="headerlink" href="#numerical-python-numpy" title="Permalink to this heading"></a></h3>
+<p>In den bisherigen Übungen haben wir zwar schon ein wenig mit Python gerechnet und haben auch bereits Listen und Tupel als Datenstrukturen kennengelernt. Aber so richtig gut ist Python von Haus nicht für numerische Aufgaben geeignet. Denn im (ingenieur-)wissenschaftlichen Bereich wenden wir meist Vektor- und Matrizenrechnung an und benutzen dabei jede Menge spezialisierte mathematische Funktionen jenseits von Sinus und Cosinus. (Einer der Gründe für den Erfolg von MATLAB(=MATrix LABoratory) ist dessen Fähigkeit originär mit Matrizen rechnen zu können und eine Unmenge an Spezialfunktionen (Toolboxen) für viele technische Bereiche anzubieten.)</p>
+<p>Für Anwendungen in diesem Bereich gibt es in Python die Bibliothek <a class="reference external" href="https://numpy.org/">NumPy</a>, deren Entwicklung 1995 begonnen hat und die  ebenso wie die Matplotlib - einen immensen Funktionsumfang enthält. Auf der NunPy-Bibliothek bauen wiederum viele weitere Bibliotheken auf. <em>NumPy</em> zählt aber ebenfalls nicht zur Standard-Distribution, so dass wir sie wieder nachzuinstallieren haben:</p>
+<p>Unter Windows geben wir folgende Kommandozeile ein:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; pip install numpy
+</pre></div>
+</div>
+<p>Unter Linux und MacOS hingegen:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip3 install numpy
+</pre></div>
+</div>
+<p>Beim Installieren werden wir wahrscheinlich sinngemäß die Meldung erhalten, dass „nichts installiert wurde, weil das Modul bereits vorhanden ist“. Die Erklärung dafür ist einfach, denn da die <em>Matplotlib</em> auf <em>Numpy</em> aufbaut, wurde es bei der Installation der <em>Matplotlib</em> durch <em>pip</em> gleich mit installiert.</p>
+<p>Was ist nun das Besondere an NumPy?</p>
+<ol class="arabic simple">
+<li></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="exercise_04.html" class="btn btn-neutral float-left" title="4. Übung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Prof. Dr.-Ing. Volker von Holt - Fahrzeuginformatik - Ostfalia Hochschule.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
