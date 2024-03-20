@@ -65,6 +65,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#aufgabe-5-1">Aufgabe 5.1</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#aufgabe-5-1-1">Aufgabe 5.1.1</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#aufgabe-5-1-2">Aufgabe 5.1.2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#aufgabe-5-1-3">Aufgabe 5.1.3</a></li>
 </ul>
 </li>
 </ul>
@@ -221,7 +222,7 @@
 <h3>Aufgabe 5.1.1<a class="headerlink" href="#aufgabe-5-1-1" title="Permalink to this heading"></a></h3>
 <div class="admonition-to-do admonition">
 <p class="admonition-title">To Do</p>
-<p>Es ist ein Programm zu erstellen, dass die drei folgenden trigonometrischen Funktionen wie in der Tabelle angegeben darstellt:</p>
+<p>Es ist ein Programm zu erstellen, dass die drei folgenden trigonometrischen Funktionen im Intervall <span class="math notranslate nohighlight">\(0 \dots 2\pi\)</span> wie in der Tabelle angegeben darstellt:</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Funktion</p></th>
@@ -275,6 +276,51 @@
 <ol class="arabic simple">
 <li><p>Um mehrere (Sub-)Plots in einem Fenster darzustellen, kann man die gewünschte Anzahl und Anordnung der Fenster beim Anlegen des Plot-Fenster durch <em>subplots()</em> als Parameter übergeben. Wenn wir keinen Wert übergeben, wird der Defaultwert zur Erzeugung eines Plots im Figure angenommen.</p></li>
 <li><p>Beim Anlegen mehrerer Subplots liefert die Funktion <em>subplots()</em> ein Array zurück, bei dem jeder Eintrag den Achsen eines der Subplots entspricht.</p></li>
+</ol>
+</section>
+<section id="aufgabe-5-1-3">
+<h3>Aufgabe 5.1.3<a class="headerlink" href="#aufgabe-5-1-3" title="Permalink to this heading"></a></h3>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Als letztes soll das Programm um drei weitere Funktionen ergänzt werden:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Funktion</p></th>
+<th class="head"><p>Farbe</p></th>
+<th class="head"><p>Linienart</p></th>
+<th class="head"><p>Marker</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sin(10x) \cdot \exp^{-0.5x}\)</span></p></td>
+<td><p>blau</p></td>
+<td><p>durchgezogen</p></td>
+<td><p>(ohne)</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(+\exp^{-0.5x}\)</span></p></td>
+<td><p>blau</p></td>
+<td><p>gestrichelt</p></td>
+<td><p>(ohne)</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(-\exp^{-0.5x}\)</span></p></td>
+<td><p>blau</p></td>
+<td><p>gestrichelt</p></td>
+<td><p>(ohne)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Anmerkung: Die beiden unteren Funktionen stellen die sog. &quot;Einhüllende“ der abklingenden Sinus-Schwingung dar.</p>
+<ol class="arabic simple">
+<li><p>Die drei Funktionen sollen alle drei in einem gemeinsamen Subplot dargestellt werden.</p></li>
+<li><p>Das Plotfenster ist auf vier Plots in [2x2]-Matrix-Anordnung zu erweitern.</p></li>
+<li><p>Jeder der Plots soll mit einem Raster, einer Achsenbeschriftung und einer Legende versehen werden.</p></li>
+<li><p>Zur Berechnung der Funktionen sind <em>NumPy</em>-Datentypen und -Funktionen zu verwenden.</p></li>
+</ol>
+</div>
+<p>Lösungshinweise:</p>
+<ol class="arabic simple">
+<li><p>Wenn man es geschickt anstellt muss man die Exponentialfunktion nur einmal berechnen und kann sie dann an drei Stellen mit entsprechenden Vorzeichen einsetzen.</p></li>
+<li><p>Um mehrere Plots in einem Figure sowohl neben- wie untereinander anzuordnen übergibt man die Anordnung in Matrixnotation als Tupel <em>(Zeilen, Spalten)</em> und erhält auch die Achsen als zweidimensionales Array zurück.</p></li>
 </ol>
 </section>
 </section>
