@@ -312,44 +312,34 @@ Verarbeite die Daten
 <div class="admonition-to-dokumentation admonition">
 <p class="admonition-title">To Dokumentation</p>
 <p>Zu erstellen ist ein Programm, welches auf der Basis der vorherigen Beispiele die Wertetabelle für eine Funktion (x,y) aus einer Datei einliest und die Funktionswerte grafisch darstellt. Dabei gelten im Detail folgende Vorgaben:</p>
-<ol class="arabic simple">
-<li><p>Das Einlesen der Datei soll mit einer Funktion realisiert werden, die folgende Signatur aufweist (so nennt man die Aufrufdefinition auch):</p></li>
-</ol>
-<blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">read_fct_values</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<ol class="arabic">
+<li><p>Das Einlesen der Datei soll mit einer Funktion realisiert werden, die folgende Signatur aufweist (so nennt man die Aufrufdefinition auch):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">read_fct_values</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 </pre></div>
 </div>
-</div></blockquote>
-<ol class="arabic simple" start="2">
-<li><p>Die grafische Ausgabe der Funktionswert soll ebenfalls mit einer Funktion realisiert werden:</p></li>
-</ol>
-<blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_fct_values</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</li>
+<li><p>Die grafische Ausgabe der Funktionswert soll ebenfalls mit einer Funktion realisiert werden:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plot_fct_values</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
-</div></blockquote>
-<ol class="arabic simple" start="3">
-<li><p>Die grafische Darstellung soll folgende Merkmale haben:</p></li>
-</ol>
-<blockquote>
-<div><ul class="simple">
+</li>
+<li><p>Die grafische Darstellung soll folgende Merkmale haben:</p>
+<ul class="simple">
 <li><p>Die Kurve soll in rot mit gepunkteter Linie dargestellt werden.</p></li>
 <li><p>Die Achsen sollen beschriftet werden.</p></li>
 <li><p>Es soll ein Grid hinterlegt werden.</p></li>
 <li><p>Der Plot soll einen passenden Titel (Dateiname) erhalten.</p></li>
 </ul>
-</div></blockquote>
-<ol class="arabic simple" start="4">
-<li><p>Das &quot;Hauptprogramm“ (der nicht eingerückte Programmabschnitt) soll:</p></li>
-</ol>
-<blockquote>
-<div><ul class="simple">
+</li>
+<li><p>Das &quot;Hauptprogramm“ (der nicht eingerückte Programmabschnitt) soll:</p>
+<ul class="simple">
 <li><p>eine Meldung über den Zweck des Programms ausgeben</p></li>
 <li><p>den Dateinamen einlesen</p></li>
 <li><p>die Datei einlesen durch Aufruf von <code class="code docutils literal notranslate"><span class="pre">read_fct_values()</span></code></p></li>
 <li><p>die Funktionswerte ausgeben durch Aufruf von <code class="code docutils literal notranslate"><span class="pre">plot_fct_values()</span></code></p></li>
 </ul>
-</div></blockquote>
+</li>
+</ol>
 </div>
 <p>Lösungshinweise:</p>
 <ol class="arabic simple">
