@@ -68,6 +68,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#aufgabe-5-1-3">Aufgabe 5.1.3</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-5-2">Beispiel 5.2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vektor-und-matrizenrechnung-mit-numpy">Vektor- und Matrizenrechnung mit <em>NumPy</em></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-5-2">Aufgabe 5.2</a></li>
 </ul>
 </li>
 </ul>
@@ -105,8 +110,8 @@
 <h2>Beispiel 5.1<a class="headerlink" href="#beispiel-5-1" title="Permalink to this heading"></a></h2>
 <section id="numerical-python-numpy">
 <h3>Numerical Python (NumPy)<a class="headerlink" href="#numerical-python-numpy" title="Permalink to this heading"></a></h3>
-<p>In den bisherigen Übungen haben wir zwar schon ein wenig mit Python gerechnet und haben auch bereits Listen und Tupel als Datenstrukturen kennengelernt. Aber so richtig gut ist Python von Haus nicht für numerische Aufgaben geeignet. Denn im (ingenieur-)wissenschaftlichen Bereich wenden wir meist Vektor- und Matrizenrechnung an und benutzen dabei jede Menge spezialisierte mathematische Funktionen jenseits von Sinus und Cosinus. (Einer der Gründe für den Erfolg von MATLAB(=MATrix LABoratory) ist dessen Fähigkeit originär mit Matrizen rechnen zu können und eine Unmenge an Spezialfunktionen (Toolboxen) für viele technische Bereiche anzubieten.)</p>
-<p>Für Anwendungen in diesem Bereich gibt es in Python die Bibliothek <a class="reference external" href="https://numpy.org/">NumPy</a>, deren Entwicklung 1995 begonnen hat und die  ebenso wie die Matplotlib - einen immensen Funktionsumfang enthält. Auf der NunPy-Bibliothek bauen wiederum viele weitere Bibliotheken auf. <em>NumPy</em> zählt aber ebenfalls nicht zur Standard-Distribution, so dass wir sie wieder nachzuinstallieren haben:</p>
+<p>In den bisherigen Übungen haben wir zwar schon ein wenig mit Python gerechnet und haben auch bereits Listen und Tupel als Datenstrukturen kennengelernt. Aber so richtig gut ist Python von Haus aus nicht für numerische Aufgaben geeignet. Denn im (ingenieur-)wissenschaftlichen Bereich wenden wir meist Vektor- und Matrizenrechnung an und benutzen dabei jede Menge spezialisierte mathematische Funktionen jenseits von Sinus und Cosinus. (Einer der Gründe für den Erfolg von MATLAB(=MATrix LABoratory) ist dessen Fähigkeit originär mit Matrizen rechnen zu können und eine Unmenge an Spezialfunktionen (Toolboxen) für viele technische Bereiche anzubieten.)</p>
+<p>Für Anwendungen in diesem Bereich gibt es in Python die Bibliothek <a class="reference external" href="https://numpy.org/">NumPy</a>, deren Entwicklung 1995 begonnen hat und die - ebenso wie die Matplotlib - einen immensen Funktionsumfang enthält. Auf der NunPy-Bibliothek bauen wiederum viele weitere Bibliotheken auf. <em>NumPy</em> zählt aber ebenfalls nicht zur Standard-Distribution, so dass wir auch diese Bibliothek nachzuinstallieren haben:</p>
 <p>Unter Windows geben wir folgende Kommandozeile ein:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; pip install numpy
 </pre></div>
@@ -118,25 +123,25 @@
 <p>Beim Installieren werden wir wahrscheinlich sinngemäß die Meldung erhalten, dass „nichts installiert wurde, weil das Modul bereits vorhanden ist“. Die Erklärung dafür ist einfach, denn da die <em>Matplotlib</em> auf <em>Numpy</em> aufbaut, wurde es bei der Installation der <em>Matplotlib</em> durch <em>pip</em> gleich mit installiert.</p>
 <p>Ein kleiner Auszug der besonderen Merkmale von <em>NumPy</em>:</p>
 <ol class="arabic simple">
-<li><p>es stellt eine Reihe elementarer Datentypen bereit, so dass man anwendungsbezogen den am besten passenden Datentyp wählen kann:</p>
+<li><p>Es stellt eine Reihe elementarer Datentypen bereit, so dass man anwendungsbezogen den am besten passenden Datentyp wählen kann:</p>
 <ul class="simple">
-<li><p>Integer-Werte mit 8-256-Bit Auflösung mit/ohne Vorzeichen</p></li>
-<li><p>Float-Werte mit 16-256-Bit Auflösung</p></li>
+<li><p>Integer-Werte mit 8 - 256-Bit Auflösung mit/ohne Vorzeichen</p></li>
+<li><p>Float-Werte mit 16 - 256-Bit Auflösung</p></li>
 </ul>
 </li>
-<li><p>es lassen sich aus den elementaren Datentypen</p>
+<li><p>Es lassen sich aus den elementaren Datentypen</p>
 <ul class="simple">
 <li><p>Vektoren und (mehrdimensionale) Matrizen in der Form von Arrays bilden, wobei alle Elemente immer den gleichen Datentyp haben</p></li>
 <li><p>Strukturierte Arrays bilden, die mehrere benamte Werte des gleichen oder unterschiedlichen Datentyps zusammenfassen (ähnlich den <em>structs</em> in C)</p></li>
 </ul>
 </li>
-<li><p>es stellt eine Vielzahl an Funktionen bereit, die auf den Datentypen und auf den daraus gebildeten Arrays arbeiten (z.B. zur Matrizenmultiplikation)</p></li>
+<li><p>Es stellt eine Vielzahl an Funktionen bereit, die auf den Datentypen und auf den daraus gebildeten Arrays arbeiten (z.B. zur Matrizenmultiplikation)</p></li>
 </ol>
 <p>Der wesentlichste Vorteil von <em>NumPy</em> ist tatsächlich die Möglichkeit mehrdimensionale Arrays eines definierten Datentyps zu bilden. Nur durch diese Eigenschaft ist es möglich hocheffiziente Funktionen in <em>NumPy</em> bereitzustellen, die mit ganzen Vektoren und Matrizen auf einmal umgehen können.</p>
-<div class="admonition-python admonition">
-<p class="admonition-title">python</p>
-<p>Hinter der Effizienz von <em>NumPy</em> steckt ganz einfach, dass hinter den  <em>NumPy</em>-Aufrufen in C geschriebene Funktionen stecken, die optimiert sind und von der Laufzeit her viel schneller ausgeführt werden als originärer Python-Code.</p>
-<p>Und, um das Ganze noch zu komplettieren: Auch der Python-Interpreter selber ist wie auch alle anderen Bibliotheken in der Programmiersprache C programmiert.</p>
+<div class="admonition-python-interpreter-und-bibliotheken admonition">
+<p class="admonition-title">Python-Interpreter und -Bibliotheken</p>
+<p>Hinter der Effizienz von <em>NumPy</em> verbirgt sich ganz einfach, dass die   <em>NumPy</em>-Aufrufe sämtlich in C geschriebene Funktionen sind, die hochoptimiert sind und von der Laufzeit her viel schneller ausgeführt werden als originärer Python-Code.</p>
+<p>Und, um das Ganze noch zu komplettieren: Auch der Python-Interpreter selbst ist wie auch alle anderen Bibliotheken in der Programmiersprache C/C++ programmiert.</p>
 </div>
 <p>Wir werden uns der <em>NumPy</em>-Bibliothek - wie üblich - Schritt-für-Schritt nähern. Was wäre für einen ersten Versuch besser geeignet als unsere &quot;altbekannte“ und &quot;vertraute“ Sinus-Berechnung:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -170,11 +175,11 @@
 <span class="linenos">29</span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Was im Code grundsätzlich passiert sollte nach den vorherigen Übungen keiner besonderen Erklärung mehr bedürfen - bis auf die <em>NumPy</em>-Spezialitäten.</p>
+<p>Was im Code grundsätzlich passiert, sollte nach den vorherigen Übungen keiner besonderen Erklärung mehr bedürfen - bis auf die <em>NumPy</em>-Spezialitäten.</p>
 <dl class="simple">
 <dt>Zeilen 6 und 7:</dt><dd><p>Mit <em>np.zeros()</em> erzeugen wir ein Array mit 100 Datenelementen, von denen jedes einen <em>32-Bit-float</em>-Wert aufnehmen kann. Wir können den Elementen des Arrays keine unterschiedlichen Datentypen zuweisen und den Datentyp auch nicht einfach so im Programm komplett ändern.</p>
 </dd>
-<dt>Zeilen 10 und 18:</dt><dd><p>Hier sehen wir, dass :math`pi` in <em>NumPy</em> ebenfalls definiert ist und es auch eine <em>sin()</em>-Funktion in <em>NumPy</em> gibt, die zunächst mal so aussieht, wie die <em>sin()</em>-Funktion im <em>math</em>-Modul.</p>
+<dt>Zeilen 10 und 18:</dt><dd><p>Hier sehen wir, dass <span class="math notranslate nohighlight">\(\pi\)</span> in <em>NumPy</em> ebenfalls definiert ist und es auch eine <em>sin()</em>-Funktion in <em>NumPy</em> gibt, die zunächst mal so aussieht, wie die <em>sin()</em>-Funktion im <em>math</em>-Modul.</p>
 </dd>
 <dt>Zeile 26:</dt><dd><p>Auch die <em>Matplotlib</em> kann mit <em>NumPy</em>-Arrays umgehen, wenn wir diese als Argument übergeben.</p>
 </dd>
@@ -203,9 +208,9 @@
 </div>
 <p>Das sieht jetzt schon etwas anders aus, denn:</p>
 <dl class="simple">
-<dt>Zeile 6:</dt><dd><p>Hier erzeugen wir <em>x</em> mit der Funktion <em>np.linspace()</em>, dass uns in diesem Fall 100 Werte im Intervall zwischen <span class="math notranslate nohighlight">\(0 \dots \pi\)</span> lieferte</p>
+<dt>Zeile 6:</dt><dd><p>Hier erzeugen wir <em>x</em> mit der Funktion <em>np.linspace()</em>, dass uns in diesem Fall 100 Werte im Intervall zwischen <span class="math notranslate nohighlight">\(0 \dots \pi\)</span> liefert.</p>
 </dd>
-<dt>Zeile 9:</dt><dd><p>Die Funktion <em>np.sin()</em> ist doch schlauer als wir dachten, die kann nämlich den Sinus für alle Werte in <em>x</em> auf einmal berechnen. (Dahinter steckt aber auch eine Programmschleife, allerdings eine <strong>schnelle</strong> Schleife in C und keine langsame in Python.)</p>
+<dt>Zeile 9:</dt><dd><p>Die Funktion <em>np.sin()</em> ist doch schlauer als wir dachten, die kann nämlich den Sinus für alle Werte in <em>x</em> auf einmal berechnen. (Dahinter steckt aber auch eine Programmschleife, allerdings eine <strong>schnelle</strong> Schleife in C und keine &quot;langsame“ wie in Python.)</p>
 </dd>
 </dl>
 <p>So wie die Sinus-Funktion auf einem ganzen Vektor (oder auch ganzen Matrizen) arbeitet, können wir auch andere Rechenoperation der Matrixrechnung anwenden. Wenn wir die Zeile 9 folgendermaßen modifizieren:</p>
@@ -253,6 +258,13 @@
 <li><p>Die drei Funktionen sollen alle drei in einem gemeinsamen Plot dargestellt werden.</p></li>
 <li><p>Der Plot soll mit einem Raster, einer Achsenbeschriftung und einer Legende versehen werden.</p></li>
 <li><p>Zur Berechnung der Funktionen sind <em>NumPy</em>-Datentypen und -Funktionen zu verwenden.</p></li>
+<li><p>Das Programm soll aus einem Hauptprogramm und zwei Funktionen bestehen:</p>
+<ol class="arabic simple">
+<li><p>Funktion zur Berechnung der drei Sinus-Funktionen</p></li>
+<li><p>Funktion zur Plot-Ausgabe</p></li>
+</ol>
+</li>
+<li><p>Das Programm soll eine Meldung, was es macht, beginnen und an den entscheidenden Stellen Kommentare zum Verständnis enthalten.</p></li>
 </ol>
 </div>
 <p>Lösungshinweise:</p>
@@ -274,7 +286,7 @@
 </div>
 <p>Lösungshinweise:</p>
 <ol class="arabic simple">
-<li><p>Um mehrere (Sub-)Plots in einem Fenster darzustellen, kann man die gewünschte Anzahl und Anordnung der Fenster beim Anlegen des Plot-Fenster durch <em>subplots()</em> als Parameter übergeben. Wenn wir keinen Wert übergeben, wird der Defaultwert zur Erzeugung eines Plots im Figure angenommen.</p></li>
+<li><p>Um mehrere (Sub-)Plots in einem Fenster darzustellen, kann man die gewünschte Anzahl und Anordnung der Fenster beim Anlegen des Plot-Fenster durch <em>subplots()</em> als Parameter übergeben. Wenn wir keinen Wert übergeben, wird der Defaultwert(=1) zur Erzeugung eines Plots im Figure angenommen.</p></li>
 <li><p>Beim Anlegen mehrerer Subplots liefert die Funktion <em>subplots()</em> ein Array zurück, bei dem jeder Eintrag den Achsen eines der Subplots entspricht.</p></li>
 </ol>
 </section>
@@ -323,6 +335,257 @@
 <li><p>Um mehrere Plots in einem Figure sowohl neben- wie untereinander anzuordnen übergibt man die Anordnung in Matrixnotation als Tupel <em>(Zeilen, Spalten)</em> und erhält auch die Achsen als zweidimensionales Array zurück.</p></li>
 </ol>
 </section>
+</section>
+<section id="beispiel-5-2">
+<h2>Beispiel 5.2<a class="headerlink" href="#beispiel-5-2" title="Permalink to this heading"></a></h2>
+<section id="vektor-und-matrizenrechnung-mit-numpy">
+<h3>Vektor- und Matrizenrechnung mit <em>NumPy</em><a class="headerlink" href="#vektor-und-matrizenrechnung-mit-numpy" title="Permalink to this heading"></a></h3>
+<p><em>NumPy</em> ist <strong>DIE</strong> Bibliothek für numerische Berechnungen mit Python. Es ist in seiner Funktionalität mehr oder weniger stark an das kommerzielle Tool <em>MATLAB</em> angelehnt. Aufgrund der &quot;sauberen“ Integration in die Programmiersprache Python ist die Integration der Matrizenrechnung nicht ganz so umfassend und transparent wie es in <em>MATLAB</em> der Fall ist.</p>
+<section id="anlegen-von-numpy-datenstrukturen">
+<h4>Anlegen von <em>NumPy</em>-Datenstrukturen<a class="headerlink" href="#anlegen-von-numpy-datenstrukturen" title="Permalink to this heading"></a></h4>
+<p>Im Folgenden schauen wir uns beispielhaft an, wie man mit <em>NumPy</em> Datenstrukturen anlegt und wie man diese in Rechnungen nutzt. Zunächst geht es also um das Anlegen von leeren oder vorbesetzten Vektoren und Matrizen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos"> 4</span><span class="n">v1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="nb">print</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">v1</span><span class="p">))</span>
+<span class="linenos"> 7</span><span class="nb">print</span><span class="p">(</span><span class="n">v1</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="n">v2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">v2</span><span class="p">))</span>
+<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="n">v2</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="linenos">13</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos">14</span><span class="n">v3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span>
+<span class="linenos">15</span><span class="nb">print</span><span class="p">(</span><span class="n">v3</span><span class="p">)</span>
+<span class="linenos">16</span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">v3</span><span class="p">))</span>
+<span class="linenos">17</span><span class="nb">print</span><span class="p">(</span><span class="n">v3</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="linenos">18</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos">19</span><span class="n">v4</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="linenos">20</span><span class="nb">print</span><span class="p">(</span><span class="n">v4</span><span class="p">)</span>
+<span class="linenos">21</span><span class="nb">print</span><span class="p">(</span><span class="n">v4</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="linenos">22</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos">23</span><span class="n">m1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float16</span><span class="p">)</span>
+<span class="linenos">24</span><span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>
+<span class="linenos">25</span><span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="linenos">26</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos">27</span><span class="n">m2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float16</span><span class="p">)</span>
+<span class="linenos">28</span><span class="nb">print</span><span class="p">(</span><span class="n">m2</span><span class="p">)</span>
+<span class="linenos">29</span><span class="nb">print</span><span class="p">(</span><span class="n">m2</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="linenos">30</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos">31</span><span class="n">m3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float16</span><span class="p">)</span>
+<span class="linenos">32</span><span class="nb">print</span><span class="p">(</span><span class="n">m3</span><span class="p">)</span>
+<span class="linenos">33</span><span class="nb">print</span><span class="p">(</span><span class="n">m3</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="linenos">34</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos">35</span><span class="n">v5</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">])</span>
+<span class="linenos">36</span><span class="nb">print</span><span class="p">(</span><span class="n">v5</span><span class="p">)</span>
+<span class="linenos">37</span><span class="nb">print</span><span class="p">(</span><span class="n">v5</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="linenos">38</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos">39</span><span class="n">v6</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="linenos">40</span><span class="nb">print</span><span class="p">(</span><span class="n">v6</span><span class="p">)</span>
+<span class="linenos">41</span><span class="nb">print</span><span class="p">(</span><span class="n">v6</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Wie wir anhand des Programmbeispiels und dessen Ausführung sehen, können wir Arrays sowohl mit Nullen oder Einsen gefüllt anlegen oder aber auch eine Liste mit Initialisierungswerten übergeben. Beim Anlegen können wir die Dimensionen und auch den Datentyp (<em>dtype</em>) vorgeben. Geben wir keinen Datentyp vor, so wählt <em>NumPy</em> bei Übergabe einer Liste einen passenden Datentyp aus, ansonsten wird als Standard-Datentyp <em>np.float64</em> gewählt. Wir können aber auch eine Einheitsmatrix (<em>np.eye()</em>) erzeugen oder uns ein neues Array &quot;nach Vorlage“ (<em>np.zeros_like()</em> oder <em>np.ones_like()</em>) erzeugen lassen.</p>
+<p>Das Hauptaugenmerk bei den <em>NumPy</em>-Datenstrukturen ist es, diese möglichst kompatibel zu den in der Programmiersprache C verwendeten Datentypen zu halten, da die <em>NumPy</em>-Bibliothek selber in C geschrieben ist. Über die gezeigten Datenstrukturen mit Arrays des gleichen Datentyps gibt es auch noch sogenannte strukturierte Arrays, die den <em>structs</em> aus C entsprechen, die für uns im Moment aber noch nicht von Interesse sind.</p>
+</section>
+<section id="id1">
+<h4>Vektor- und Matrizenrechnung mit <em>NumPy</em><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<p>Als nächstes Werfen wir einen exemplarischen Blick auf einige elementare Rechenoperationen mit Vektoren und Matrizen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos"> 4</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Anlegen von 2 Vektoren&#39;</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="n">v1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="linenos"> 6</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;v1= &#39;</span><span class="p">,</span> <span class="n">v1</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="n">v2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;v2= &#39;</span><span class="p">,</span> <span class="n">v2</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Anlegen einer Matrix&#39;</span><span class="p">)</span>
+<span class="linenos">11</span><span class="n">m1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="linenos">12</span>               <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+<span class="linenos">13</span>               <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+<span class="linenos">14</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;m1= &#39;</span><span class="p">,</span> <span class="n">m1</span><span class="p">)</span>
+<span class="linenos">15</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos">16</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Matrixmultiplikation&#39;</span><span class="p">)</span>
+<span class="linenos">17</span><span class="n">v3a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">m1</span><span class="p">)</span>
+<span class="linenos">18</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;v1*m1= &#39;</span><span class="p">,</span> <span class="n">v3a</span><span class="p">)</span>
+<span class="linenos">19</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos">20</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Elementweise Multiplikation&#39;</span><span class="p">)</span>
+<span class="linenos">21</span><span class="n">v3b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">m1</span><span class="p">)</span>
+<span class="linenos">22</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;v1.*m1= &#39;</span><span class="p">,</span> <span class="n">v3b</span><span class="p">)</span>
+<span class="linenos">23</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos">24</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Matrix transponieren&#39;</span><span class="p">)</span>
+<span class="linenos">25</span><span class="n">m2</span> <span class="o">=</span> <span class="n">m1</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+<span class="linenos">26</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;m1: &#39;</span><span class="p">,</span> <span class="n">m1</span><span class="p">)</span>
+<span class="linenos">27</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;m2: &#39;</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span>
+<span class="linenos">28</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos">29</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Matrixmultiplikation mit der Transponierten&#39;</span><span class="p">)</span>
+<span class="linenos">30</span><span class="n">v4</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">m1</span><span class="o">.</span><span class="n">transpose</span><span class="p">())</span>
+<span class="linenos">31</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;v1*m1</span><span class="se">\&#39;</span><span class="s1">= &#39;</span><span class="p">,</span> <span class="n">v4</span><span class="p">)</span>
+<span class="linenos">32</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos">33</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vektor-/Matrix-Addition&#39;</span><span class="p">)</span>
+<span class="linenos">34</span><span class="n">v5</span> <span class="o">=</span> <span class="n">v1</span> <span class="o">+</span> <span class="n">v2</span>
+<span class="linenos">35</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;v5= &#39;</span><span class="p">,</span> <span class="n">v5</span><span class="p">)</span>
+<span class="linenos">36</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos">37</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vektor-/Matrix-Addition verschachtelt mit Matrixmultiplikation&#39;</span><span class="p">)</span>
+<span class="linenos">38</span><span class="n">v6</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">((</span><span class="n">v1</span><span class="o">+</span><span class="n">v2</span><span class="p">),</span> <span class="n">m2</span><span class="p">)</span>
+<span class="linenos">39</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;v6= &#39;</span><span class="p">,</span> <span class="n">v6</span><span class="p">)</span>
+<span class="linenos">40</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+<span class="linenos">41</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Multiplikation von 2 Matrizen&#39;</span><span class="p">)</span>
+<span class="linenos">42</span><span class="n">m3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span>
+<span class="linenos">43</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;m1*m2= &#39;</span><span class="p">,</span> <span class="n">m3</span><span class="p">)</span>
+<span class="linenos">44</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;---------------------------------&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Anhand der dargestellten Operationen sehen wir, dass die Matrizenoperationen i.d.R. durch Funktionsaufrufe (teilweise in objektorientierter Notation) realisiert werden. Die Addition/Subtraktion von Vektoren und Matrizen kann auch mit den bekannten Opertoren '+‘ und '-‘ dargestellt werden. Der Multiplikatiosoperator '*‘ ist zwar auch definiert, da es aber sowohl den Fall der &quot;echten“ Matrixmultiplikation (Funktion <em>np.matmul()</em>) als auch der elementweisen Multiplikation (Funktion <em>np.multiply()</em>) gibt, kann es hier zu Mißverständnissen und Verwirrungen kommen. Es ist nämlich für Ungeübte keineswegs trivial zu erkennen, wie <em>NumPy</em> die Operation interpretiert. Bei Unklarheiten empfiehlt es sich unbedingt, dies in der Python-Shell oder mit einem kleinen Testprogramm auszuprobieren!</p>
+</section>
+</section>
+</section>
+<section id="aufgabe-5-2">
+<h2>Aufgabe 5.2<a class="headerlink" href="#aufgabe-5-2" title="Permalink to this heading"></a></h2>
+<p>In dieser Aufgabe soll der Beschleunigungsvorgang eines in einer Dimension beweglichen Objekts simuliert werden. Die Beschleunigungswerte sollen aus einer Datei eingelesen werden, die nach folgendem Muster aufgebaut ist:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(t\ [s]\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\Delta a\ [m/s^2]\)</span></p></th>
+<th class="head"><p>Kommentar</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.0</p></td>
+<td><p>+1.0</p></td>
+<td><p><span class="math notranslate nohighlight">\(a = a+\Delta a = +1.0m/s^2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>15.5</p></td>
+<td><p>-1.0</p></td>
+<td><p><span class="math notranslate nohighlight">\(a = a+\Delta a = +0.0m/s^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>30.5</p></td>
+<td><p>+0.5</p></td>
+<td><p><span class="math notranslate nohighlight">\(a = a+\Delta a = +0.5m/s^2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>41.0</p></td>
+<td><p>-2.5</p></td>
+<td><p><span class="math notranslate nohighlight">\(a = a+\Delta a = -2.0m/s^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>50.0</p></td>
+<td><p>+2.0</p></td>
+<td><p><span class="math notranslate nohighlight">\(a = a+\Delta a = +0.0m/s^2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>60.0</p></td>
+<td><p>+0.0</p></td>
+<td><p>Endzeitpunkt</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Anhand der Tabelle für die Beschleunigungsänderungen lässt sich die Bewegung anhand der kinematischen Beziehungen berechnen. In kontinuierlicher Form lauten diese:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray}
+  s(t) &amp;=&amp; \int v(t) dt \\
+  v(t) &amp;=&amp; \int a(t) dt \\
+  a(t) &amp;=&amp; u(t) \ \ \ \text{(abschnittsweise konstant)}
+\end{eqnarray}\end{split}\]</div>
+<p>Da wir <span class="math notranslate nohighlight">\(a(t)\)</span> mittels der sog. Steuergröße <span class="math notranslate nohighlight">\(u(t)\)</span> vorgeben und dies damit die höchste Ableitung darstellt, haben wir es mit einem Modell 2. Ordnung zu tun. Die Größen <span class="math notranslate nohighlight">\(s(t), v(t), a(t)\)</span> beschreiben jeweils den momentanen Bewegungszustand des Objekts und werden deshalb auch als dessen Zustandsgrößen bezeichnet.</p>
+<p>Da die Beschleunigung <span class="math notranslate nohighlight">\(a(t)\)</span> die zweite Ableitung des Weges <span class="math notranslate nohighlight">\(s(t)\)</span> darstellt, haben wir es hier mit einem Modell 2. Ordnung zu tun. Die Größen <span class="math notranslate nohighlight">\(s(t), v(t), a(t)\)</span> beschreiben jeweils den momentanen Bewegungszustand des Objekts und werden deshalb auch als dessen Zustandsgrößen bezeichnet. Die Größe <span class="math notranslate nohighlight">\(u(t)\)</span>, die wir vorgeben, wird als Steuergröße bezeichnet.</p>
+<div class="admonition-anmerkung admonition">
+<p class="admonition-title">Anmerkung</p>
+<p>Die Steuergröße <span class="math notranslate nohighlight">\(u(t)\)</span>, die wir mittels unserer Tabelle als <span class="math notranslate nohighlight">\(\Delta a(t)\)</span> vorgeben ist physikalisch nicht ganz korrekt dargestellt. Die zeitliche Änderung der Beschleunigung <span class="math notranslate nohighlight">\(a(t)\)</span> bezeichnet man korrekt als Ruck <span class="math notranslate nohighlight">\(j(t)\)</span>, der sich eigentlich nicht sprunghaft ändern kann. Um aus diesem Programmierkurs keine Vorlesung über physikalische Modellierung zu machen, nutzen wir pragmatisch einfach die sprunghafte Änderung <span class="math notranslate nohighlight">\(\Delta a(t)\)</span> zu definierten Zeitpunkten.</p>
+</div>
+<p>Für die Anwendung im Rechner müssen wir das kontinuierliche Bewegungsmodell in ein sog. diskretes Bewegungsmodell überführen, da wir mit einem Digitalrechner nur in diskreten Zeitschritten rechnen können und nicht kontinuierlich.</p>
+<ol class="arabic simple">
+<li><p>Sei <span class="math notranslate nohighlight">\(t_k\)</span> ein beliebiger Zeitschritt und seien <span class="math notranslate nohighlight">\(s(t_k)\)</span>, <span class="math notranslate nohighlight">\(v(t_k)\)</span> und <span class="math notranslate nohighlight">\(a(t_k)\)</span> die entsprechenden Zustandsgrößen zu diesem Zeitpunkt.</p></li>
+<li><p>Unter der Annahme, das <span class="math notranslate nohighlight">\(\Delta T\)</span> ein hinreichend kleines Zeitintervall sei und die Zustandsgrößen für die Dauer eines Zeitschritts als konstant angenommen werden können, ergeben sich die Zustandsgrößen für den Zeitpunkt <span class="math notranslate nohighlight">\(t_{k+1}\)</span> zu:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray}
+  s(t_{k+1}) &amp;=&amp; s(t_{k}) + v(t_{k}) \cdot \Delta T + a(t_{k}) \cdot \frac{\Delta T^2}{2} \tag{5.1} \\
+  v(t_{k+1}) &amp;=&amp; v(t_{k}) + a(t_{k}) \cdot \Delta T \tag{5.2} \\
+  a(t_{k+1}) &amp;=&amp; a(t_{k}) + u(t_k) \tag{5.3}
+\end{eqnarray}\end{split}\]</div>
+<dl class="simple">
+<dt>Anmerkung:</dt><dd><p>Bei der von uns angenommenen abschnittsweise konstanten Beschleunigung laut o.a. Tabelle, gilt dieses Modell jeweils innerhalb eines Intervalls. An jeder Intervallgrenze folgt ein Beschleunigungssprung und wir setzen die Berechnung prinzipiell in gleicher Weise fort, nur mit einem anderen &quot;konstanten“ Wert für <span class="math notranslate nohighlight">\(a(t_k)\)</span>.</p>
+</dd>
+</dl>
+<div class="admonition-intuitive-erklarung-des-modells admonition">
+<p class="admonition-title">Intuitive Erklärung des Modells</p>
+<p>Das diskrete Modell lässt sich auf Basis des Grundwissens aus der Schulphysik plausibilisieren. Betrachten wir Gleichung (5.1), so stellt:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(s(t_k)\)</span> den zu Beginn des Intervalls erreichten Weg dar, mithin den Ausgangspunkt.</p></li>
+<li><p><span class="math notranslate nohighlight">\(v(t_k) \cdot \Delta T\)</span> ist der Weganteil, der aufgrund von <span class="math notranslate nohighlight">\(v(t_k)\)</span> im Zeitraum <span class="math notranslate nohighlight">\(\Delta T\)</span> zurückgelegt wird.</p></li>
+<li><p><span class="math notranslate nohighlight">\(a(t_k) \cdot \frac{\Delta T^2}{2}\)</span> ist der Weganteil, der aufgrund von <span class="math notranslate nohighlight">\(a(t_k)\)</span> im Zeitraum <span class="math notranslate nohighlight">\(\Delta T\)</span> zurückgelegt wird.</p></li>
+</ul>
+<p>Die Erklärungen für die Geschwindigkeit (Gleichung 5.2) und die Beschleunigung (Gleichung 5.3) erfolgen analog.</p>
+<p>Es wird also einfach das bekannte Weg-Zeit-Gesetz für ein kleines Zeitintervall angewendet, wobei die Anfangsbedingungen mit einbezogen werden.</p>
+</div>
+<p>Wenn wir nun weiter die Zustandsgrößen in einem Vektor zusammenfassen</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\underline{x}(t_k) = \underline{x}_k = \left( \begin{array}{c} s(t_k) \\ v(t_k) \\ a(t_k) \end{array} \right)\end{split}\]</div>
+<p>dann können wir die drei o.a. Gleichungen auch wie folgt darstellen:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\underline{x}_{k+1} = \left( \begin{array}{ccc}
+                      1 &amp; \Delta T &amp; \Delta T^2 / 2 \\
+                      0 &amp; 1        &amp; \Delta T \\
+                      0 &amp; 0        &amp; 1
+                      \end{array} \right) \cdot \underline{x}_{k} +
+                      \left( \begin{array}{c} 0 \\ 0 \\ 1 \end{array} \right) \cdot u_k = \underline{A}  \cdot \underline{x}_{k} + \underline{b}  \cdot u_k\end{split}\]</div>
+<p>Die Matrix <span class="math notranslate nohighlight">\(\underline{A}\)</span> wird als Systemmatrix und der Vektor <span class="math notranslate nohighlight">\(\underline{b}\)</span> als Steuervektor bezeichnet. Die Übereinstimmung mit den o.a. Gleichungen sollte offensichtlich sein (überprüfen!).</p>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Es ist ein Programm zu erstellen, dass:</p>
+<ol class="arabic simple">
+<li><p>die Beschleunigungswerte für mindestens 5 Zeitintervalle aus einer Datei einliest. (Die Datei ist ebenfalls selbst zu erstellen.)</p></li>
+<li><p>unter Nutzung der <em>NumPy</em>-Bibliothek die o.a. Berechnung des Zustandsvektors <span class="math notranslate nohighlight">\(\underline{x}\)</span> über alle Zeitintervalle unter Annahme von <span class="math notranslate nohighlight">\(\Delta  T = 0.1s\)</span> implementiert.</p></li>
+<li><p>die Verläufe für die Elemente von <span class="math notranslate nohighlight">\(x = (s, v, a)\)</span> sowie <span class="math notranslate nohighlight">\(u\)</span> mittels der <em>Matplotlib</em> untereinander in 4 einzelnen Subplots darstellt. (Grid, Achsenbezeichnungen, Legenden)</p></li>
+<li><p>die verschiedenen Aufgaben sinnvoll in Funktionen gliedert, Meldungen an die Nutzer ausgibt und Kommentare enthält.</p></li>
+</ol>
+</div>
+<p>s
+Lösungshinweise:</p>
+<ol class="arabic simple">
+<li><p>Da die Lösung für jeden Zeitschritt vom vorherigen Zeitschritt abhängig ist, können wir hier nicht einfach alle Werte für die <span class="math notranslate nohighlight">\(\underline{x}_k\)</span> gleichzeitig berechnen, sondern müssen in einer Schleife darüber iterieren.</p></li>
+<li><p>Da wir die Zeit <span class="math notranslate nohighlight">\(t\)</span> für die graphische Darstellung für alle Zeitschritte <span class="math notranslate nohighlight">\(k\)</span> benötigen, bietet es sich an, diese ebenfalls als <em>NumPy</em>-Array anzulegen und darüber zu iterieren.</p></li>
+<li><p>Zum Lesen/Schreiben von tabellenartigen Dateien gibt es in <em>NumPy</em> die beiden Funktionen <em>loadtxt()/saveTxt()</em>, die direkt ein Array verarbeiten können.</p></li>
+<li><p>Um den Vektor für <span class="math notranslate nohighlight">\(t\)</span> zu erzeugen bietet sich die <em>NumPy</em>-Funktion <em>np.arange()</em> besser an als die uns schon bekannte Funktion <em>np.linspace()</em>.</p></li>
+<li><p>Auf <em>NumPy</em>-Arrays lässt sich ebenfalls durch <em>Slicing</em> auf Teilbereiche zugreifen - sowohl in eindimensionalen wie in mehrdimensionalen Arrays.</p></li>
+<li><p>Da das Standardlayout sowie die Standardgröße des durch <em>Matplotlib</em> erzeugten Figure-Fensters meist eher ungünstig ist, empfiehlt es sich, diese selber vorzugeben. In der folgenden Beispielfunktion sehen wir außerdem, wie man auch auf dunklem Hintergrund plotten kann:</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">plot_dark</span><span class="p">():</span>
+<span class="linenos"> 2</span>  <span class="c1"># Werte und Funktionen erzeugen</span>
+<span class="linenos"> 3</span>  <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="linenos"> 4</span>  <span class="n">sin_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="linenos"> 5</span>  <span class="n">cos_x</span> <span class="o">=</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>  <span class="c1"># mit der folgenden Anweisung ändern wir die Voreinstellungen zum Plotten</span>
+<span class="linenos"> 8</span>  <span class="c1"># für den eingerückten Block auf &#39;dark_background&#39;</span>
+<span class="hll"><span class="linenos"> 9</span>  <span class="k">with</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">context</span><span class="p">(</span><span class="s1">&#39;dark_background&#39;</span><span class="p">):</span>
+</span><span class="linenos">10</span>    <span class="c1"># figure anlegen</span>
+<span class="linenos">11</span>    <span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="c1"># Größe des figure einstellen</span>
+<span class="hll"><span class="linenos">14</span>    <span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>   <span class="c1"># (figure_width, figure_height)</span>
+</span><span class="linenos">15</span>    <span class="c1"># Layout auf &#39;tight&#39; (=schmaler Rand) setzen</span>
+<span class="hll"><span class="linenos">16</span>    <span class="n">fig</span><span class="o">.</span><span class="n">set_tight_layout</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span><span class="linenos">17</span>
+<span class="linenos">18</span>    <span class="c1"># dann plotten</span>
+<span class="linenos">19</span>    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sin_x</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="linenos">20</span>    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">cos_x</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="linenos">21</span>    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="linenos">22</span>    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="linenos">23</span>    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;sin(x)&#39;</span><span class="p">,</span><span class="s1">&#39;1.5*cos(2*x)&#39;</span><span class="p">])</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span>    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Hier noch ein Beispiel, wie das Ergebnis aussehen sollte, wenn wir die o.a. Beispieltabelle verwenden:</p>
+<figure class="align-default" id="label-img-matplotlib-02">
+<a class="reference internal image-reference" href="../_images/matplotlib_02.png"><img alt="../_images/matplotlib_02.png" src="../_images/matplotlib_02.png" style="width: 601.0px; height: 801.0px;" /></a>
+</figure>
 </section>
 </section>
 

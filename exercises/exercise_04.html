@@ -176,7 +176,7 @@ Verarbeite die Daten
 <h2>Beispiel 4.2<a class="headerlink" href="#beispiel-4-2" title="Permalink to this heading"></a></h2>
 <section id="grafische-ausgabe-mit-der-matplotlib">
 <h3>Grafische Ausgabe mit der Matplotlib<a class="headerlink" href="#grafische-ausgabe-mit-der-matplotlib" title="Permalink to this heading"></a></h3>
-<p>Nachdem das bisher alles recht gut geklappt hat, werden wir etwas mutiger und wollen uns eine größere Herausforderung vornehmen - die grafische Darstellung von Kurvenverläufen. Für grafische Ausgaben, bei denen es darum mathematische Inhalte darzustellen, gibt es in Python das Modul <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>, das einen wirklich mächtigen Funktionsumfang bereitstellt. Das Modul gehört nicht zur Standard-Python-Distribution, die wir installiert haben, aber wir können es einfach nachinstallieren. Dazu gehen wir in eine Konsole, in der die virtuelle Umgebung aktiviert ist, in die wir das Paket installieren wollen.</p>
+<p>Nachdem das bisher alles recht gut geklappt hat, werden wir etwas mutiger und wollen uns eine größere Herausforderung vornehmen - die grafische Darstellung von Kurvenverläufen. Für grafische Ausgaben, bei denen es darum geht  mathematische Inhalte darzustellen, gibt es in Python das Modul <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>, das einen wirklich mächtigen Funktionsumfang bereitstellt. Das Modul gehört nicht zur Standard-Python-Distribution, die wir installiert haben, aber wir können es einfach nachinstallieren. Dazu gehen wir in eine Konsole, in der die virtuelle Umgebung aktiviert ist, in die wir das Paket installieren wollen.</p>
 <p>Unter Windows geben wir folgende Kommandozeile ein:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; pip install matplotlib
 </pre></div>
@@ -209,7 +209,7 @@ Verarbeite die Daten
 <figure class="align-default" id="label-img-matplotlib-01">
 <a class="reference internal image-reference" href="../_images/matplotlib_01.png"><img alt="../_images/matplotlib_01.png" src="../_images/matplotlib_01.png" style="width: 513.6px; height: 427.20000000000005px;" /></a>
 </figure>
-<p>Wie wir sehen, &quot;zaubert“ die <em>Matplotlib</em> aus den wenigen Zeilen Code etwas druchaus ansehnliches: Es gibt einen Digrammrahmen, die Achsen besitzen Skalen, das Digramm wird auch passend zu den Daten skaliert und das Plotfenster kann beispielsweise vergrößert oder auch gespeichert werden und mehr. Und das Ganze mit nur drei Zeilen Python:</p>
+<p>Wie wir sehen, &quot;zaubert“ die <em>Matplotlib</em> aus den wenigen Zeilen Code etwas durchaus ansehnliches: Es gibt einen Diagrammrahmen, die Achsen besitzen Skalen, das Diagramm wird auch passend zu den Daten skaliert und das Plotfenster kann beispielsweise vergrößert oder auch gespeichert werden und mehr. Und das Ganze mit nur drei Zeilen Python:</p>
 <dl class="simple">
 <dt>Zeile 11:</dt><dd><p>Wir lassen uns von der <em>Matplotlib</em> durch die Funktion <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots">plt.subplots()</a> ein Objekt zum Plotten erzeugen und erhalten <strong>zwei</strong> Rückgabewerte von <strong>einer</strong> Funktion:</p>
 <ol class="arabic simple">
@@ -241,7 +241,7 @@ Verarbeite die Daten
 </span><span class="linenos">14</span><span class="c1"># d: (ret_1, ret_2, ret_3)</span>
 </pre></div>
 </div>
-<p>Auch wenn der Aufruf und die Übernahme der Rückgabewerte in allen drei Fällen (Zeilen 7, 9, 11) etwas anders aussieht, steckt dahinter tatsächlich immer der gleiche Mechanismus. Bei der Rückgabe von mehreren Werten, werden diese als sog. Tupel zurückgegeben. Ein Tupel in Python kann ähnlich wie eine Liste eine Reihe von Werten unterschiedlichen Datentyps enthalten. Die Werte eines Tupels werden durch <em>( )</em> eingeschlossen (zur Erinnerung: Listen durch <em>[ ]</em>). Der wesentliche Unterschied zwischen beiden Datenstrukturen ist, dass wir bei einem Tupel die Werte nachträglich nicht mehr verändern können, bei Listen hingegen schon.</p>
+<p>Auch wenn der Aufruf und die Übernahme der Rückgabewerte in allen drei Fällen (Zeilen 7, 9, 11) etwas anders aussieht, steckt dahinter tatsächlich immer der gleiche Mechanismus. Bei der Rückgabe von mehreren Werten, werden diese als sog. Tupel zurückgegeben. Ein Tupel in Python kann ähnlich wie eine Liste eine Reihe von Werten unterschiedlichen Datentyps enthalten. Die Werte eines Tupels werden durch <em>( )</em> eingeschlossen (Listen durch <em>[ ]</em>). Der wesentliche Unterschied zwischen beiden Datenstrukturen ist, dass wir bei einem Tupel die Werte nachträglich nicht mehr verändern können, bei Listen hingegen schon.</p>
 </div>
 <p>Wir können den Plot noch in vielfältiger Weise anpassen oder um weitere Darstellungselemente ergänzen, z.B.:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Import des Moduls</span>
@@ -281,7 +281,7 @@ Verarbeite die Daten
 <dl class="simple">
 <dt>*args:</dt><dd><p>Mit den &quot;arguments“ sind die Daten gemeint, die geplotted werden sollen. '*‘ deshab, weil wir die Daten in unterschiedlicher Form übergeben können, ebenso wie einen oder mehrere Datensätze.</p>
 </dd>
-<dt>scalex=True, scaley=True, data=None:</dt><dd><p>Dies sind Argumente mit Defaultwerten. Übergeben wir diese Argumente nicht explizit, dann werden die Defaultwerte verwendet. (Zu dieser Form der Datenübergabe gleich mehr.)</p>
+<dt>scalex=True, scaley=True, data=None:</dt><dd><p>Dies sind Argumente mit Defaultwerten. Übergeben wir diese Argumente nicht explizit, dann werden die Defaultwerte verwendet (zu dieser Form der Datenübergabe gleich mehr).</p>
 </dd>
 <dt>**kwargs:</dt><dd><p>Mit den &quot;keyword-arguments“ ist eine Aufzählung variabler Länge von Modifikationsparametern gemeint. Auch diese Parameter haben Standardwerte hinterlegt, die wir ändern können, z.B. ändern wir durch das 'kwarg‘ <code class="code docutils literal notranslate"><span class="pre">color='r'</span></code> die Farbe der zu plottenden Kurve in 'red‘.</p>
 </dd>
@@ -309,8 +309,8 @@ Verarbeite die Daten
 <section id="aufgabe-4-1">
 <h2>Aufgabe 4.1<a class="headerlink" href="#aufgabe-4-1" title="Permalink to this heading"></a></h2>
 <p>In dieser Aufgabe wollen wir die bisher gewonnenen Erkenntnisse zum Einlesen von Dateien und zum Plotten zusammenbringen und unsere &quot;Sinus-Aufgabe“ fortsetzen.</p>
-<div class="admonition-to-dokumentation admonition">
-<p class="admonition-title">To Dokumentation</p>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
 <p>Zu erstellen ist ein Programm, welches auf der Basis der vorherigen Beispiele die Wertetabelle für eine Funktion (x,y) aus einer Datei einliest und die Funktionswerte grafisch darstellt. Dabei gelten im Detail folgende Vorgaben:</p>
 <ol class="arabic">
 <li><p>Das Einlesen der Datei soll mit einer Funktion realisiert werden, die folgende Signatur aufweist (so nennt man die Aufrufdefinition auch):</p>

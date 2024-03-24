@@ -164,7 +164,7 @@
 </section>
 <section id="listen">
 <h3>Listen<a class="headerlink" href="#listen" title="Permalink to this heading"></a></h3>
-<p>Listen (oft auch als Arrays oder Felder) bezeichnet sind ein sog. zusammengesetzter Datentyp, der eine gewisse Ähnlichkeit zu den o.a. Strings hat. Unter der Haube gibt es dann aber doch eine ganze Reihe Unterschiede. In einer Liste können wir zunächst - ähnlich den Zeichenketten - mehrere Datenwerte abspeichern, auf die wir dann mit dem Indexoperator <em>[ ]</em> zugreifen können:</p>
+<p>Listen sind ein sog. zusammengesetzter Datentyp, der eine gewisse Ähnlichkeit zu den o.a. Strings hat. Unter der Haube gibt es dann aber doch eine ganze Reihe Unterschiede. In einer Liste können wir zunächst - ähnlich den Zeichenketten - mehrere Datenwerte abspeichern, auf die wir dann mit dem Indexoperator <em>[ ]</em> zugreifen können:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">eine_liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">17</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span> <span class="mi">99</span><span class="p">]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">eine_liste</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>                <span class="c1"># 1. Element der Liste</span>
@@ -201,7 +201,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">liste_b</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>               <span class="c1"># letztes Element von liste_b</span>
 </pre></div>
 </div>
-<p>Wir können aber Listen anlegen, in denen die Elemente alle unterschiedliche Datentypen besitzen:</p>
+<p>Wir können aber auch Listen anlegen, in denen die Elemente alle unterschiedliche Datentypen besitzen:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">q_liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mf">3.1415</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
 
 <span class="c1"># wir schauen uns die Datentypen und -werte der Listenelemente an</span>
@@ -218,8 +218,7 @@
 </div>
 <div class="admonition-hinweis-fur-programmiererfahrene admonition">
 <p class="admonition-title">Hinweis für Programmiererfahrene</p>
-<p>Bei Kenntnis anderer Programmiersprachen &quot;fühlen“ sich diese gemischten Listen i.d.R. ungewohnt an, weil man gewohnt ist, dass in einem Array alle Elemente gleichen Datentyps sind und man damit „rechnen“ kann. Im Falle numerischer Datentypen sind eindimensionale Arrays analog zu Vektoren aus der Mathematik und zweidimensionale Arrays entsprechend analog zu Matrizen.</p>
-<p>Wir könnten zwar auch mit den Standard-Listen aus Python mathematische Rechnungen durchführen (die wir selber implementieren müssten), tatsächlich aber gibt es dafür in Python ein spezielles Modul mit Namen <em>numpy</em> (für &quot;numerical python“), das neben Datentypen für Vektor- und Matrizenrechnungen viele weitere mathematische Funktionen bereitstellt. (Die Funktionalität von <em>numpy</em> ist stark an MATLAB angelehnt.)</p>
+<p>Bei Kenntnis anderer Programmiersprachen &quot;fühlen“ sich diese gemischten Listen i.d.R. ungewohnt an, weil man gewohnt ist, dass in listenartigen Datenstrukturen alle Elemente gleichen Datentyps sind und man damit „rechnen“ kann. Wir könnten zwar auch mit den Standard-Listen aus Python mathematische Rechnungen durchführen (die wir selber implementieren müssten), tatsächlich aber gibt es dafür in Python ein spezielles Modul mit Namen <em>NumPy</em> (für &quot;Numerical Python“), das neben Datentypen für Vektor- und Matrizenrechnungen viele weitere mathematische Funktionen bereitstellt. (Die Funktionalität von <em>NumPy</em> ist stark an MATLAB angelehnt.)</p>
 </div>
 <p>Bisher haben wir unsere Listen immer auf einen Schlag angelegt und dann auf die Elemente zugegriffen. Was machen wir aber, wenn wir im Programmverlauf eine Liste erweitern oder verkleinern wollen?</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">list_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
@@ -257,7 +256,7 @@
 <span class="n">rückgabewert</span> <span class="o">=</span> <span class="n">variablenname</span><span class="o">.</span><span class="n">funktionsname</span><span class="p">(</span><span class="n">argument_2</span><span class="p">,</span> <span class="n">argument_3</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Diese Aufrufform entspricht der sog. objektorientierten Notation, bei die Funktionen (oft auch &quot;Methoden“ genannt) auf Datenobjekten/Variablen arbeiten. Für jeden Datentyp werden dabei die für ihn sinnvollen Funktionen implementiert und wir können diese Funktionen dann für Datenelemente des entsprechenden Typs nach o.a. Notation aufrufen. Inhaltlich entspricht die o.a. zweite Form dem (nicht-objektorientierten) Funktionsaufruf:</p>
+<p>Diese Aufrufform entspricht der sog. objektorientierten Notation, bei der die Funktionen (oft auch &quot;Methoden“ genannt) auf Datenobjekten/Variablen arbeiten. Für jeden Datentyp werden dabei die für ihn sinnvollen Funktionen implementiert und wir können diese Funktionen dann für Datenelemente des entsprechenden Typs nach o.a. Notation aufrufen. Inhaltlich entspricht die o.a. zweite Form dem (nicht-objektorientierten) Funktionsaufruf:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># rückgabewert und argumente sind optional</span>
 <span class="n">rückgabewert</span> <span class="o">=</span> <span class="n">funktionsname</span><span class="p">(</span><span class="n">variablenname</span><span class="p">,</span> <span class="n">argument_2</span><span class="p">,</span> <span class="n">argument_3</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
 </pre></div>
