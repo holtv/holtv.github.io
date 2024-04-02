@@ -67,6 +67,7 @@
 <li class="toctree-l2"><a class="reference internal" href="exercise_03.html">3. Übung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exercise_04.html">4. Übung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exercise_05.html">5. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_06.html">6. Übung</a></li>
 </ul>
 </li>
 </ul>
@@ -242,11 +243,11 @@ Bei der Nutzung von <em>print()</em> und <em>input()</em> haben wir schon gesehe
   Wert &amp;==&amp; 0  \rightarrow \ False \\
   Wert &amp;\ne&amp; 0 \rightarrow \ True
 \end{eqnarray}\end{split}\]</div>
-<p>In unserem Fall sind die Bedingung in der Form eines Vergleichs, z.B. 'n == 3‘, für den wir '==‘ als Vergleichszeichen verwenden, um dies von der Zuweisung mit '=‘ zu unterscheiden. Daneben gibt es viele weitere (Vergleichs-)Operatoren, die in Bedingungen verwendet werden können. Auf diese ziemlich stupide Weise haben wir die Berechnung der drei Fakultätswerte für 1, 3 und 5 in unsere Funktion <em>fak(n)</em> gepackt, können diese in Zeile 20 einfach aufrufen mit <em>fak(1)</em>, <em>fak(3)</em> und <em>fak(5)</em> und bekommen jeweils den passenden Wert zurückgeliefert. Der Aufruf unserer selbst geschriebenen Funktion sieht im Übrigen genauso aus, wie der Aufruf der vordefinierten Funktionen <em>print()</em> und <em>input()</em>.</p>
+<p>In unserem Fall wird die Bedingung in der Form eines Vergleichs, z.B. 'n == 3‘, abgeprüft für den wir '==‘ als Vergleichszeichen verwenden, um dies von der Zuweisung mit '=‘ zu unterscheiden. Daneben gibt es viele weitere (Vergleichs-)Operatoren, die in Bedingungen verwendet werden können. Auf diese ziemlich stupide Weise haben wir die Berechnung der drei Fakultätswerte für 1, 3 und 5 in unsere Funktion <em>fak(n)</em> gepackt, können diese in Zeile 20 einfach aufrufen mit <em>fak(1)</em>, <em>fak(3)</em> und <em>fak(5)</em> und bekommen jeweils den passenden Wert zurückgeliefert. Der Aufruf unserer selbst geschriebenen Funktion sieht im Übrigen genauso aus, wie der Aufruf der vordefinierten Funktionen <em>print()</em> und <em>input()</em>.</p>
 <p>Wenn wir uns jetzt allerdings ins Gedächtnis rufen, dass der Python-Interpreter das Programm zeilenweise abarbeitet, können wir allerdings ins Grübeln geraten. Aber der Python-Interpreter ist durchaus clever, er erkennt die Funktionsdefinition von <em>fak()</em> und überspringt diese. Tatsächlich führt er nacheinander alle nicht eingerückten Zeilen unseres Programms aus, <strong>egal</strong> an welcher Stelle im Programmcode diese stehen. (Daraus folgt, dass wir im Prinzip unsere Funktionen - umfangreichere Programme vorausgesetzt - mehr oder weniger wild über die Datei verteilen könnten. Dies ist aber kein guter Programmierstil!)</p>
 <div class="admonition-merke admonition">
 <p class="admonition-title">Merke</p>
-<p>Wichtig bei der Definition von Funktionen ist, dass die Definition stets vor dem ersten Aufruf der Funktion erfolgen muss,damit diese an der Stelle des Aufrufs schon bekannt sind. (Der Python-Interpreter führt die Funktionen zwar nicht aus, aber er merkt sich, dass es sie gibt!)</p>
+<p>Wichtig bei der Definition von Funktionen ist, dass die Definition stets vor dem ersten Aufruf der Funktion erfolgen muss, damit diese an der Stelle des Aufrufs schon bekannt sind. (Der Python-Interpreter führt die Funktionen zwar nicht aus, aber er merkt sich, dass es sie gibt!)</p>
 </div>
 <p>Ein Testlauf unseres geänderten Programms sollte die gleiche Ausgabe wie vorher ergeben, da wir keine für die Nutzer sichtbaren Änderungen vorgenommmen, sondern nur intern umstrukturiert haben.</p>
 <p>Der nächste logische Schritt ist es nun, die wirklich unelegante hart codierte <em>fak()</em>-Funktion so zu modifizieren, dass wir die Fakultät ganz allgemein für beliebige Argumente <em>n</em> berechnen können. Um auf eine Idee zu kommen, wie wir die Berechnung in einen geschickten Algorithmus in Python umsetzen können, werfen wir mal einen Blick auf die Bestimmung für die ersten aufeinanderfolgenden Werte:</p>

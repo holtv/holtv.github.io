@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6. Übung &mdash; IPP - Ingenieurwissenschaftliches Programmieren mit Python 0.1 Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=9d4e32a3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="prev" title="5. Übung" href="exercise_05.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            IPP - Ingenieurwissenschaftliches Programmieren mit Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhalt:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Grundlagen der Programmierung</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../exer.html">Übungen</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="exercise_01.html">1. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_02.html">2. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_03.html">3. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_04.html">4. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_05.html">5. Übung</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6. Übung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-6-1">Beispiel 6.1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ein-worterbuch-fur-python">Ein &quot;Wörterbuch“ für Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module">Module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-6-1">Aufgabe 6.1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IPP - Ingenieurwissenschaftliches Programmieren mit Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../exer.html">Übungen</a></li>
+      <li class="breadcrumb-item active">6. Übung</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/exercises/exercise_06.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ubung">
+<h1>6. Übung<a class="headerlink" href="#ubung" title="Permalink to this heading"></a></h1>
+<section id="beispiel-6-1">
+<h2>Beispiel 6.1<a class="headerlink" href="#beispiel-6-1" title="Permalink to this heading"></a></h2>
+<section id="ein-worterbuch-fur-python">
+<h3>Ein &quot;Wörterbuch“ für Python<a class="headerlink" href="#ein-worterbuch-fur-python" title="Permalink to this heading"></a></h3>
+<p>Bevor wir uns an die nächste Aufgabe heranwagen, wollen wir eine weitere Datenstruktur kennenlernen, die Python uns bietet: das <em>dictionary</em> (Wörterbuch, Lexikon). Nachschlagewerke wie eben z.B. Wörterbücher, Telefonbücher oder andere Verzeichnisse basieren auf der Idee, dass man über einen definierten Schlüssel auf das Verzeichnis zugreift und daraufhin die unter dem Schlüssel hinterlegten Informationen ermitteln kann. Dies ist auch bei einem Python-<em>dictionary</em> nicht anders, wie wir an diesem Beispiel sehen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Wir definieren uns eine kleines Telefonbuch in Form eines &#39;dictonaries&#39; ...</span>
+<span class="n">telefonbuch</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="c1"># Schlüssel   : Wert</span>
+  <span class="s2">&quot;Adam&quot;</span>        <span class="p">:</span> <span class="mi">1234</span><span class="p">,</span>
+  <span class="s2">&quot;Eva&quot;</span>         <span class="p">:</span> <span class="mi">4321</span><span class="p">,</span>
+  <span class="s2">&quot;Max&quot;</span>         <span class="p">:</span> <span class="mi">9191</span><span class="p">,</span>
+  <span class="s2">&quot;Moritz&quot;</span>      <span class="p">:</span> <span class="mi">1919</span><span class="p">,</span>
+  <span class="s2">&quot;Pippi&quot;</span>       <span class="p">:</span> <span class="mi">1001</span><span class="p">,</span>
+  <span class="s2">&quot;Wickie&quot;</span>      <span class="p">:</span> <span class="mi">2002</span>
+<span class="p">}</span>
+
+<span class="c1"># ... dann können wir über alle Schlüssel iterieren ...</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">telefonbuch</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">&#39;hat die Rufnummer&#39;</span><span class="p">,</span> <span class="n">telefonbuch</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+
+<span class="c1"># ... können die Werte natürlich auch direkt ändern ...</span>
+<span class="n">telefonbuch</span><span class="p">[</span><span class="s2">&quot;Adam&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2345</span>
+<span class="c1"># ... und dabei auch einen anderen Datentyp zuweisen ...</span>
+<span class="n">telefonbuch</span><span class="p">[</span><span class="s2">&quot;Eva&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;geheim&#39;</span>
+
+<span class="c1"># ... und geben das zur Kontrolle nochmal aus</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">telefonbuch</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s1">&#39;hat die Rufnummer&#39;</span><span class="p">,</span> <span class="n">telefonbuch</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Die <em>dictonaries</em> bestehen also immer aus <em>(Schlüssel, Wert)</em>-Paaren, wobei der <em>Wert</em> - wie in Python nicht anders zu erwarten - ein beliebiger Datentyp sein kann, also z.B. auch eine Liste oder ein weiteres Dictionary:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ein &#39;dictionary&#39; mit Werten unterschiedlichen Datentyps definieren ...</span>
+<span class="n">vw_kaefer</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;Leistung&quot;</span> <span class="p">:</span> <span class="mi">34</span><span class="p">,</span> <span class="c1"># in [PS]</span>
+  <span class="s2">&quot;Konstrukteur&quot;</span> <span class="p">:</span> <span class="s1">&#39;F. Porsche&#39;</span><span class="p">,</span>
+  <span class="s2">&quot;Spitzname&quot;</span> <span class="p">:</span> <span class="s1">&#39;Herbie&#39;</span><span class="p">,</span>
+  <span class="s2">&quot;Abmessungen&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">4.09</span><span class="p">,</span> <span class="mf">1.55</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">]</span>  <span class="c1"># L B H in [m]</span>
+<span class="p">}</span>
+
+<span class="c1"># ... einmal zur Kontrolle darüber iterieren ...</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">vw_kaefer</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">vw_kaefer</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+
+<span class="c1"># ... und den Schlüssel &#39;Abmessungen&#39; einer Variablen zuweisen ...</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">vw_kaefer</span><span class="p">[</span><span class="s2">&quot;Abmessungen&quot;</span><span class="p">]</span>
+
+<span class="c1"># ... und damit dann etwas berechnen</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Einhüllendes Volumen eines Käfers: &quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s1">&#39;qm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Auch Dictionaries haben vielfältige Verwendungsmöglichkeiten insbesondere auch in Verbindung mit dem Lesen oder Schreiben von strukturierten Daten. Wir werden das später in Verbindung mit dem JSON(JavaScript Objekt Notation)-Datenformat  noch näher kennenlernen. Vorerst wollen wir Dictionaries dazu nutzen, um einige Konfigurationsdaten in unseren Beispielen und Aufgaben nicht mehr direkt fest in den Code einzuprogrammieren, sondern in Form einer separaten &quot;Konfigurationsdatei“ übersichtlich und leicht änderbar zu definieren. Wir schauen uns das am Beispiel der Parameter zur Festlegung der Größe unseres Plot-Fensters einmal an:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dieses Dictionary enthält die Konfigurationsparameter für die Größe des</span>
+<span class="c1"># Figure-Fensters</span>
+<span class="n">cfg_plt_fig</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;width&quot;</span>  <span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="c1"># [in]</span>
+  <span class="s2">&quot;height&quot;</span> <span class="p">:</span> <span class="mi">10</span> <span class="c1"># [in]</span>
+<span class="p">}</span>
+
+<span class="o">...</span> <span class="n">andere</span> <span class="n">Anweisungen</span>
+
+<span class="c1"># Anlegen eines Figures zum Plotten ...</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="c1"># ... und festlegen der Fenstergröße anhand der Konfigurationsparameter</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="n">cfg_plt_fig</span><span class="p">[</span><span class="s1">&#39;width&#39;</span><span class="p">],</span> <span class="n">cfg_plt_fig</span><span class="p">[</span><span class="s1">&#39;height&#39;</span><span class="p">])</span>
+
+<span class="o">...</span> <span class="n">andere</span> <span class="n">Anweisungen</span>
+</pre></div>
+</div>
+<p>Diese Methode funktioniert zwar, allerdings stehen unsere Konfigurationsparameter jetzt immer noch in der gleichen Datei wie unser Programmcode. Deutlich schicker wäre es aber, wenn wir eine separate Konfigurationsdatei hätten, in der nur die möglichen Parameter zu unserem Programm in übersichtlicher Form stünden.</p>
+</section>
+<section id="module">
+<h3>Module<a class="headerlink" href="#module" title="Permalink to this heading"></a></h3>
+<p>Deshalb gehen wir zunächst noch einen Schritt weiter und schauen uns an, wie wir unser Programm über mehrere Dateien verteilen. In Python spricht man dann von sog. &quot;Modulen“. Im Prinzip haben wir schon die ganze Zeit mit (jeweils) einem Modul gearbeitet, wenn wir ein Programm geschrieben haben. In Python ist nämlich jedes Programm bzw. jede Programmdatei auch ein Modul! Um jetzt in einem Programm auf Inhalte wie Daten oder Funktionen in einem anderen Modul zuzugreifen müssen wir dieses lediglich importieren und DAS kennen wir ja schon lange. Wir packen unser Konfigurations-Dictionary also in eine separate Datei, die wir beispielsweise &quot;cfg_example_6_1.py“ nennen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Datei &#39;cfg_example_6_1.py&#39;</span>
+<span class="c1"># Konfigurationsdaten zum Beispiel 6.1</span>
+
+<span class="c1"># Dieses Dictionary enthält die Konfigurationsparameter für die Größe des</span>
+<span class="c1"># Figure-Fensters</span>
+<span class="n">plt_fig</span> <span class="o">=</span> <span class="p">{</span>             <span class="c1"># ACHTUNG - der Name ist hier geändert!</span>
+  <span class="s2">&quot;width&quot;</span>  <span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="c1"># [in]</span>
+  <span class="s2">&quot;height&quot;</span> <span class="p">:</span> <span class="mi">10</span> <span class="c1"># [in]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Im unserer eigentlichen Programmdatei können wir dann unser erstes (bewusst) selbstgeschriebenes Modul so wie auch andere Module einfach importieren und nutzen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Datei &#39;example_6_1.py&#39;</span>
+<span class="c1"># Unser Hauptprogramm</span>
+
+<span class="c1"># Wir importieren unser Konfigurationsmodul und kürzen den Namen mit &#39;cfg&#39; ab</span>
+<span class="kn">import</span> <span class="nn">cfg_example_6_1</span> <span class="k">as</span> <span class="nn">cfg</span>
+
+<span class="o">...</span> <span class="n">andere</span> <span class="n">Anweisungen</span>
+
+<span class="c1"># Anlegen eines Figures zum Plotten ...</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="c1"># ... und festlegen der Fenstergröße anhand der Konfigurationsparameter</span>
+<span class="c1"># Mit &#39;cfg.&#39; greifen wir auf die Konfigurationsparameter zu</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="n">cfg</span><span class="o">.</span><span class="n">plt_fig</span><span class="p">[</span><span class="s1">&#39;width&#39;</span><span class="p">],</span> <span class="n">cfg</span><span class="o">.</span><span class="n">plt_fig</span><span class="p">[</span><span class="s1">&#39;height&#39;</span><span class="p">])</span>
+
+<span class="o">...</span> <span class="n">andere</span> <span class="n">Anweisungen</span>
+</pre></div>
+</div>
+<p>In gleicher Weise wie unsere Konfigurationsparameter könnten wir auch andere Daten, Funktionen oder Klassen in eigene Module auslagern. Darüberhinaus können wir mehrere Module zu sogenannten Paketen zusammenfassen, aber dazu später mehr.</p>
+<div class="admonition-module-und-der-python-pfad admonition">
+<p class="admonition-title">Module und der Python-Pfad</p>
+<p>Grundsätzlich sind selbsterstellte Module und Pakete vollkommen gleichwertig zu den Modulen, die wir mit <em>pip</em> (oder auf andere Weise) herunterladen und auf unserem Rechner installieren. Trotzdem kann es manchmal sein, dass unsere eigenen Module nicht gefunden werden - vor allem, wenn diese nicht im selben Verzeichnis stehen, wie das Modul in dem der Aufruf erfolgt. Das liegt daran, dass Python Module und Pakete im Python-Pfad sucht, zu dem i.d.R. auch das aktuelle Arbeitsverzeichnis zählt. Um das Problem zu beseitigen, gibt es drei Möglichkeiten:</p>
+<ol class="arabic simple">
+<li><p>Das Modul in einem Verzeichnis im (vorhandenen) Python-Pfad bereitstellen.</p></li>
+<li><p>Den Python-Pfad in unserem (virtuellen) Environment statisch um das Modulverzeichnis erweitern.</p></li>
+<li><p>Den Python-Pfad dynamisch, d.h. während der Ausführung, um das Modulverzeichnis erweitern.</p></li>
+</ol>
+<p>Die dritte Variante werden wir später bei Gelegenheit einsetzen, im Augenblick sollte unser Modul auch so gefunden werden.</p>
+</div>
+</section>
+</section>
+<section id="aufgabe-6-1">
+<h2>Aufgabe 6.1<a class="headerlink" href="#aufgabe-6-1" title="Permalink to this heading"></a></h2>
+<p>Im Rahmen der letzten Aufgabe haben wir angenommen, dass wir die Beschleunigungsänderungen als (Ruck-)Impulse auf unser System geben. Ein solches Verhalten entspricht nicht dem realer Systeme, da diese über - im Falle der Bewegung - über Massen verfügen, die beschleunigt werden müssen, außerdem treten oft Reibungs- und andere Widerstandskräfte auf, die berücksichtigt werden müssten. Bei einem Auto beispielsweise geben wir mittels der Gaspedalstellung auch nicht die Beschleunigung vor, sondern die Geschwindigkeit. Deshalb wollen wir jetzt einmal ein etwas realitätsgetreueres Modell betrachten.</p>
+<p>Jedes reale physikalische System hat aufgrund der vorhandenen &quot;Energiespeicher“ wie etwa Massen, Federn, Kondensatoren oder sonstigen Elementen eine gewisse Trägheit. Im Fall der von uns betrachteten Bewegung eines Objekts wollen wir uns auf die Masse als Energiespeicher beschränken. Wenn wir bei einem Auto eine bestimmte Gaspedalstellung vorgeben (und halten), dann korrespondiert diese - je nach Übersetzung des Antriebsstrangs - mit einer gewissen Geschwindigkeit. Diese wird aber erst nach einiger Zeit erreicht, je nach Leistung des Motors und der Masse der Autos. In erster Näherung kann man das Verhalten ähnlich wie in Abbildung <a class="reference internal" href="#label-img"><span class="std std-ref">Sprungantwort eines PT1-Gliedes</span></a> darstellen. Ein solches Übertragungsverhalten bezeichnet man als Verzögerungsglied 1. Ordnung (PT1-Glied), auch als Tiefpass bezeichnet.</p>
+<figure class="align-default" id="id1">
+<span id="label-img"></span><a class="reference internal image-reference" href="../_images/matplotlib_04A.png"><img alt="../_images/matplotlib_04A.png" src="../_images/matplotlib_04A.png" style="width: 591.0px; height: 245.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Abb. 2 </span><span class="caption-text">Sprungantwort eines PT1-Gliedes</span><a class="headerlink" href="#id1" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+<p>Mathematisch wird dieses Verhalten wie folgt als Differenzengleichung beschrieben (im Folgenden schreiben wir abkürzend <span class="math notranslate nohighlight">\(v_k  anstelle von v(t_k)\)</span> und weitere):</p>
+<div class="math notranslate nohighlight">
+\[v_{ist,k+1} = v_{ist,k} + (K_v \cdot v_{soll,k}-v_{ist,k}) \cdot \frac{\Delta t}{T_v} \tag{6.1}\]</div>
+<p>mit</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{eqnarray}
+  v_{ist}   &amp;=&amp; \text{Ist-Geschwindigkeit} \\
+  v_{soll}  &amp;=&amp; \text{Soll-Geschwindigkeit} \\
+  K_v       &amp;=&amp; \text{Verstärkungsfaktor} \\
+  \Delta t  &amp;=&amp; \text{Zeitschritt} \\
+  T_v       &amp;=&amp; \text{Zeitkonstante}
+\end{eqnarray}\end{split}\]</div>
+<p>Den Weg erhalten wir dann in der uns schon bekannten Form als Differenzengleichung:</p>
+<div class="math notranslate nohighlight">
+\[s_{k+1} = s_k + \Delta t \cdot v_{ist,k} \tag{6.2}\]</div>
+<p>Die Beschleunigung ergibt sich in diesem Fall als Ableitung der Ist-Geschwindigkeit:</p>
+<div class="math notranslate nohighlight">
+\[a_{k+1} = \frac{v_{ist,k+1}-v_{ist,k}}{\Delta t}  \tag{6.3}\]</div>
+<p>Da wir - anders als in Aufgabe 5.2 - nun die Soll-Geschwindigkeit vorgeben, muss die Tabelle, die wir wieder aus einer Datei einlesen wollen, nach einem etwas anderen Muster aufgebaut sein:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(t\ [s]\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(v_{soll}\ [m/s]\)</span></p></th>
+<th class="head"><p>Kommentar</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.0</p></td>
+<td><p>12.5</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>15.5</p></td>
+<td><p>0.0</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>28.5</p></td>
+<td><p>31.0</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>43.0</p></td>
+<td><p>22.5</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>52.0</p></td>
+<td><p>0.0</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>60.0</p></td>
+<td><p>0.0</p></td>
+<td><p>Endzeitpunkt</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Es ist ein Programm zu erstellen, dass:</p>
+<ol class="arabic simple">
+<li><p>die Soll-Geschwindigkeit für mindestens 5 Zeitintervalle aus einer Datei einliest. (Die Datei ist ebenfalls selbst zu erstellen.)</p></li>
+<li><p>unter Nutzung der <em>NumPy</em>-Bibliothek die Ist-Geschwindigkeit <span class="math notranslate nohighlight">\(v_{ist}\)</span>, die Beschleunigung <span class="math notranslate nohighlight">\(a\)</span> und den zurückgelegtem Weg <span class="math notranslate nohighlight">\(s\)</span>   über alle Zeitintervalle und alle Zeitschritte <span class="math notranslate nohighlight">\(k\)</span> implementiert.</p></li>
+<li><p>die Verläufe für die Elemente von <span class="math notranslate nohighlight">\(s, (v_{ist}, v_{soll}), a\)</span> mittels der <em>Matplotlib</em> untereinander in 3 einzelnen Subplots darstellt. (Grid, Achsenbezeichnungen, Legenden)</p></li>
+<li><p>die folgenden Konfigurationsparameter aus einem separaten Modul in Form eines Dictionaries einliest:</p>
+<ol class="arabic simple">
+<li><p>Zeitschritt <span class="math notranslate nohighlight">\(dt\)</span> (Standardwert = <span class="math notranslate nohighlight">\(0.05s\)</span>)</p></li>
+<li><p>Verstärkungsfaktor <span class="math notranslate nohighlight">\(K_v\)</span> (Standardwert = <span class="math notranslate nohighlight">\(1\)</span>)</p></li>
+<li><p>Zeitkonstante <span class="math notranslate nohighlight">\(T_v\)</span> (Standardwert = <span class="math notranslate nohighlight">\(2.5s\)</span>)</p></li>
+<li><p>Größe des Plot-Fensters</p></li>
+<li><p>Plot-Stil (Farbe, Linienart) für jedes darzustellende Signal</p></li>
+<li><p>Name der Datei mit den Soll-Geschwindigkeiten</p></li>
+</ol>
+</li>
+<li><p>die verschiedenen Aufgaben sinnvoll in Funktionen gliedert, Meldungen an die Nutzer ausgibt und Kommentare enthält.</p></li>
+</ol>
+</div>
+<p>Lösungshinweise:</p>
+<ol class="arabic simple">
+<li><p>Auch in diesem Fall muss die Lösung wieder iterativ berechnet werden. Anders als bei Aufgabe 5.2 können wir in diesem Fall nicht mit Matrizen arbeiten, sondern müssen die gesuchten Werte jeweils separat ermitteln.</p></li>
+<li><p>Da die Konfigurationsparameter unterschiedliche Aspekte betreffen, ist es sinnvoll, diese nicht in einem gemeinsamen Dictionary abzulegen, sondern diese thematisch zu bündeln, z.B. 'model‘ (1.-3.), 'plot‘ (4.-5.) und 'data‘ (6.).</p></li>
+</ol>
+<p>Auch hier wieder als Beispiel, wie das Ergebnis aussehen sollte, wenn wir die o.a. Beispieltabelle verwenden:</p>
+<figure class="align-default" id="label-img-matplotlib-03">
+<a class="reference internal image-reference" href="../_images/matplotlib_03.png"><img alt="../_images/matplotlib_03.png" src="../_images/matplotlib_03.png" style="width: 601.5px; height: 805.5px;" /></a>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="exercise_05.html" class="btn btn-neutral float-left" title="5. Übung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Prof. Dr.-Ing. Volker von Holt - Fahrzeuginformatik - Ostfalia Hochschule.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
