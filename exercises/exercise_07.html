@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7. Übung &mdash; IPP - Ingenieurwissenschaftliches Programmieren mit Python 0.1 Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=9d4e32a3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="prev" title="6. Übung" href="exercise_06.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            IPP - Ingenieurwissenschaftliches Programmieren mit Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhalt:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Grundlagen der Programmierung</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../exer.html">Übungen</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="exercise_01.html">1. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_02.html">2. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_03.html">3. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_04.html">4. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_05.html">5. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_06.html">6. Übung</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7. Übung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-7-1">Beispiel 7.1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#klassengesellschaft">Klassengesellschaft</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eigene-klassen-definieren">Eigene Klassen definieren</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-7-2">Beispiel 7.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-7-1">Aufgabe 7.1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IPP - Ingenieurwissenschaftliches Programmieren mit Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../exer.html">Übungen</a></li>
+      <li class="breadcrumb-item active">7. Übung</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/exercises/exercise_07.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ubung">
+<h1>7. Übung<a class="headerlink" href="#ubung" title="Permalink to this heading"></a></h1>
+<section id="beispiel-7-1">
+<h2>Beispiel 7.1<a class="headerlink" href="#beispiel-7-1" title="Permalink to this heading"></a></h2>
+<section id="klassengesellschaft">
+<h3>Klassengesellschaft<a class="headerlink" href="#klassengesellschaft" title="Permalink to this heading"></a></h3>
+<p>Bereits in der ersten Übung hatten wir uns den Datentyp verschiedener Variablen anzeigen lassen. Damals hatten wir vorerst nur zur Kenntnis genommen, dass uns für eine Variable <code class="code docutils literal notranslate"><span class="pre">a=42</span></code> als Datentyp <code class="code docutils literal notranslate"><span class="pre">&lt;class</span> <span class="pre">'int'&gt;</span></code> ausgegeben wird. Nun wollen wir etwas mehr Licht ins Dunkel der Pythonschen &quot;Klassengesellschaft“ bringen, denn in Python gehören einfach alle Daten einer Klasse an. Bevor wir dies weiter vertiefen, schauen wir uns noch ein Beispiel an:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Wir definieren 2 Integervariablen ...</span>
+<span class="linenos"> 2</span><span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="linenos"> 3</span><span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">73</span><span class="p">)</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1"># ... und schauen uns deren Datentypen an ...</span>
+<span class="linenos"> 6</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Datentyp von a=&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="linenos"> 7</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Datentyp von b=&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1"># ... addieren a und b &quot;konventionell&quot; ...</span>
+<span class="linenos">10</span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Datentyp von c=&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span><span class="c1"># ... und etwas &quot;unkonventioneller&quot; ...</span>
+<span class="linenos">14</span><span class="n">d</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="fm">__add__</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="linenos">15</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Datentyp von d=&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="c1"># Zur Kontrolle lassen wir uns noch einmal alle Variablen ausgeben.</span>
+<span class="linenos">18</span><span class="c1"># NEU: Hier sehen wir gleich ein Beispiel, wie man bei &#39;print()&#39; die Ausgabe formatieren kann.</span>
+<span class="linenos">19</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a=</span><span class="si">%d</span><span class="s1">  b=</span><span class="si">%d</span><span class="s1">  c=</span><span class="si">%c</span><span class="s1">  d=</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Zur Erinnerung ist in Zeile 3 noch einmal eine explizite Instanziierung des Wertes <em>73</em> als Integervariable vorgenommen worden - in Zeile 2 erfolgt das Ganze implizit hinter den Kulissen durch den Python-Interpreter. In Zeile 14 wird es dann so richtig &quot;obskur“: dort addieren wir die beiden Variablen <em>a</em> und <em>b</em> nicht durch den '+‘-Operator, sondern durch den Aufruf der Methode <em>__add()__</em> der Klasse <em>int</em>. Methoden, also Funktionen, die zu einer Klasse gehören, haben wir schon verschiedentlich eingesetzt, z.B. beim Einsatz der <em>Matplotlib</em> oder von <em>NumPy</em>, aber noch nicht weiter vertieft. Tatsächlich ist es so, dass auch im Fall des Additionsoperators '+‘ eigentlich die Methode <em>__add()__</em> der Klasse <em>int</em> aufgerufen wird. Ebenso gibt es für alle Operatoren, die für Integerzahlen definiert sind entsprechende Klassen-Methoden, die stattdessen aufgerufen werden. Dieser Aufruf erfolgt für uns transparent durch den Python-Interpreter und hat die schöne Bezeichnung &quot;Operator-Overloading“. Alternativ könnten wir aber tatsächlich auch überall direkt mit den Methoden arbeiten - nur ist die Schreibweise für uns natürlich viel gewohnter und auch kürzer und übersichtlicher. Und zur weiteren Erinnerung hier noch einmal ein kurzer Codeausschnitt, bei dem die Variable <em>a</em> erst als Integer-Variable und danach als Float-Variable instanziiert wird:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Variable &#39;a&#39; ist erst ein Integer ...</span>
+<span class="linenos">2</span><span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>        <span class="c1"># explizit: int(42)</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Datentyp von a=&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="fm">__add__</span><span class="p">(</span><span class="mi">73</span><span class="p">))</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="c1"># und wird dann zum Float</span>
+<span class="linenos">7</span><span class="n">a</span> <span class="o">=</span> <span class="mf">3.1415</span>    <span class="c1"># explizit: float(3.1415)</span>
+<span class="linenos">8</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Datentyp von a=&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="linenos">9</span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="fm">__add__</span><span class="p">(</span><span class="mf">2.71</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Die Methoden <em>__add__()</em>, die in beiden Fällen aufgerufen werden, sind tatsächlich unterschiedliche Methoden, da ja <em>a</em> eine anderen Klasse hat: im ersten Fall (Zeile 4) wird eine Integer-Addition ausgeführt, im zweiten Fall (Zeile 9) eine Float-Addition.</p>
+</section>
+<section id="eigene-klassen-definieren">
+<h3>Eigene Klassen definieren<a class="headerlink" href="#eigene-klassen-definieren" title="Permalink to this heading"></a></h3>
+<p>Das Beste an der Sache ist aber, dass es kinderleicht ist, auch eigene Klassen zu definieren und mit diesen genauso zu arbeiten wie mit vordefinierten Klassen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Zuerst definieren wir die Klasse, die Python sich - ebenso wie Funktionen - im Vorbeigehen für die spätere Verwendung &quot;merkt&quot;</span>
+<span class="linenos"> 2</span><span class="k">class</span> <span class="nc">MeineKlasse</span><span class="p">():</span>
+<span class="linenos"> 3</span>  <span class="c1"># ... die Methoden werden - wie üblich - eingerückt ...</span>
+<span class="linenos"> 4</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 5</span>    <span class="c1"># ... sind ansonsten aber ganz normale Python-Funktionen</span>
+<span class="linenos"> 6</span>    <span class="k">pass</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># Hier beginnt das eigentliche &quot;Hauptprogramm&quot; mit der Definition einer Instanz unserer Klasse</span>
+<span class="linenos"> 9</span><span class="n">mein_objekt</span> <span class="o">=</span> <span class="n">MeineKlasse</span><span class="p">()</span>
+<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Datentyp von m_objekt=&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">m_objekt</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Mit diesem einfachen Beispiel haben wir eine Klasse namens <em>MeineKlasse</em> definiert, die allerdings außer der Methode <em>__init__()</em> keine weiteren Methoden und auch keine Attribute (=Datenelemente) enthält, mit der wir also so noch nichts anfangen können. Die Methode <em>__init__()</em> <strong>muss</strong> allerdings jede Klasse besitzen, denn diese wird von Python aufgerufen, wenn wir ein Element der Klasse instanziieren wollen, also eine Variable vom Typ dieser Klasse anlegen wollen. Genau das haben wir in Zeile 5 gemacht und somit ein Objekt <em>mein_objekt</em> der Klasse <em>MeineKlasse</em> angelegt. Nichts anderes passiert im Übrigen, wenn wir <code class="code docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">int(42)</span></code> schreiben - dann wird die <em>__init__()</em>-Methode der Klasse <em>int</em> aufgerufen.</p>
+<div class="admonition-klassen-und-objekte admonition">
+<p class="admonition-title">Klassen und Objekte</p>
+<p>Gemeinhin spricht man beim Einsatz von Klassen in der Programmierung und den dafür verwendeten Programmiersprachen von <em>Objektorientierter Programmierung</em>. Diese Begrifflichkeit ist in Programmierkreisen nicht ganz unumstritten, da viele der Meinung sind der Begriff <em>Klassenorientierte Programmierung</em> wäre zutreffender. Dies ist aber eher als einer (von gar nicht so wenigen) Glaubenskonflikten untern Programmierern zu sehen und muss uns überhaupt nicht stören - wir bleiben beim Begriff der <em>Objektorientierten Programmierung</em> oder kurz <em>OOP</em>, merken uns aber den Unterschied zwischen Klassen und Objekten:</p>
+<dl class="simple">
+<dt>Klasse:</dt><dd><p>Bauplan/Schablone für einen (neuen) Datentyp der Datenelemente als Attribute und Methoden, die auf diesen Attributen arbeiten, enthält. Eine Klasse selbst ist ein abstraktes Konstrukt und enthält i.d.R. keine konkreten Daten (bis auf Ausnahmefälle).</p>
+</dd>
+<dt>Objekt:</dt><dd><p>Ein Objekt ist ein Datenelement, welches bei der Programmierung als konkrete Instanz einer vor- oder selbstdefinierten Klasse angelegt wird. Es enthält für jedes Attribut, das in der Klasse definiert ist, einen ihm eigenen Wert, der sich von den Attributwerten anderer Objekte der gleichen Klasse i.d.R. unterscheidet.</p>
+</dd>
+</dl>
+</div>
+<p>Um das Konzept der OOP etwas weiter zu veranschaulichen, wollen wir uns an einer Klasse zu Repräsentation komplexer Zahlen versuchen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Definition der Klasse</span>
+<span class="linenos"> 2</span><span class="k">class</span> <span class="nc">Komplex</span><span class="p">():</span>
+<span class="linenos"> 3</span>  <span class="c1"># Konstruktor mit Defaultwerten für die Argumente</span>
+<span class="linenos"> 4</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">imag</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+<span class="linenos"> 5</span>    <span class="c1"># Die Attribute der Klasse sollten im Konstruktor definiert werden</span>
+<span class="linenos"> 6</span>    <span class="bp">self</span><span class="o">.</span><span class="n">real</span> <span class="o">=</span> <span class="n">real</span>  <span class="c1"># Realteil der komplexen Zahl</span>
+<span class="linenos"> 7</span>    <span class="bp">self</span><span class="o">.</span><span class="n">imag</span> <span class="o">=</span> <span class="n">imag</span>  <span class="c1"># Imaginärteil der komplexen Zahl</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1"># Eine Instanz mit Defaultwerten anlegen ...</span>
+<span class="linenos">10</span><span class="n">k1</span> <span class="o">=</span> <span class="n">Komplex</span><span class="p">()</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Datentyp von k1=&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">k1</span><span class="p">))</span>
+<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Realteil=</span><span class="si">%f</span><span class="s1">  Imaginärteil=</span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">k1</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">k1</span><span class="o">.</span><span class="n">imag</span><span class="p">))</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="c1"># ... und eine mit Übergabe der Initialisierungswerte</span>
+<span class="linenos">15</span><span class="n">k2</span> <span class="o">=</span> <span class="n">Komplex</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">)</span>
+<span class="linenos">16</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Datentyp von k2=&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">k2</span><span class="p">))</span>
+<span class="linenos">17</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Realteil=</span><span class="si">%f</span><span class="s1">  Imaginärteil=</span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">k2</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">k2</span><span class="o">.</span><span class="n">imag</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Hier haben wir die <em>__init()__</em>-Methode (auch <em>Konstruktor</em> genannt) mit Leben gefüllt und können beim Anlegen einer Instanz der Klasse Initialisierungswerte für den Real- und den Imaginärteil übergeben. Sofern wir nichts übergeben, werden die Standardwerte <em>(0.0, j0.0)</em> genommen. Die Attributwerte einer Klasse können und sollten wir immer im Konstruktor anlegen. Dabei benutzen wir den Ausdruck <em>self</em>, der allen Methoden einer Klasse als implizites erstes Argument übergeben wird. <em>self</em> stellt die Referenz auf die jeweilige Instanz der Klasse dar, denn die beiden Instanzen <em>k1</em> und <em>k2</em> unterscheiden sich ja i.d.R. durch den jeweiligen Wert ihrer Attribute. Damit wir mit den Attributen einer Instanz arbeiten, müssen wir den Attributen stets <em>self.</em> voranstellen, wie dies in den Zeilen 6 und 7 zu sehen ist. (Anmerkung: In C++ und Java wird die hier <em>self</em> genannte Referenz auf die jeweilige Instanz mit <em>this</em> bezeichnet.)</p>
+<p>Außer dem Konstruktor bietet unsere Beispielklasse noch keinerlei Funktionalität, also bauen sie noch etwas weiter aus:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">Komplex</span><span class="p">():</span>
+<span class="linenos"> 2</span>  <span class="c1"># Konstruktor</span>
+<span class="linenos"> 3</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">real</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">imag</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+<span class="linenos"> 4</span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Objekt der Klasse </span><span class="se">\&#39;</span><span class="s1">Komplex</span><span class="se">\&#39;</span><span class="s1"> angelegt&#39;</span><span class="p">)</span>
+<span class="linenos"> 5</span>    <span class="bp">self</span><span class="o">.</span><span class="n">real</span> <span class="o">=</span> <span class="n">real</span>
+<span class="linenos"> 6</span>    <span class="bp">self</span><span class="o">.</span><span class="n">imag</span> <span class="o">=</span> <span class="n">imag</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>  <span class="c1"># Destruktor - wird bei der Zerstörung aufgerufen</span>
+<span class="linenos"> 9</span>  <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">10</span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Objekt der Klasse </span><span class="se">\&#39;</span><span class="s1">Komplex</span><span class="se">\&#39;</span><span class="s1"> gelöscht&#39;</span><span class="p">)</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span>  <span class="c1"># Methode zur passenden print-Ausgabe</span>
+<span class="linenos">13</span>  <span class="k">def</span> <span class="nf">print</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">14</span>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">imag</span> <span class="o">&gt;=</span> <span class="mf">0.0</span><span class="p">:</span>
+<span class="linenos">15</span>      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(</span><span class="si">%3.2f</span><span class="s1">+j</span><span class="si">%3.2f</span><span class="s1">)&#39;</span> <span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">imag</span><span class="p">))</span>
+<span class="linenos">16</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">17</span>      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(</span><span class="si">%3.2f</span><span class="s1">-j</span><span class="si">%3.2f</span><span class="s1">)&#39;</span> <span class="o">%</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">imag</span><span class="p">)))</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>  <span class="c1"># Methode zum Addieren zweier komplexer Zahlen</span>
+<span class="linenos">20</span>  <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">ks</span><span class="p">):</span>
+<span class="linenos">21</span>    <span class="k">return</span> <span class="n">Komplex</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">real</span><span class="o">+</span><span class="n">ks</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">imag</span><span class="o">+</span><span class="n">ks</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="c1">#---------------------------------------------</span>
+<span class="linenos">24</span><span class="c1"># Hauptprogramm: Einstiegspunkt</span>
+<span class="linenos">25</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span>  <span class="c1"># 1. Instanz</span>
+<span class="linenos">28</span>  <span class="n">k1</span> <span class="o">=</span> <span class="n">Komplex</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="linenos">29</span>  <span class="n">k1</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span>  <span class="c1"># 2. Instanz</span>
+<span class="linenos">32</span>  <span class="n">k2</span> <span class="o">=</span> <span class="n">Komplex</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+<span class="linenos">33</span>  <span class="n">k2</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span>  <span class="c1"># 3. Instanz als Ergebnis der Addition von k1 und k2</span>
+<span class="linenos">36</span>  <span class="n">k3</span> <span class="o">=</span> <span class="n">k1</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">k2</span><span class="p">)</span>
+<span class="linenos">37</span>  <span class="n">k3</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+<span class="linenos">38</span><span class="c1">#---------------------------------------------</span>
+</pre></div>
+</div>
+<p>Die wesentlichen Anmerkungen zum Vorgehen sollten aus den Kommentaren ersichtlich sein. Neu ist allerdings die Zeile 25, die nichts mit dem Thema OOP zu tun hat: Wir haben ja schon erfahren, dass jede Python-Datei gleichzeitig auch ein Modul darstellt, dass wir in anderen Modulen importieren und verwenden können. Um zu unterscheiden, ob ein Modul direkt vom Python-Interpreter aufgerufen wird, weil wir Python mit dem Modulnamen gestartet haben, bekommt dieses &quot;Start“-Modul den (internen) Laufzeitnamen <em>__main__</em> (für diesen Durchlauf). Durch Abfrage des Laufzeitnamens können wir nun dafür sorgen, dass der nachfolgende, eingerückte Code nur ausgeführt wird, wenn es das &quot;Start“-Modul ist, aber nicht, falls es von einem anderen Modul importiert worden ist.</p>
+<div class="admonition-hintergrund-oop-lite admonition">
+<p class="admonition-title">Hintergrund: OOP &quot;lite“</p>
+<p>Der Entwurf umfangreicherer Softwaresysteme ist eine komplexe Angelegenheit, die viel Planung und viele Entwürfe erfordert. Man spricht dann auch von Softwarearchitekturen, die z.B. im Vorfeld der Implementierung durch Modelle definiert werden. Erst nach ganz am Ende erfolgt dann die technische Umsetzung in einer Programmiersprache. Nicht nur im Rahmen von Softwaresystemen, sondern auch ganz allgemein bei anderen Systemen, gibt es den Begriff der &quot;Black Box“. Als solche bezeichnet man ein System, das auf bestimmte Eingaben mit bestimmten Ausgaben reagiert. Man kennt also das definierte Verhalten des Systems (das man u.U. selber spezifiziert hat), aber nicht die Umsetzung wie die &quot;Black Box arbeitet“. Dieses Design hat den Vorteil (neben einigen Nachteilen), dass die Implementierung beliebig geändert werden kann (scheller, billiger, resourcensparener) ohne das sich an der zur Verfügung gestellten Funktion etwas ändert. Die Implementierung ist sozusagen das &quot;Geheimnis“ der Black-Box. Ein ganz ähnliches Ziel verfolgt die OOP mit den Klassen, deren Attributen und Methoden: Nach außen sollen möglichst nur die Methoden(aufrufe) (die &quot;Ein-“ und &quot;Ausgänge“) der Klasse sichtbar sein. Weder die Attribute noch die konkrete Implementierung einer Klasse sollen sichtbar sein. Nur dann haben wir bei der Implementierung der Klasse die volle Freiheit intern alles zu ändern und nur die Methoden als Schnittstellen unverändert zu lassen. Um dies technisch zu unterstützen kennen Objektorientierte Programmiersprachen ein abgestuftes Geheimniskonzept mit den (meist) drei Stufen:</p>
+<dl class="simple">
+<dt>public</dt><dd><p>Attribut/Methode von außerhalb der Klasse zugreifbar, also komplett ungeschützt.</p>
+</dd>
+<dt>protected</dt><dd><p>Attribut/Methode nur innerhalb der Klasse und der &quot;Verwandtschaft“ zugreifbar, also vollkommen teilweise geschützt. (Python: dem Namen des Attributs/der Methode ein ‚_‘ (ein Unterstrich) voranstellen.)</p>
+</dd>
+<dt>private</dt><dd><p>Attribut/Methode nur innerhalb der Klasse zugreifbar, also vollkommen geschützt. (Python: dem Namen des Attributs/der Methode ein ‚__‘ (zwei Unterstriche) voranstellen.)</p>
+</dd>
+</dl>
+<p>Hinter der OOP steckt also eine ganze Ecke mehr, als wir bislang kennen. Da dies aber einen Kurs über Programmiertechniken in Python ist und kein vertiefender Kurs in objektorientiertem Softwareentwurf, werden wir mit dem Thema OOP sehr pragmatisch umgehen. D.h. wir werden die strukturellen Methoden des Klassendesigns einsetzen, uns aber nicht strikt an die eigentlichen OOP-Paradigmen halten.</p>
+</div>
+</section>
+</section>
+<section id="beispiel-7-2">
+<h2>Beispiel 7.2<a class="headerlink" href="#beispiel-7-2" title="Permalink to this heading"></a></h2>
+<p>Wir wollen nun an einem uns bekannten Beispiel den Übergang von der &quot;gewohnten „ prozeduralen Programmierung zur objektorientierten Programmierung demonstrieren. Dazu betrachten wir als uns bekannte Aufgabe die Berechnung der Sinus-Funktion und deren grafische Darstellung. Bislang waren wir immer so verfahren, dass wir erst alle Werte berechnet (und gespeichert) haben und dann erst haben wir das Ergebnis grafisch dargestellt. Bei vielen praktischen Aufgaben hingegen (z.B. Messwerterfassung) kommen laufend neue Werte hinzu, die schritthaltend ausgegeben werden müssen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 2</span><span class="sd">Iterative Berechnung der Sinusfunktion mit schritthaltender grafischer Ausgabe</span>
+<span class="linenos"> 3</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 4</span><span class="c1"># Importieren der notwendigen Module</span>
+<span class="linenos"> 5</span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="linenos"> 6</span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># Anzahl der Stützpunkte</span>
+<span class="linenos"> 9</span><span class="n">n_gesamt</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="linenos">10</span><span class="c1"># Darstellungsintervall</span>
+<span class="linenos">11</span><span class="n">t_gesamt</span> <span class="o">=</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="linenos">12</span><span class="c1"># Inkrement zwischen 2 Stützpunkten</span>
+<span class="linenos">13</span><span class="n">dt</span> <span class="o">=</span> <span class="n">t_gesamt</span> <span class="o">/</span> <span class="n">n_gesamt</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1"># Vektor für Zeitwerte</span>
+<span class="linenos">16</span><span class="n">t_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_gesamt</span><span class="p">)</span>
+<span class="linenos">17</span><span class="c1"># Vektor für Ergebniswerte</span>
+<span class="linenos">18</span><span class="n">sin_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">t_vec</span><span class="p">)</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="c1"># Plot anlegen ...</span>
+<span class="linenos">21</span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="c1"># ... und den ersten Iterationsschritt vorab berechnen</span>
+<span class="linenos">24</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="linenos">25</span><span class="n">sin_vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t_vec</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="c1"># Ersten Stützpunkt &quot;normal&quot; plotten ...</span>
+<span class="linenos">28</span><span class="c1"># Die ax.plot()-Funktion liefert uns eine Referenz auf die Plotdaten zurück</span>
+<span class="linenos">29</span><span class="n">sin_plot</span><span class="p">,</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vec</span><span class="p">[:</span><span class="n">i</span><span class="p">],</span> <span class="n">sin_vec</span><span class="p">[:</span><span class="n">i</span><span class="p">])</span>
+<span class="linenos">30</span><span class="c1"># ... und das Diagramm groß genug machen für die weiteren Punkte</span>
+<span class="linenos">31</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="linenos">32</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="o">+</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span><span class="c1"># Jetzt den Plot mit kurzer Pause ausgeben ohne anzuhalten ...</span>
+<span class="linenos">35</span><span class="n">plt</span><span class="o">.</span><span class="n">pause</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span><span class="c1"># ... und jetzt die restlichen Stützpunkte iterativ berechnen und nach jedem</span>
+<span class="linenos">38</span><span class="c1"># 10. Schritt den Plot aktualisieren</span>
+<span class="linenos">39</span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n_gesamt</span><span class="p">):</span>
+<span class="linenos">40</span>  <span class="n">t_vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">t_vec</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">dt</span>
+<span class="linenos">41</span>  <span class="n">sin_vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t_vec</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="linenos">42</span>
+<span class="linenos">43</span>  <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">44</span>    <span class="c1"># Hier nutzen wir die Referenz auf die Plotdaten und können diese einfach</span>
+<span class="linenos">45</span>    <span class="c1"># aktualisieren - die Darstellung wird automatisch ...</span>
+<span class="linenos">46</span>    <span class="n">sin_plot</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">t_vec</span><span class="p">[:</span><span class="n">i</span><span class="p">],</span><span class="n">sin_vec</span><span class="p">[:</span><span class="n">i</span><span class="p">])</span>
+<span class="linenos">47</span>    <span class="c1"># ... mit aktualisiert, wenn wir eine kurze Pause einlegen</span>
+<span class="linenos">48</span>    <span class="n">plt</span><span class="o">.</span><span class="n">pause</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Jetzt wollen wir im ersten Schritt die Plot-Funktionalität in eine separate Klasse auslagern:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Unsere Klasse für die Plotausgabe</span>
+<span class="linenos"> 2</span><span class="k">class</span> <span class="nc">SinPlot</span><span class="p">():</span>
+<span class="linenos"> 3</span>  <span class="c1"># Konstruktor</span>
+<span class="linenos"> 4</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 5</span>    <span class="c1"># Plot anlegen ...</span>
+<span class="linenos"> 6</span>    <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>  <span class="c1"># Aufruf für die erste Plot-Ausgabe</span>
+<span class="linenos"> 9</span>  <span class="k">def</span> <span class="nf">init_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t_vec</span><span class="p">,</span> <span class="n">sin_vec</span><span class="p">):</span>
+<span class="linenos">10</span>    <span class="c1"># Ersten Stützpunkt &quot;normal&quot; plotten ...</span>
+<span class="linenos">11</span>    <span class="bp">self</span><span class="o">.</span><span class="n">sin_plot</span><span class="p">,</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vec</span><span class="p">,</span> <span class="n">sin_vec</span><span class="p">)</span>
+<span class="linenos">12</span>    <span class="c1"># ... und das Diagramm groß genug machen für die weiteren Punkte</span>
+<span class="linenos">13</span>    <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="linenos">14</span>    <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="o">+</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span>  <span class="c1"># Aufruf für die weiteren Plot-Ausgaben</span>
+<span class="linenos">17</span>  <span class="k">def</span> <span class="nf">update_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t_vec</span><span class="p">,</span> <span class="n">sin_vec</span><span class="p">):</span>
+<span class="linenos">18</span>    <span class="bp">self</span><span class="o">.</span><span class="n">sin_plot</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">t_vec</span><span class="p">,</span><span class="n">sin_vec</span><span class="p">)</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="c1">#---------------------------------------------</span>
+<span class="linenos">21</span><span class="c1"># Hauptprogramm: Einstiegspunkt</span>
+<span class="linenos">22</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="linenos">23</span>  <span class="c1"># Anzahl der Stützpunkte</span>
+<span class="linenos">24</span>  <span class="n">n_gesamt</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="linenos">25</span>  <span class="c1"># Darstellungsintervall</span>
+<span class="linenos">26</span>  <span class="n">t_gesamt</span> <span class="o">=</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="linenos">27</span>  <span class="c1"># Inkrement zwischen 2 Stützpunkten</span>
+<span class="linenos">28</span>  <span class="n">dt</span> <span class="o">=</span> <span class="n">t_gesamt</span> <span class="o">/</span> <span class="n">n_gesamt</span>
+<span class="linenos">29</span>
+<span class="linenos">30</span>  <span class="c1"># Vektor für Zeitwerte</span>
+<span class="linenos">31</span>  <span class="n">t_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_gesamt</span><span class="p">)</span>
+<span class="linenos">32</span>  <span class="c1"># Vektor für Ergebniswerte</span>
+<span class="linenos">33</span>  <span class="n">sin_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">t_vec</span><span class="p">)</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span>  <span class="c1"># Plot(-Klasse) anlegen ...</span>
+<span class="linenos">36</span>  <span class="n">sin_plot</span> <span class="o">=</span> <span class="n">SinPlot</span><span class="p">()</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span>  <span class="c1"># ... und den ersten Iterationsschritt vorab berechnen</span>
+<span class="linenos">39</span>  <span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="linenos">40</span>  <span class="n">sin_vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t_vec</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="linenos">41</span>
+<span class="linenos">42</span>  <span class="c1"># Erste Plot-Ausgabe erzeugen</span>
+<span class="linenos">43</span>  <span class="n">sin_plot</span><span class="o">.</span><span class="n">init_plot</span><span class="p">(</span><span class="n">t_vec</span><span class="p">[:</span><span class="n">i</span><span class="p">],</span> <span class="n">sin_vec</span><span class="p">[:</span><span class="n">i</span><span class="p">])</span>
+<span class="linenos">44</span>  <span class="c1"># Jetzt den Plot mit kurzer Pause ausgeben ohne anzuhalten ...</span>
+<span class="linenos">45</span>  <span class="n">plt</span><span class="o">.</span><span class="n">pause</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="linenos">46</span>
+<span class="linenos">47</span>  <span class="c1"># ... und jetzt die restlichen Stützpunkte iterativ berechnen und nach</span>
+<span class="linenos">48</span>  <span class="c1"># jedem 10. Schritt den Plot aktualisieren</span>
+<span class="linenos">49</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n_gesamt</span><span class="p">):</span>
+<span class="linenos">50</span>    <span class="n">t_vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">t_vec</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">dt</span>
+<span class="linenos">51</span>    <span class="n">sin_vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t_vec</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="linenos">52</span>
+<span class="linenos">53</span>    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">54</span>      <span class="n">sin_plot</span><span class="o">.</span><span class="n">update_plot</span><span class="p">(</span><span class="n">t_vec</span><span class="p">[:</span><span class="n">i</span><span class="p">],</span> <span class="n">sin_vec</span><span class="p">[:</span><span class="n">i</span><span class="p">])</span>
+<span class="linenos">55</span>      <span class="n">plt</span><span class="o">.</span><span class="n">pause</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="linenos">56</span><span class="c1">#---------------------------------------------</span>
+</pre></div>
+</div>
+<p>Und im nächsten Schritt auch die Funktionalität der Sinus-Berechnung, die wir - damit es nicht zu trivial wird - um die explizite Berücksichtigung von Amplitude und Kreisfrequenz erweitert haben:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Unsere Klasse für die Sinus-Berechnung</span>
+<span class="linenos"> 2</span><span class="k">class</span> <span class="nc">Sinus</span><span class="p">():</span>
+<span class="linenos"> 3</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">omega</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<span class="linenos"> 4</span>    <span class="c1"># Amplitude</span>
+<span class="linenos"> 5</span>    <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="n">A</span>
+<span class="linenos"> 6</span>    <span class="c1"># Kreisfrequenz</span>
+<span class="linenos"> 7</span>    <span class="bp">self</span><span class="o">.</span><span class="n">omega</span> <span class="o">=</span> <span class="n">omega</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span>  <span class="c1"># &quot;Setter&quot;-Funktion für die Amplitude</span>
+<span class="linenos">10</span>  <span class="k">def</span> <span class="nf">set_A</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+<span class="linenos">11</span>    <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="n">A</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>  <span class="c1"># &quot;Setter&quot;-Funktion für die Kreisfrequenz</span>
+<span class="linenos">14</span>  <span class="k">def</span> <span class="nf">set_omega</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">omega</span><span class="p">):</span>
+<span class="linenos">15</span>    <span class="bp">self</span><span class="o">.</span><span class="n">omega</span> <span class="o">=</span> <span class="n">omega</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span>  <span class="c1"># Berechnung des Sinus</span>
+<span class="linenos">18</span>  <span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
+<span class="linenos">19</span>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">omega</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span><span class="c1"># Unsere Klasse für die Plotausgabe</span>
+<span class="linenos">22</span><span class="k">class</span> <span class="nc">SinPlot</span><span class="p">():</span>
+<span class="linenos">23</span>  <span class="c1"># Konstruktor</span>
+<span class="linenos">24</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">25</span>    <span class="c1"># Plot anlegen ...</span>
+<span class="linenos">26</span>    <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span>  <span class="c1"># Aufruf für die erste Plot-Ausgabe</span>
+<span class="linenos">29</span>  <span class="k">def</span> <span class="nf">init_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t_vec</span><span class="p">,</span> <span class="n">sin_vec</span><span class="p">):</span>
+<span class="linenos">30</span>    <span class="c1"># Ersten Stützpunkt &quot;normal&quot; plotten ...</span>
+<span class="linenos">31</span>    <span class="bp">self</span><span class="o">.</span><span class="n">sin_plot</span><span class="p">,</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_vec</span><span class="p">,</span> <span class="n">sin_vec</span><span class="p">)</span>
+<span class="linenos">32</span>    <span class="c1"># ... und das Diagramm groß genug machen für die weiteren Punkte</span>
+<span class="linenos">33</span>    <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="linenos">34</span>    <span class="bp">self</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="o">+</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span>  <span class="c1"># Aufruf für die weiteren Plot-Ausgaben</span>
+<span class="linenos">37</span>  <span class="k">def</span> <span class="nf">update_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t_vec</span><span class="p">,</span> <span class="n">sin_vec</span><span class="p">):</span>
+<span class="linenos">38</span>    <span class="bp">self</span><span class="o">.</span><span class="n">sin_plot</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">t_vec</span><span class="p">,</span><span class="n">sin_vec</span><span class="p">)</span>
+<span class="linenos">39</span>
+<span class="linenos">40</span><span class="c1">#---------------------------------------------</span>
+<span class="linenos">41</span><span class="c1"># Hauptprogramm: Einstiegspunkt</span>
+<span class="linenos">42</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="linenos">43</span>  <span class="c1"># Anzahl der Stützpunkte</span>
+<span class="linenos">44</span>  <span class="n">n_gesamt</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="linenos">45</span>  <span class="c1"># Darstellungsintervall</span>
+<span class="linenos">46</span>  <span class="n">t_gesamt</span> <span class="o">=</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="linenos">47</span>  <span class="c1"># Inkrement zwischen 2 Stützpunkten</span>
+<span class="linenos">48</span>  <span class="n">dt</span> <span class="o">=</span> <span class="n">t_gesamt</span> <span class="o">/</span> <span class="n">n_gesamt</span>
+<span class="linenos">49</span>
+<span class="linenos">50</span>  <span class="c1"># Vektor für Zeitwerte</span>
+<span class="linenos">51</span>  <span class="n">t_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_gesamt</span><span class="p">)</span>
+<span class="linenos">52</span>  <span class="c1"># Vektor für Ergebniswerte</span>
+<span class="linenos">53</span>  <span class="n">sin_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">t_vec</span><span class="p">)</span>
+<span class="linenos">54</span>
+<span class="linenos">55</span>  <span class="c1"># Sinus-Objekt anlegen ...</span>
+<span class="linenos">56</span>  <span class="n">sinus</span> <span class="o">=</span> <span class="n">Sinus</span><span class="p">()</span>
+<span class="linenos">57</span>  <span class="c1"># Plot-Objekt anlegen ...</span>
+<span class="linenos">58</span>  <span class="n">sin_plot</span> <span class="o">=</span> <span class="n">SinPlot</span><span class="p">()</span>
+<span class="linenos">59</span>
+<span class="linenos">60</span>  <span class="c1"># Wir ergänzen ein paar Parameter für die Sinus-Funktion</span>
+<span class="linenos">61</span>  <span class="n">omega</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="linenos">62</span>  <span class="n">domega</span> <span class="o">=</span> <span class="mf">0.025</span>
+<span class="linenos">63</span>  <span class="n">A</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="linenos">64</span>  <span class="n">dA</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.001</span>
+<span class="linenos">65</span>  <span class="c1"># ... und den ersten Iterationsschritt vorab berechnen</span>
+<span class="linenos">66</span>  <span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="linenos">67</span>  <span class="n">sinus</span><span class="o">.</span><span class="n">set_A</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="linenos">68</span>  <span class="n">sinus</span><span class="o">.</span><span class="n">set_omega</span><span class="p">(</span><span class="n">omega</span><span class="p">)</span>
+<span class="linenos">69</span>  <span class="n">sin_vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">sinus</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">t_vec</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="linenos">70</span>
+<span class="linenos">71</span>  <span class="c1"># Erste Plot-Ausgabe erzeugen</span>
+<span class="linenos">72</span>  <span class="n">sin_plot</span><span class="o">.</span><span class="n">init_plot</span><span class="p">(</span><span class="n">t_vec</span><span class="p">[:</span><span class="n">i</span><span class="p">],</span> <span class="n">sin_vec</span><span class="p">[:</span><span class="n">i</span><span class="p">])</span>
+<span class="linenos">73</span>  <span class="c1"># Jetzt den Plot mit kurzer Pause ausgeben ohne anzuhalten ...</span>
+<span class="linenos">74</span>  <span class="n">plt</span><span class="o">.</span><span class="n">pause</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="linenos">75</span>
+<span class="linenos">76</span>  <span class="c1"># ... und jetzt die restlichen Stützpunkte iterativ berechnen und nach</span>
+<span class="linenos">77</span>  <span class="c1"># jedem 10. Schritt den Plot aktualisieren</span>
+<span class="linenos">78</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n_gesamt</span><span class="p">):</span>
+<span class="linenos">79</span>    <span class="n">t_vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">t_vec</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">dt</span>
+<span class="linenos">80</span>    <span class="c1"># omega durch&quot;wobbeln&quot;</span>
+<span class="linenos">81</span>    <span class="n">omega</span> <span class="o">+=</span> <span class="n">domega</span>
+<span class="linenos">82</span>    <span class="n">sinus</span><span class="o">.</span><span class="n">set_omega</span><span class="p">(</span><span class="n">omega</span><span class="p">)</span>
+<span class="linenos">83</span>    <span class="c1"># A durch&quot;wobbeln&quot;</span>
+<span class="linenos">84</span>    <span class="n">A</span> <span class="o">+=</span> <span class="n">dA</span>
+<span class="linenos">85</span>    <span class="n">sinus</span><span class="o">.</span><span class="n">set_A</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="linenos">86</span>    <span class="n">sin_vec</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">sinus</span><span class="o">.</span><span class="n">calc</span><span class="p">(</span><span class="n">t_vec</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="linenos">87</span>
+<span class="linenos">88</span>    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos">89</span>      <span class="n">sin_plot</span><span class="o">.</span><span class="n">update_plot</span><span class="p">(</span><span class="n">t_vec</span><span class="p">[:</span><span class="n">i</span><span class="p">],</span> <span class="n">sin_vec</span><span class="p">[:</span><span class="n">i</span><span class="p">])</span>
+<span class="linenos">90</span>      <span class="n">plt</span><span class="o">.</span><span class="n">pause</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="linenos">91</span><span class="c1">#---------------------------------------------</span>
+</pre></div>
+</div>
+<p>Das vorangegangene Beispiel sollte im Wesentliche für sich selber sprechen im Vergleich zur &quot;konventionellen“ prozeduralen Variante. Es soll in der Hauptsache als Muster für die nachfolgende Aufgabe dienen, in der ganz ähnliche Punkte zu bearbeiten sind.</p>
+</section>
+<section id="aufgabe-7-1">
+<h2>Aufgabe 7.1<a class="headerlink" href="#aufgabe-7-1" title="Permalink to this heading"></a></h2>
+<p>… folgt in Kürze</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="exercise_06.html" class="btn btn-neutral float-left" title="6. Übung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Prof. Dr.-Ing. Volker von Holt - Fahrzeuginformatik - Ostfalia Hochschule.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
