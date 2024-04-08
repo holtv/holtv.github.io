@@ -453,7 +453,47 @@
 </section>
 <section id="aufgabe-7-1">
 <h2>Aufgabe 7.1<a class="headerlink" href="#aufgabe-7-1" title="Permalink to this heading"></a></h2>
-<p>… folgt in Kürze</p>
+<p>In dieser Aufgabe wollen wir in Analogie zu Beispiel 7.2 unser Resultat der Aufgabe 6.1 in eine objektorientierte Darstellung überführen.</p>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Es soll das Resultat der Aufgabe 6.2 unter den folgenden Vorgaben neu formuliert werden:</p>
+<ol class="arabic">
+<li><p>Es sollen zwei Klassen mit folgender Signatur eingeführt werden:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Klasse zur grafischen Ausgabe der Bewegungsgrößen</span>
+<span class="k">class</span> <span class="nc">MotionPlot</span><span class="p">():</span>
+  <span class="k">def</span> <span class="nf">init_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t_vec</span><span class="p">,</span> <span class="n">v_soll</span><span class="p">,</span> <span class="n">v_ist</span><span class="p">,</span> <span class="n">a_ist</span><span class="p">,</span> <span class="n">s_ist</span><span class="p">)</span>
+    <span class="n">ToDo</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">Plot</span> <span class="n">initial</span> <span class="n">ausgeben</span>
+    <span class="o">-</span> <span class="n">Plotreferenz</span> <span class="n">merken</span>
+
+  <span class="k">def</span> <span class="nf">update_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t_vec</span><span class="p">,</span> <span class="n">v_soll</span><span class="p">,</span> <span class="n">v_ist</span><span class="p">,</span> <span class="n">a_ist</span><span class="p">,</span> <span class="n">s_ist</span><span class="p">)</span>
+    <span class="n">ToDo</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">Plotdaten</span> <span class="n">aktualisieren</span> <span class="n">mit</span> <span class="n">neuen</span> <span class="n">Daten</span>
+
+<span class="c1"># Klasse zur Repräsentation der Objektbewegung</span>
+<span class="c1"># (Berechnung von v_ist, a_ist, s_ist)</span>
+<span class="k">class</span> <span class="nc">MotionObject</span><span class="p">():</span>
+  <span class="k">def</span> <span class="nf">set_v_soll</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">v_soll</span><span class="p">)</span>
+    <span class="n">ToDo</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">neues</span> <span class="n">v_soll</span> <span class="n">setzen</span>
+
+  <span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
+    <span class="n">ToDo</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">Bewegungsgrößen</span> <span class="n">für</span> <span class="n">den</span> <span class="n">Zeitschritt</span> <span class="n">dt</span> <span class="n">berechnen</span>
+    <span class="o">-</span> <span class="n">Ergebnisse</span> <span class="ow">in</span> <span class="n">der</span> <span class="n">Form</span>  <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">v_ist</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">a_ist</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">s_ist</span><span class="p">)</span> <span class="n">zurückgeben</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Die Visualisierung soll schritthaltend mit der Berechnung in jedem 10. Iterationsschritt erfolgen.</p></li>
+</ol>
+</div>
+<p>Lösungshinweise:</p>
+<ul class="simple">
+<li><p>Bei der Lösung kann man sich gut an der Vorgehensweise von Beispiel 7.2 orientieren und diese auf mehrere zu berechnende und darzustellende Größen erweitern.</p></li>
+<li><p>Analog bietet es sich an, die Adaption in getrennten Teilschritten für jede der beiden Klassen durchzuführen und zu testen.</p></li>
+</ul>
 </section>
 </section>
 
