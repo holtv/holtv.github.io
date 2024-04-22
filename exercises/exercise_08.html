@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8. Übung &mdash; IPP - Ingenieurwissenschaftliches Programmieren mit Python 0.1 Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=9d4e32a3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="prev" title="7. Übung" href="exercise_07.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            IPP - Ingenieurwissenschaftliches Programmieren mit Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhalt:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Grundlagen der Programmierung</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../exer.html">Übungen</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="exercise_01.html">1. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_02.html">2. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_03.html">3. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_04.html">4. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_05.html">5. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_06.html">6. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_07.html">7. Übung</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8. Übung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-8-1">Beispiel 8.1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#socket-kommunikation">Socket-Kommunikation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-8-1">Aufgabe 8.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-8-2">Aufgabe 8.2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IPP - Ingenieurwissenschaftliches Programmieren mit Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../exer.html">Übungen</a></li>
+      <li class="breadcrumb-item active">8. Übung</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/exercises/exercise_08.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ubung">
+<h1>8. Übung<a class="headerlink" href="#ubung" title="Permalink to this heading"></a></h1>
+<section id="beispiel-8-1">
+<h2>Beispiel 8.1<a class="headerlink" href="#beispiel-8-1" title="Permalink to this heading"></a></h2>
+<section id="socket-kommunikation">
+<h3>Socket-Kommunikation<a class="headerlink" href="#socket-kommunikation" title="Permalink to this heading"></a></h3>
+<p>Bei Office-Anwendungen oder auch bei der Softwareentwicklung bearbeiten wir meist dediziert ein Dokument mit einer Anwendung. Die überwiegende Anzahl der im Einsatz befindlichen Software befindet sich aber nicht auf Office- oder Entwicklungs-PCs sondern auf sogenannten Embedded Rechnern zur Steuerung von Anlagen (vom Kraftwerk über den E-Motor, den Netzwerk-Switch bis zur Kaffeemaschine). Die Software in diesen Geräten ist aus Gründen der Modularität oder der Funktionalität in viele kleine Softwareprogramme aufgeteilt. Damit die Geräte ihre Aufgabe erfüllen können, müssen alle diese Softwaremodule zusammenarbeiten und tauschen zu diesem Zweck rechnerintern oder rechnerübergreifend Daten aus. Sofern die Daten zwischen unterschiedlichen Rechnern ausgetauscht werden, benötigen wir eine Vernetzungstechnologie, welches je nach Anwendungsgebiet unterschiedlich ausgelegt wird, wie z.B. der CAN-Bus in Fahrzeugen, der USB zur Anbindung von Computer-Peripherie oder das Ethernet im Bereich der LANs (Local Area Network). Die Vernetzungstechnologien stellen dabei immer eine Kommunikation aus einem physikalischen Medium zur Datenübertragung und einer Vereinbarung über die Nutzung des Mediums dar. Letzeres wird als sog. Protokoll bezeichnet und regelt, wann und wie die an der Vernetzung beteiligten Rechner auf das Medium zugreifen können, wie die Teilnehmer identifiziert werden und wie beim Auftreten von Fehlern verfahren wird. Dies mag als ganz grobe Einführung in dieses Gebiet genügen. Das Thema der Vernetzung selbst ist Gegenstand mehrerer Lehrveranstaltungen auf die für eine Vertiefung verwiesen sei.</p>
+<section id="ip-adressen">
+<h4>IP-Adressen<a class="headerlink" href="#ip-adressen" title="Permalink to this heading"></a></h4>
+<p>Wir wollen uns konkret eine bestimmte Form der Kommunikation anschauen, die sog. Socket-Kommunikation. Diese entstand an der UCLA in Berkley als Kommunikationsschnittstelle primär zur Nutzung in Verbindung mit der TCP/IP-Protokollfamilie. In der IP-Welt besitzt jede Netzwerkschnittstelle in jedem beteiligten Rechner eine sog. IP-Adresse. Deren Format (nach IPv4) haben bestimmt alle schon einmal gesehen, z.B. 192.168.92.42. Um sich auf einem PC unter Windows die Adressen aller Netzwerkschnittstellen anzeigen zu lassen müssen wir <code class="code docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">ipconfig</span></code> in der Kommandozeile eingeben, unter Linux oder macOS hingegen <code class="code docutils literal notranslate"><span class="pre">$</span> <span class="pre">ifconfig</span></code>. Neben den an eine physikalische Netzwerkschnittstelle gebundenen Adressen gibt es auch eine Art virtuelle Netzschnittstelle, die zur Kommunikation innerhalb des selben Rechners genutzt werden kann. Diese bezeichnet man als sog. &quot;loopback device“ und es hat immer die IP-Adresse 127.0.0.1.</p>
+<figure class="align-default" id="id1">
+<span id="label-img-udp-01"></span><a class="reference internal image-reference" href="../_images/udp_01.png"><img alt="../_images/udp_01.png" src="../_images/udp_01.png" style="width: 315.5px; height: 373.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Abb. 3 </span><span class="caption-text">PC mit 2 Netzwerkschnittstellen und 2 IP-Adressen: Anwendungen wie ein Mailclient oder Webserver können sich an mehrere IP-Adressen und mehrere Ports binden.</span><a class="headerlink" href="#id1" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="ports">
+<h4>Ports<a class="headerlink" href="#ports" title="Permalink to this heading"></a></h4>
+<p>Wie wir aus eigener Erfahrung wissen, kommunizieren auf einem PC-artigen Rechner diverse Anwendungen (Email, Webbrowser etc.) über die gleiche Netzwerkschnittstelle. Wie aber weiß der Rechner (eigentlich ist es das Betriebssystem) für welche Anwendung eine über das Netz ankommende Nachricht bestimmt ist? Um hier eine Differenzierung zu erreichen, werden an jeder Netzwerkschnittstelle sogenannte Ports definiert. Jeder Port entspicht einem numerischen Identifier und für viele Anwendungsdienste sind Portnummern vordefiniert. Ein Webserver etwa erwartet &quot;http“-Anfragen von Webclients auf dem Port 80, während &quot;https“-Anfragen auf Port 443 erwartet werden. Ein Webclient, der eine &quot;http“-Anfrage an einen anderen Port adressiert wird keine Antwort erhalten. Ebenso wird eine Anfrage an den Port 80 ins Leere laufen, wenn auf dem adressierten Rechner gar kein Webserver aktiv ist, der sich für Nachrichten auf den Ports 80 bzw. 443 beim TCP/IP-Protokollstapel angemeldet hat.</p>
+<figure class="align-default" id="id2">
+<span id="label-img-udp-02"></span><a class="reference internal image-reference" href="../_images/udp_02.png"><img alt="../_images/udp_02.png" src="../_images/udp_02.png" style="width: 729.0px; height: 503.5px;" /></a>
+<figcaption>
+<p><span class="caption-number">Abb. 4 </span><span class="caption-text">2 Netzwerke mit insgesamt 4 PCs: PC1/PC3 sind über jeweils 2 Netzwerkschnittstellen in beide Netzwerke eingebunden, PC2 und PC4 jeweils nur in das &quot;blaue“ bzw. &quot;rote“ Netzwerk. (Die Anwendungen sind in dieser Darstellung nicht eingeblendet.)</span><a class="headerlink" href="#id2" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="tcp-und-udp-protokoll">
+<h4>TCP- und UDP-Protokoll<a class="headerlink" href="#tcp-und-udp-protokoll" title="Permalink to this heading"></a></h4>
+<p>Den Begriff &quot;TCP/IP“(-Protokoll) haben sicher viele in Verbindung mit dem Datentransfer in Internet und Intranets schon gehört. Es handelt sich dabei um einen sogenannten Protokollstack, der in mehreren Ebenen organisiert ist und die sichere und transparente Kommunikation bestimmter Dienste zwischen Rechnern organisiert. Über die Details lassen sich ganze Bücher füllen, für die Anwendung reichen uns aber relativ wenige Informationen aus.</p>
+<dl class="simple">
+<dt>Gemeinsamkeiten</dt><dd><p>Beide Protokoll nutzen das unterlagerte IP(Internet Protocol)-Protokoll um Daten in Form von Paketen zwischen Anwendungen auf einem oder unterschiedlichen Rechnern auszutauschen. Die Rechner werden über deren IP-Adressen angesprochen, die Anwendungen über deren Port.</p>
+</dd>
+<dt>TCP (Transmission Control Protocol)</dt><dd><p>TCP baut vor dem Datenaustausch eine Verbindung zur Gegenseite auf und baut diese nach dem Ende der Datenübertragung auch wieder ab. Die Datenpakete werden durchnummeriert und empfangene Datenpakte werden dem Sender bestätigt. Dadurch ist es dem Sender möglich den Verlust eines Datenpakets zu erkennen und dieses dann erneut zu senden. Längere Nachrichten werden in mehrere Pakete zerlegt, die unabhängig voneinander an den Empfänger verschickt werden. Jedes dieser Paket nimmt u.U. einen unterschiedlichen Weg durch das Netzwerk, wobei sich durchaus auch Pakete überholen können. Anhand der Nummerierung kann der Empfänger die eintreffenden Pakete dennoch wieder in die richtige Reihenfolge bringen. Damit stellt TCP ein sicheres Verfahren zur Übertragung auch größerer Datenmenge über längere Distanzen dar. Der Preis ist ein höherer Aufwand und eine höhere Latenzzeit bei der Übertragung.</p>
+</dd>
+<dt>UDP (User Datagram Protocol)</dt><dd><p>Im Gegensatz zu TCP handelt es sich bei UDP um ein verbindungsloses Protokoll. Der Sender verschickt ein Datenpaket an den Empfänger, erhält dafür aber keine Bestätigung und kann damit auch keine Ausfälle erkennen. Eine Fehlersicherung bei Paketausfällen ist damit genauso wie das Versenden längerer Nachrichten komplett in Verantwortung der kommmunizierenden Anwendungen. Im Gegenzug ist UDP dafür aber deutlich schlanker und schneller in der Kommunikation und bietet sich daher für den Austausch kürzerer Nachrichten in zuverlässigen lokalen Netzen an.</p>
+</dd>
+</dl>
+</section>
+<section id="client-server-kommunikation">
+<h4>Client-Server-Kommunikation<a class="headerlink" href="#client-server-kommunikation" title="Permalink to this heading"></a></h4>
+<p>Das Client-Server-Prinzip ist in Inter- und Intranet-Anwendungen weit verbreitet. Webbrowser und Webserver stellen ebenso ein Client-Server-Paar dar, wie auch Mail-Frontends (z.B. MS Outlook) und Mailserver. Das Prinzip basiert darauf, dass der Server - dem Namen entsprechend - einen oder mehrere Dienste (Services) zur Verfügung stellt. Der Server wartet passiv auf Anfragen der aktiv nachfragenden Clients. Hat der Server eine Client-Anfrage erhalten, so bearbeitet er diese (z.B. Zugbuchung) und sendet die Antwort an den Client zurück. Es kann sich bei diesem Ping-Pong zwischen Client und Server um einmalige separierte Vorgänge handeln, es können aber auch umfangreichere Aktionen erfolgen, z.B. wenn der Server als Antwort einen Videostream startet (dabei wird der Videostream in viele einzelne Nachrichten zerlegt). Ob es sich bei der Kommunkikation um eine Client-Server-Verbindung handelt oder ein anderes Prinzip (Sender-Receiver) verwendet wird, hängt von den Anwendungen ab und hat nichts mit dem darunterliegenden Protokollstapel zu tun.</p>
+<figure class="align-default" id="id3">
+<span id="label-img-udp-03"></span><a class="reference internal image-reference" href="../_images/udp_03.png"><img alt="../_images/udp_03.png" src="../_images/udp_03.png" style="width: 320.0px; height: 403.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Abb. 5 </span><span class="caption-text">Client-Server-Prinzip: Der Client übernimmt die aktive Rolle und sendet Anfragen (&quot;Request“) an den passiv wartenden Server. Bei Eintreffen einer Anfrage wird diese vom Server beantwortet (&quot;Reply“).</span><a class="headerlink" href="#id3" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+<p>Jetzt wirds aber langsam Zeit für ein Code-Beispiel zur Socket-Kommunikation,
+zuerst den UDP-Server:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 2</span><span class="sd">Einfacher UDP-Server, der auf eine Nachricht wartet, eine Antwort sendet und sich dann beendet.</span>
+<span class="linenos"> 3</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1"># Für die Sockets gibt es natürlich ein eigenes Modul</span>
+<span class="linenos"> 6</span><span class="kn">import</span> <span class="nn">socket</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># Wir nutzen das Loopback-Device zur rechnerinternen Kommunikation ...</span>
+<span class="linenos"> 9</span><span class="n">localIP</span>     <span class="o">=</span> <span class="s2">&quot;127.0.0.1&quot;</span>
+<span class="linenos">10</span><span class="c1"># ... und einen nicht belegten Port</span>
+<span class="linenos">11</span><span class="n">localPort</span>   <span class="o">=</span> <span class="mi">1234</span>
+<span class="linenos">12</span><span class="c1"># Das ist die maximale Paketlänge für den Empfang ...</span>
+<span class="linenos">13</span><span class="n">bufferSize</span>  <span class="o">=</span> <span class="mi">1024</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1"># ... und das unsere Testnachricht ...</span>
+<span class="linenos">16</span><span class="n">msgFromServer</span>       <span class="o">=</span> <span class="s2">&quot;Hello UDP Client&quot;</span>
+<span class="linenos">17</span><span class="c1"># ... die wir in eine Byte-Folge konvertieren müssen</span>
+<span class="linenos">18</span><span class="n">bytesToSend</span>         <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">msgFromServer</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="c1"># Jetzt legen wir einen Socket für die UDP an ...</span>
+<span class="hll"><span class="linenos">21</span><span class="n">UDPServerSocket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">socket</span><span class="o">.</span><span class="n">SOCK_DGRAM</span><span class="p">)</span>
+</span><span class="linenos">22</span><span class="c1"># ... und binden ihn an unseren Port ...</span>
+<span class="hll"><span class="linenos">23</span><span class="n">UDPServerSocket</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">localIP</span><span class="p">,</span> <span class="n">localPort</span><span class="p">))</span>
+</span><span class="linenos">24</span>
+<span class="linenos">25</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;UDP server up and listening&quot;</span><span class="p">)</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="c1"># ... und schon können wir auf Empfang gehen</span>
+<span class="linenos">28</span><span class="c1"># Die Funktion recvfrom() kehrt nur zurück, wenn eine Nachricht empfangen wurde</span>
+<span class="linenos">29</span><span class="c1"># oder ein Fehler aufgetreten ist ...</span>
+<span class="hll"><span class="linenos">30</span><span class="n">bytesAddressPair</span> <span class="o">=</span> <span class="n">UDPServerSocket</span><span class="o">.</span><span class="n">recvfrom</span><span class="p">(</span><span class="n">bufferSize</span><span class="p">)</span>
+</span><span class="linenos">31</span><span class="c1"># ... und liefert uns im Erfolgsfall ein Tupel mit diesem Inhalt:</span>
+<span class="linenos">32</span><span class="n">message</span> <span class="o">=</span> <span class="n">bytesAddressPair</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="linenos">33</span><span class="n">address</span> <span class="o">=</span> <span class="n">bytesAddressPair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span><span class="c1"># Die Nachricht und die Absender-IP schauen wir uns mal an...</span>
+<span class="linenos">36</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Message from Client: &#39;</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+<span class="linenos">37</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Client IP Address: &#39;</span><span class="p">,</span> <span class="n">address</span><span class="p">)</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span><span class="c1"># ... und senden dann - freundlich wie wir sind - eine Antwort zurück</span>
+<span class="hll"><span class="linenos">40</span><span class="n">UDPServerSocket</span><span class="o">.</span><span class="n">sendto</span><span class="p">(</span><span class="n">bytesToSend</span><span class="p">,</span> <span class="n">address</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>Die wesentlichen Code-Zeilen sind hervorgehoben:</p>
+<ol class="arabic">
+<li><p>Zeile 21: Wir legen einen neue Socket-Datenstruktur an.</p></li>
+<li><p>Zeile 23: Den Socket binden wir dann an eine IP-Adresse und einen Port. Ab jetzt kommen alle Nachrichten, die an diese IP-Adresse und diesen Port gerichtet sind, bei uns an.</p></li>
+<li><p>Zeile 30: Um tatsächlich eintreffende Nachrichten abzuholen müssen wir die Methode <em>recvfrom()</em> unseres Sockets aufrufen.</p>
+<div class="admonition-achtung admonition">
+<p class="admonition-title">Achtung</p>
+<p>Diese Methode wartet bis in alle Ewigkeit, dass eine Nachricht eintrifft und lässt sich - je nach Betriebssystem - auch durch ein STRG-C nicht beeindrucken!</p>
+</div>
+</li>
+<li><p>Zeile 40: Mit der Methode <em>sendto()</em> unseres Sockets senden wir dann eine Antwort an den Client.</p></li>
+</ol>
+<p>Und dann brauchen wir noch einen dazu passenden UDP-Client:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 2</span><span class="sd">Einfacher UDP-Client, der eine Nachricht sendet, auf eine Antwort sendet und sich dann beendet.</span>
+<span class="linenos"> 3</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1"># Für die Sockets gibt es natürlich ein eigenes Modul</span>
+<span class="linenos"> 6</span><span class="kn">import</span> <span class="nn">socket</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span><span class="c1"># Wir nutzen das Loopback-Device zur rechnerinternen Kommunikation ...</span>
+<span class="linenos"> 9</span><span class="n">localIP</span>     <span class="o">=</span> <span class="s2">&quot;127.0.0.1&quot;</span>
+<span class="linenos">10</span><span class="c1"># ... und einen nicht belegten Port</span>
+<span class="linenos">11</span><span class="n">localPort</span>   <span class="o">=</span> <span class="mi">1234</span>
+<span class="linenos">12</span><span class="c1"># IP und Port müssen wir als Tupel zusammenfassen</span>
+<span class="linenos">13</span><span class="n">serverAddressPort</span>   <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span> <span class="mi">1234</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1"># Das ist die maximale Paketlänge für den Empfang ...</span>
+<span class="linenos">16</span><span class="n">bufferSize</span>  <span class="o">=</span> <span class="mi">1024</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="c1"># ... und das unsere Testnachricht ...</span>
+<span class="linenos">19</span><span class="n">msgFromClient</span>       <span class="o">=</span> <span class="s2">&quot;Hello UDP Server&quot;</span>
+<span class="linenos">20</span><span class="c1"># ... die wir in eine Byte-Folge konvertieren müssen</span>
+<span class="linenos">21</span><span class="n">bytesToSend</span>         <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">msgFromClient</span><span class="p">,</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="c1"># Jetzt legen wir einen Socket für die UDP an ...</span>
+<span class="hll"><span class="linenos">24</span><span class="n">UDPClientSocket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">socket</span><span class="o">.</span><span class="n">SOCK_DGRAM</span><span class="p">)</span>
+</span><span class="linenos">25</span>
+<span class="linenos">26</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;UDP client up and sending&quot;</span><span class="p">)</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="c1"># ... und schon können wir auf Senden gehen</span>
+<span class="hll"><span class="linenos">29</span><span class="n">UDPClientSocket</span><span class="o">.</span><span class="n">sendto</span><span class="p">(</span><span class="n">bytesToSend</span><span class="p">,</span> <span class="n">serverAddressPort</span><span class="p">)</span>
+</span><span class="linenos">30</span>
+<span class="linenos">31</span><span class="c1"># ... und dann auf die Antwort warten</span>
+<span class="linenos">32</span><span class="c1"># Die Funktion recvfrom() kehrt nur zurück, wenn eine Nachricht empfangen wurde</span>
+<span class="linenos">33</span><span class="c1"># oder ein Fehler aufgetreten ist ...</span>
+<span class="hll"><span class="linenos">34</span><span class="n">bytesAddressPair</span> <span class="o">=</span> <span class="n">UDPClientSocket</span><span class="o">.</span><span class="n">recvfrom</span><span class="p">(</span><span class="n">bufferSize</span><span class="p">)</span>
+</span><span class="linenos">35</span><span class="c1"># ... und liefert uns im Erfolgsfall ein Tupel mit diesem Inhalt:</span>
+<span class="linenos">36</span><span class="n">message</span> <span class="o">=</span> <span class="n">bytesAddressPair</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="linenos">37</span><span class="n">address</span> <span class="o">=</span> <span class="n">bytesAddressPair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span><span class="c1"># Die Nachricht und die Absender-IP schauen wir uns mal an...</span>
+<span class="linenos">40</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Message from Server: &#39;</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+<span class="linenos">41</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Server IP Address: &#39;</span> <span class="p">,</span> <span class="n">address</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Auf den ersten Blick sieht der Client-Code dem Server-Code zum Verwechseln ähnlich, bis auf eine Ausnahme:</p>
+<ol class="arabic simple">
+<li><p>Zeile 24: Wir legen einen neue Socket-Datenstruktur an.</p></li>
+<li><p>Zeile 29: Mit der Methode <em>sendto()</em> unseres Sockets senden wir eine Nachricht an den Server (der darauf schon wartet). Wir benutzen dabei die IP-Adresse und den Port, an die der Server sich mit seinem Socket mittels <em>bind()</em> gebunden hat.</p></li>
+<li><p>Zeile 34: Um auf die Antwortnachricht vom Server zu warten, rufen wir die Methode <em>recvfrom()</em> unseres Sockets auf.</p></li>
+</ol>
+<p>Im Unterschied zum Server binden wir uns beim Client nicht an eine unserer (eigenen) IP-Adressen und an einen Port. Stattdessen geben wir beim Senden die entsprechenden Daten des Servers an. Beides muss dem Client demnach bekannt sein und darüberhinaus muss der Server auch &quot;up“ (also bereits ausgeführt werden) und nicht etwa &quot;down“ sein, damit wir ihn auch erreichen können.</p>
+<p>Unsere Testanordnung sieht grafisch wie folgt aus:</p>
+<figure class="align-default" id="label-img-udp-04">
+<a class="reference internal image-reference" href="../_images/udp_04.png"><img alt="../_images/udp_04.png" src="../_images/udp_04.png" style="width: 239.0px; height: 225.5px;" /></a>
+</figure>
+<div class="admonition-loopback-device admonition">
+<p class="admonition-title">Loopback-Device</p>
+<p>In unserem einfachen Beispiel zur Client-Server-Kommunikation lassen wir (zunächst) beide Anwendungen auf dem selben PC ausführen und miteinander kommunizieren. Dafür nutzen wir eine virtuelle Netzwerk-&quot;Karte“, das sog. &quot;Loopback-Device“, das es unter allen Betriebssystemen mit der Adresse &quot;127.0.0.1“ gibt. Mit dieser virtuellen Schnittstelle lassen sich sehr einfach Netzwerkanwendungen testen - wenn die Anwendungen schon rechnerintern nicht funktionieren, wird es auch zwischen PCs über ein Netzwerk eher schlecht aussehen.</p>
+</div>
+<dl class="simple">
+<dt>Test:</dt><dd><ol class="arabic simple">
+<li><p>Zunächst starten wir den UDP-Server in einem Terminal. Der Server meldet seine Bereitschaft, eine Client-Anfrage zu empfangen.</p></li>
+<li><p>Danach starten wir den UDP-Client. Der Client sendet eine &quot;Hello“-Botschaft an den Server und wartet dann auf eine Antwort vom Server.</p></li>
+<li><p>Der Server empfängt die &quot;Hello“-Botschaft vom Client und antwortet seinerseits mit einem &quot;Hello“ als Antwort. Danach beendet sich der Server.</p></li>
+<li><p>Der Client empfängt die Antwort vom Server und beendet sich ebenfalls.</p></li>
+</ol>
+</dd>
+</dl>
+<p>Sofern ein weiterer Rechner vorhanden ist und beide Rechner über ein Netzwerk verbunden ist, können wir nun auch den Server auf dem einen und den Client auf dem anderen Rechner laufen zu lassen. Damit das funktioniert müssen wir natürlich zuvor in beiden Programmen die entsprechende IP-Adresse des Servers als IP-Adresse eintragen.</p>
+</section>
+</section>
+</section>
+<section id="aufgabe-8-1">
+<h2>Aufgabe 8.1<a class="headerlink" href="#aufgabe-8-1" title="Permalink to this heading"></a></h2>
+<p>Nach diesem &quot;Funktionstest“ für die UDP-Kommunikation wollen wir nun eine erste kleine Client-Server-Anwendung schreiben. Wir werden dazu das Beispiel 7.2 in einen Client- und einen Server-Teil zerlegen:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Die Berechnung der Sinus-Funktionswerte durch die Klasse <em>Sinus</em> soll im Client stattfinden.</p></li>
+<li><p>Die grafische Ausgabe der Funktion mittels der Klasse <em>SinPlot</em> wiederum soll in den Server eingebettet werden.</p></li>
+</ol>
+</div></blockquote>
+<p>Unsere Anordnung sieht also wie folgt aus:</p>
+<figure class="align-default" id="label-img-udp-05">
+<a class="reference internal image-reference" href="../_images/udp_05.png"><img alt="../_images/udp_05.png" src="../_images/udp_05.png" style="width: 408.5px; height: 305.5px;" /></a>
+</figure>
+<p>In der Folge bedeutet dies, dass wir die im Client berechneten Funktionswerte mittels UDP-Paketen zum Server übertragen müssen. Die Nachrichten, die wir übertragen, müssen also folgende Informationen beinhalten:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>id: Identifier um den Inhalt der Nachricht zu kennzeichnen</p></li>
+<li><p>x: Wert auf der Abszisse (x-Achse)</p></li>
+<li><p>y: Wert auf der Ordinate (y-Achse)</p></li>
+</ol>
+</div></blockquote>
+<p>Bei der Definition des Paketinhalts haben wir die Bezeichner etwas allgemeiner gewählt als in unserem Sinus-Beispiel, weil es dem Server beim Plotten eigentlich egal ist, um welche Funktion es sich handelt. Außerdem haben wir vorausschauend dem Paket einen sog. Identifier vorangestellt. Dieser ist wichtig, falls wir später auch andere Informationen als die reinen Daten übertragen wollen. In diesem Fall muss der Server anhand der (unterschiedlichen) Identifier unterscheiden können, was der Client von ihm möchte.</p>
+<p>Um unser Nachrichtenformat in Form eines Datentyps in Python darzustellen, bieten sich die sog. &quot;Structured Arrays“ von NumPy an. Dabei können wir (ähnlich wie in C/C++) einen eigenen Datentyp definieren, der benamte Elemente unterschiedlichen Datentyps enthält:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mit np.dtype definieren wir einen neuen NumPy-Datentyp ...</span>
+<span class="n">person_dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span>    <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">),</span>
+                         <span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">),</span>
+                         <span class="p">(</span><span class="s1">&#39;weight&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)])</span>
+
+<span class="c1"># ... legen uns ein leeres Element davon an ...</span>
+<span class="n">person_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">person_dtype</span><span class="p">)</span>
+<span class="c1"># ... und befüllen dieses unter Angaben der Feldnamen ...</span>
+<span class="n">person_1</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">22</span>
+<span class="n">person_1</span><span class="p">[</span><span class="s1">&#39;height&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">184.0</span>
+<span class="n">person_1</span><span class="p">[</span><span class="s1">&#39;weight&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">72.5</span>
+<span class="c1"># .. ehe wir es zur Kontrolle ausgeben</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person_1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Die so definierten Datentypen lassen sich genauso transparent verwenden wie die eingebauten Datentypen. Die o.a. Form der Definition eines eigenen Datentyps ist nur eine von mehreren Varianten, die NumPy zur Verfügung stellt. Auch sehr konplexe und verschachtelte Datentypen (z.B. mit Arrays) lassen sich sich definieren.</p>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Das Beispiel 7.2 soll in einen Client- und einen Server-Anteil aufgespalten werden:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Der Server soll die Zeichenfunktionalität mithilfe der Klasse <em>SinPlot()</em> realisieren.</p></li>
+<li><p>Der Client soll die Berechungfunktionalität mithilfe der Klasse <em>Sinus()</em> realisieren.</p></li>
+<li><p>Die Kommunikation zwischen Client und Server soll über UDP-Sockets erfolgen.</p></li>
+<li><p>Das Nachrichtenformat soll wie folgt aussehen:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">msg_type</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span>  <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">),</span>
+                    <span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span>  <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Es sollen 3 verschiedene Nachrichten ausgetauscht werden:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>id=1 - Initialisierung:</dt><dd><p>Der Client fordert den Server auf, das  Plot-Fenster zu öffnen.</p>
+</dd>
+<dt>id=2 - Daten:</dt><dd><p>Der Client sendet dem Server einen Datensatz (x,y).</p>
+</dd>
+<dt>id=3 - Terminierung:</dt><dd><p>Der Client beendet den Server nach Ende der Berechnungen.</p>
+</dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p>Um die Daten ausgeben zu lassen, muss der Client dem Server die Nachrichten in folgender Reihenfolge senden:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Initialisierung</p></li>
+<li><p>Daten 0…N</p></li>
+<li><p>Terminierung</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Um die Grafikausgabe auf Seiten des Servers effizient zu gestalten, soll der Plot nur nach jedem 10. Datensatz aktualisiert werden.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<p>Lösungshinweise:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Schrittweise vorgehen:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Ausgehend vom einfachen Client-Server-Beispiel den Datenaustausch auf das definierte Nachrichtenformat umstellen und eine Testnachricht versenden.</p></li>
+<li><p>Erweiterung um alle 3 Nachrichten-IDs auf Client-/Server-Seite und wieder testen.</p></li>
+<li><p>Funktionalität für die Initialisierung in den Server integrieren.</p></li>
+<li><p>Funktionalität für die Terminierung in den Server integrieren.</p></li>
+<li><p>Datenübertragung integrieren und zunächst mit einem einfachen Testdatensatz, z.B. 10 Punkte (x,y), ausprobieren.</p></li>
+<li><p>Zum Schluss die iterative Berechnung der Sinus-Funktion in den Client integrieren und testen.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Das Versenden eines Structured Arrays über einen Socket kann direkt erfolgen. Auf der Empfangsseite kommen die Daten allerdings als reiner Bytestrom an. Um Daten aus einem unformatieren Bytebuffer in einen NumPy-Datentyp umzuwandeln kann man die Funktion <em>np.frombuffer()</em> einsetzen.</p></li>
+<li><p>Wir sprechen zwar hier auch von einer Client-Server-Kommunikation, allerdings brauchen wir in diesem Fall den Rückkanal vom Server an den Client gar nicht - es müssen also keine Antworten vom Server an den Client gesendet werden.</p></li>
+<li><p>Auf der Client-Seite sollte am Ende kein Code zur grafischen Ausgabe mehr enthalten sein, also sollte auch der Import der <em>Matplotlib</em> nicht mehr erforderlich sein.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="aufgabe-8-2">
+<h2>Aufgabe 8.2<a class="headerlink" href="#aufgabe-8-2" title="Permalink to this heading"></a></h2>
+<p>Die Aufgabe 8.2 erweitert unsere Lösung der Aufgabe 8.1 dahingehend, dass wir die Plotausgabe universeller gestalten wollen, denn eine ganze Reihe von Angaben ist bei uns derzeit noch &quot;fest verdrahtet“, wie z.B. das Werteintervall und die Dimension des Plot-Fensters.</p>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Das Ergebnis der Aufgabe 8.1 soll so modifiziert werden, dass der Client folgende Informationen während der Initialiserung an den Server überträgt:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>die Dimension des Plot-Fensters</p></li>
+<li><p>die Dimensionen der Achsen <em>(xlim, ylim)</em></p></li>
+<li><p>die Zeichenfarbe</p></li>
+<li><p>eine Legende</p></li>
+<li><p>Grid <em>on | off</em></p></li>
+</ol>
+</div></blockquote>
+</div>
+<p>Lösungshinweise:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Um die zusätzlichen Informationen bei der Initialsierung zu übertragen, müssen wir eine eigene Initialiserungsnachricht (also einen neuen <em>NumPy</em>-Datentyp) anlegen.</p></li>
+<li><p>Es bietet sich an, auch für den Nachrichtenkopf (&quot;id“) einen eigenen Datentyp zu definieren. Beim Eingang einer Nachricht wertet man dann erst diese &quot;id“-Nachricht aus und je nachdem, um welche &quot;id“ es sich handelt, interpretiert man dann die Nachricht unterschiedlich.</p></li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="exercise_07.html" class="btn btn-neutral float-left" title="7. Übung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Prof. Dr.-Ing. Volker von Holt - Fahrzeuginformatik - Ostfalia Hochschule.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
