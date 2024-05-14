@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10. Übung &mdash; IPP - Ingenieurwissenschaftliches Programmieren mit Python 0.1 Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=9d4e32a3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            IPP - Ingenieurwissenschaftliches Programmieren mit Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhalt:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Grundlagen der Programmierung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exer.html">Übungen</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IPP - Ingenieurwissenschaftliches Programmieren mit Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">10. Übung</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/exercises/exercise_10.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ubung">
+<h1>10. Übung<a class="headerlink" href="#ubung" title="Permalink to this heading"></a></h1>
+<p>Die elementaren Grundlagen der Python-Programmierung haben wir mit den zurückliegenden 9 Übungen - soweit es diesen Kurs betrifft - hinter uns gelassen. Natürlich gibt es jede Menge Pakete, Module und Funktionen, die wir noch nicht kennengelernt haben. Aber da es so unglaublich viele Möglichkeiten in Python gibt, werden wir uns immer wieder neue Dinge (eigenständig) aneignen müssen, daher lautet die Devise Üben und Machen!</p>
+<p>In den verbleibenden Übungungen wollen wir genau dies exemplarisch noch ein wenig üben. Beginnen</p>
+<section id="beispiel-10-1">
+<h2>Beispiel 10.1<a class="headerlink" href="#beispiel-10-1" title="Permalink to this heading"></a></h2>
+<section id="opencv">
+<h3>OpenCV<a class="headerlink" href="#opencv" title="Permalink to this heading"></a></h3>
+<p>Beginnen wollen wir mit einer weit verbreiteten und sehr mächtigen Bibliothek zur Bildverarbeitung, der OpenCV-Bibliothek. Diese hat sich zum De-Facto-Standard in der Bild(folgen)verarbeitung im Bereich der Robotik entwickelt. Originär ist OpenCV aus Effizienzgründen in C++ geschrieben, verfügt aber auch über eine Python-Schnittstelle. Allerdings &quot;fühlt“ sich die Schnittstelle weniger nach Python an, als originäre Python-Module wie z.B. <em>NumPy</em>.</p>
+<p>Bevor wir loslegen, müssen wir die Bibliothek aber installieren. Dies tun wir wie gewohnt von der PyPI-Seite unter Nutzung des <em>pip</em>-Kommandos:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">pip3</span> <span class="n">install</span> <span class="n">opencv</span><span class="o">-</span><span class="n">python</span>
+</pre></div>
+</div>
+<p>Damit sollten alle Abhängigkeiten, die eventuell noch nicht erfüllt sind, gleich mit installiert werden. Für einen ersten Test von OpenCV benötigen wir in jedem Fall entweder eine (Video-)Kamera oder eine Videosequenz - im Prinzip reicht auch ein einzelnes Bild, interessanter sind für uns aber Bildfolgen. Als Kamera reicht zunächst eine interne oder externe Webcam völlig aus. Eine Beispiel-Videosequenz ist im Stud.iP-Kurs als '.avi‘-Datei zu finden.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Importieren der OpenCV-Bibliothek</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">cv2</span>
+<span class="linenos"> 3</span>
+<span class="linenos"> 4</span><span class="c1"># Öffnen einer Videoquelle, hier einer Kamera</span>
+<span class="linenos"> 5</span><span class="c1"># Argument: laufende Nummer der Kamera des jeweiligen Systems</span>
+<span class="linenos"> 6</span><span class="c1"># - eingebaute Kamera (Notebook): 0</span>
+<span class="linenos"> 7</span><span class="c1"># - externe Kamera (Notebook mit Kamera): 1</span>
+<span class="linenos"> 8</span><span class="c1"># - externe Kamera (PC): 0</span>
+<span class="linenos"> 9</span><span class="c1"># Linux/MacOS:</span>
+<span class="linenos">10</span><span class="c1">#vid = cv2.VideoCapture(1)</span>
+<span class="linenos">11</span><span class="c1"># WINDOWS: Hier muss die Option für DIRECTSHOW mit angegeben werden,</span>
+<span class="linenos">12</span><span class="c1"># sonst dauert das Öffnen der Kamera ewig!</span>
+<span class="linenos">13</span><span class="n">vid</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_DSHOW</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;cam opened&#39;</span><span class="p">)</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="linenos">18</span>    <span class="c1"># Jetzt lesen wir ein Bild/Frame von der Kamera ein</span>
+<span class="linenos">19</span>    <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">vid</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>    <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
+<span class="linenos">22</span>      <span class="c1"># Im Erfolgsfall zeigen wir das Bild an ...</span>
+<span class="linenos">23</span>      <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;grayFrame&#39;</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="linenos">24</span>
+<span class="linenos">25</span>      <span class="c1"># ... und damit das auch wirklich passiert, müssen wir die Tastatur</span>
+<span class="linenos">26</span>      <span class="c1"># pollen (ähnlich wie &#39;plt.show()&#39; bei der Matplotlib)</span>
+<span class="linenos">27</span>      <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
+<span class="linenos">28</span>        <span class="c1"># Wenn wir &#39;q&#39; drücken bricht unser Programm ab.</span>
+<span class="linenos">29</span>        <span class="k">break</span>
+<span class="linenos">30</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">31</span>        <span class="k">break</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span><span class="c1"># Jetzt geben wir das Videobjekt wieder frei ...</span>
+<span class="linenos">34</span><span class="n">vid</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;cam closed&#39;</span><span class="p">)</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span><span class="c1"># ... und schließen alle Fenster.</span>
+<span class="linenos">39</span><span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Das Beispiel ist jetzt für die Kamera mit der laufenden Nummer 1 unter Windows konfiguriert. Wenn alles klappt, öffnet sich nach dem Programmstart ein neues Fenster, welches das Videobild der Kamera (in Farbe und mit der orginären Auflösung) wiedergibt. Meist können wir einige Parameter der Kamera setzen, z.B. durch Einfügen der beiden folgenden Programmzeilen im Anschluss an Zeile 13 des Beispiels:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vid</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_WIDTH</span><span class="p">,</span> <span class="mi">320</span><span class="p">)</span>
+<span class="n">vid</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_HEIGHT</span><span class="p">,</span> <span class="mi">240</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Dadurch sollte die Auflösung des eingelesenen Bildes setzt werden. Man darf sich aber nicht wundern, wenn diese oder andere Parameter keine Wirkung zeigen, denn für jede Kamera gibt es einen anderen Treiber und nicht alle Treiber unterstützen (unter allen Betriebssystemen) alle Parameter. Ebenso kann es passiert, dass eine bestimmte Kamera einfach gar kein Bild liefert. In diesem Fall empfiehlt es sich, auf eine &quot;Standard“-Konfiguration zu setzen und das Programm damit auszuprobieren. Hier haben sich Logitech-Webcams als i.d.R. gut unterstützt gezeigt.</p>
+</section>
+</section>
+<section id="aufgabe-10-1">
+<h2>Aufgabe 10.1<a class="headerlink" href="#aufgabe-10-1" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Prof. Dr.-Ing. Volker von Holt - Fahrzeuginformatik - Ostfalia Hochschule.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

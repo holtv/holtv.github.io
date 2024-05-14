@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="de">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9. Übung &mdash; IPP - Ingenieurwissenschaftliches Programmieren mit Python 0.1 Dokumentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=9d4e32a3"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+        <script src="../_static/translations.js?v=70a09b52"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="prev" title="8. Übung" href="exercise_08.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            IPP - Ingenieurwissenschaftliches Programmieren mit Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Dokumentation durchsuchen" aria-label="Dokumentation durchsuchen" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Inhalt:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">Grundlagen der Programmierung</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../exer.html">Übungen</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="exercise_01.html">1. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_02.html">2. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_03.html">3. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_04.html">4. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_05.html">5. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_06.html">6. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_07.html">7. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_08.html">8. Übung</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9. Übung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-9-1">Beispiel 9.1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#json-datenformat">JSON-Datenformat</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-9-1">Aufgabe 9.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-9-2">Beispiel 9.2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exceptions">Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-9-2">Aufgabe 9.2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">IPP - Ingenieurwissenschaftliches Programmieren mit Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../exer.html">Übungen</a></li>
+      <li class="breadcrumb-item active">9. Übung</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/exercises/exercise_09.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ubung">
+<h1>9. Übung<a class="headerlink" href="#ubung" title="Permalink to this heading"></a></h1>
+<section id="beispiel-9-1">
+<h2>Beispiel 9.1<a class="headerlink" href="#beispiel-9-1" title="Permalink to this heading"></a></h2>
+<section id="json-datenformat">
+<h3>JSON-Datenformat<a class="headerlink" href="#json-datenformat" title="Permalink to this heading"></a></h3>
+<p>JSON (JavaScript Object Notation) ist ein offenes und standardisiertes Format zum Datenaustausch zwischen Anwendungen sowie für Dateien. Entstanden ist das Format - wie man anhand des Namens unschwer erkennen kann - in Verbindung mit der Programmiersprache JavaScript. Aufgrund seines sehr einfachen und dazu noch für Menschen lesbaren Formats hat es sich aber allgemein für viele Aufgaben im Bereich der IT etabliert und wird von vielen Programmiersprachen direkt unterstützt u.a. auch von Python.</p>
+<div class="admonition-dateiformate admonition">
+<p class="admonition-title">Dateiformate</p>
+<p>Ein anderes weit verbreitetes Dateiformat/Datenaustauschformat ist die XML (eXtended Markup Language), die extra für den rechner- und anwendungsübergreifenden Einsatz konzipiert wurde. Zwar ist die XML sehr vielseitig, dabei leider aber auch recht länglich in der Formatierung, was die Lesbarkeit und manuelle Erzeugbarkeit für uns Menschen recht umständlich macht. In diese &quot;Lücke“ ist dann zum einen die JSON gestoßen, zum anderen auch die YAML (YAML Ain’t Markup Language - Anmerkung: eine sog. &quot;rekursive“ Definition). Letztere ist noch umfangreicher als JSON und beinhaltet diese als echte Untermenge, hat aber nicht die Verbreitung von JSON gefunden und wird von Python ebenfalls unterstützt, allerdings nicht originär.</p>
+</div>
+<p>Wir schauen uns am besten einfach ein Beispiel an, wie eine Datei im JSON-Format aussieht (<a class="reference external" href="https://en.wikipedia.org/wiki/JSON">Wikipedia</a>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;first_name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;last_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;is_alive&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+  <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span>
+  <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;street_address&quot;</span><span class="p">:</span> <span class="s2">&quot;21 2nd Street&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;New York&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="s2">&quot;NY&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;postal_code&quot;</span><span class="p">:</span> <span class="s2">&quot;10021-3100&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;phone_numbers&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;home&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;number&quot;</span><span class="p">:</span> <span class="s2">&quot;212 555-1234&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;office&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;number&quot;</span><span class="p">:</span> <span class="s2">&quot;646 555-4567&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;children&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;Catherine&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Thomas&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Trevor&quot;</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;spouse&quot;</span><span class="p">:</span> <span class="n">null</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Das sieht nicht nur auf den ersten Blick sehr ähnlich aus zu den Dictionaries, die wir in Python kennen. Tatsächlich ist der einfachste Weg eine JSON-Datei/Datenstruktur zu erzeugen ein Dictionary anzulegen und in JSON zu konvertieren und umgekehrt ist es ebenso einfach eine JSON-Datei/Datenstruktur wieder in ein Dictionary umzwandeln. Im ersten Fall sprechen wir von der JSON-Codierung, im zweiten Fall von der JSON-Decodierung. Das schauen wir uns gleich mal an einem einfachen Beispiel an:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">json</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1"># Wir definieren ein Datenobjekt als Dictionary ...</span>
+<span class="linenos"> 4</span><span class="n">input_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Adresse&quot;</span><span class="p">:</span> <span class="s2">&quot;Kleiststr.&quot;</span><span class="p">,</span> <span class="s2">&quot;Hausnummer&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">}</span>
+<span class="linenos"> 5</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Originale Daten:&#39;</span><span class="p">,</span> <span class="n">input_data</span><span class="p">)</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1"># ... und codieren diese mit dumps() in eine JSON-formatierte Byte-Folge um ...</span>
+<span class="linenos"> 8</span><span class="n">json_string</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">input_data</span><span class="p">),</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span>
+<span class="linenos"> 9</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;JSON codierte Daten:&#39;</span><span class="p">,</span> <span class="n">json_string</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># .. die wir mit der &#39;loads()&#39;-Methode wieder decodieren können</span>
+<span class="linenos">12</span><span class="n">output_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
+<span class="linenos">13</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Decodierte JSON-Daten:&#39;</span><span class="p">,</span> <span class="n">output_data</span><span class="p">)</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1"># Wenn wir ein Datenobjekt im JSON-Format in eine Datei schreiben wollen,</span>
+<span class="linenos">16</span><span class="c1"># sieht das ganz ähnlich aus ...</span>
+<span class="linenos">17</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="linenos">18</span>  <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="c1"># ... und auch das Wieder-Einlesen aus der Datei ghet sehr leicht</span>
+<span class="linenos">21</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="linenos">22</span>  <span class="n">loaded_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Aus der Datei geladener Datensatz:&#39;</span><span class="p">,</span>  <span class="n">loaded_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In den Zeilen 7-13 machen wir sozusagen eine &quot;Trockenübung“, indem wir ein Dictionary mittels der Methode <em>dumps()</em> in einen JSON-String umwandeln (codieren), den wir anschließend unter zuhilfenahme der inversen Methode <em>loads()</em> wieder in ein Dictionary konvertieren (decodieren). Das durch <em>dumps()</em> erzeugte Byte-Array können wir z.B. über einen Socket an einen andere Anwendung schicken, die das empfangene Array dann mit <em>loads()</em> wieder in ein Dictionary wandelt und auswertet. In den Zeilen 17-24 wiederum erzeugen wir ein Datei im JSON-Format und speichern unser Test-Dictionary mittels der Methode <em>dump()</em> darin, um es gleich darauf mit der Methode <em>load()</em> als Dictionary wieder einzulesen.</p>
+<p>Wie wir der o.a. Beispieldatei entnehmen, können die JSON-Datenstrukturen auch verschachtelt sein, also z.B. Arrays oder weitere Dictionaries enthalten. Auch dies wird 1:1 in Python-Dictonaries abgebildet. Darüberhinaus können wir auch eigene Datenobjekte/-klassen in JSON-Objekte umwandeln (und vice versa), nur müssen wir dazu eigene Coder und Decoder in unseren Klassen schreiben. Auf diese Möglichkeit sei an dieser Stelle nur verwiesen, vertiefen wollen wir das in diesem Kurs aber nicht weiter.</p>
+</section>
+</section>
+<section id="aufgabe-9-1">
+<h2>Aufgabe 9.1<a class="headerlink" href="#aufgabe-9-1" title="Permalink to this heading"></a></h2>
+<p>In dieser Aufgabe wollen wir den Umgang mit JSON-Objekten in Verbindung mit der Socket-Kommunikation ausprobieren.</p>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>In den Aufgaben 8.1/8.2 wurden die zwischen Client und Server ausgetauschten Nachrichten durch separat definierte NumPy-Datentypen realisiert. Diese sollen nun durch JSON-Objekte ersetzt werden.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Der Datenaustausch zwischen Client und Server soll im JSON-Format erfolgen.</p></li>
+<li><p>Die Inhalte der Nachrichten sowie die verschiedenen Nachrichtentypen sollen prinzipiell erhalten bleiben.</p></li>
+<li><p>Die Funktionalität der Anwendungen soll identisch bleiben.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<p>Lösungshinweise:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Analog zu Beispiel 9.1 können die Nachrichten clientseitig jeweils als Dictionary definiert, in ein Byte-Array umgewandelt und dann über die UDP-Verbindung an den Server geschickt werden.</p></li>
+<li><p>Auf der Serverseite muss die Decodierung dann entsprechend der jeweiligen Nachrichten-ID erfolgen.</p></li>
+<li><p>Zum Testen und zur Fehlersuche bietet es sich an, die Kommunikation zunächst ohne Zeichenfunktionalität unter Anzeige der gesendeten und empfangenen Inhalte auf beiden Seiten zu testen.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="beispiel-9-2">
+<h2>Beispiel 9.2<a class="headerlink" href="#beispiel-9-2" title="Permalink to this heading"></a></h2>
+<section id="exceptions">
+<h3>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this heading"></a></h3>
+<p>Wenn wir eine Datei öffnen wollen, die gar nicht existiert, oder, wenn wir eine Division durch Null durchführen wollen, die nicht erlaubt ist, oder auch, wenn bei der Socket-Kommunikation ein Fehler auftritt, haben wir es mit sogenannten &quot;Laufzeitfehlern“ zu tun - dies waren nur einige wenige Beispiele für Laufzeitfehler. Diese sind dadurch gekennzeichnet, dass man sie im Vorfeld nicht diagnostizieren kann, weil sie von den konkreten Rahmenbedingungen zu einem Zeitpunkt während der Programmausführung abhängen. In allen diesen Fällen kann der Python-Interpreter ein Programm ohne weitere Maßnahmen nicht sinnvoll fortsetzen. Daher löst Python in diesen Fällen eine sog. &quot;Exception“ aus, auf die wir programmiertechnisch reagieren können oder nicht. Bislang haben wir nicht auf Exceptions reagiert mit der Folge, dass unser Programm bei Auftreten eines Laufzeitfehlers unter Ausgabe einer Fehlermeldung einfach abgebrochen wird. In der Tat ist es aber relativ einfach, eine Fehlerbehandlung in unsere Programme zu integrieren. In Python gibt es dazu das <em>try-except</em>-Konstrukt:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+  <span class="c1"># Hier steht der eigentliche Code, der funktionell auszuführen ist ...</span>
+
+<span class="k">except</span> <span class="n">FirstError</span><span class="p">:</span>
+  <span class="c1"># Dieser Abschnitt wird ausgeführt, falls im try-Block ein Fehler des Typs</span>
+  <span class="c1"># FirstError auftritt.</span>
+
+<span class="k">except</span> <span class="p">(</span><span class="n">SecondError</span><span class="p">,</span> <span class="n">ThirdError</span><span class="p">):</span>
+  <span class="c1"># Dieser Abschnitt wird ausgeführt, falls im try-Block einer der Fehler aus</span>
+  <span class="c1"># der Liste auftritt.</span>
+
+<span class="k">except</span> <span class="n">FourthError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+  <span class="c1"># Beim Auftreten von FourthError enthält &#39;error&#39; nähere Informationen zum</span>
+  <span class="c1"># Fehler, die wir z.B. ausgeben können.</span>
+
+<span class="k">except</span><span class="p">:</span>
+  <span class="c1"># Reaktion auf alle anderen noch möglichen Fehler.</span>
+
+<span class="k">else</span><span class="p">:</span>
+  <span class="c1"># Code-Block, der nur ausgeführt wird, wenn kein Fehler aufgetreten ist.</span>
+
+<span class="k">finally</span><span class="p">:</span>
+  <span class="c1"># Code-Block, der unabhängig davon, ob ein Fehler aufgetreten ist oder</span>
+  <span class="c1"># nicht, immer ausgeführt wird.</span>
+</pre></div>
+</div>
+<p>Wie wir sehen, kann man die Fehlerbehandlung sehr vielschichtig gestalten. Verpflichtend sind aber - neben dem obligatorischen <em>try</em>-Block - mindestens ein <em>except</em>-Block oder der <em>finally</em>-Block - alles andere ist optional. Betrachten wir ein einfaches Beispiel dazu:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">try</span><span class="p">:</span>
+<span class="linenos">2</span>  <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;nonsense.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="linenos">3</span>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Datei erfolgreich geöffnet&#39;</span><span class="p">)</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="k">except</span><span class="p">:</span>
+<span class="linenos">6</span>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exception&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Im Beispiel versuchen wir eine (hoffentlich tatsächlich) nicht vorhandene Datei mit Namen 'nonsense.txt‘ zu öffnen. Beim Versuch des Öffnens einer nicht vorhandenen Datei wird dann eine Exception ausgelöst, die uns mit der <em>print()</em>-Anweisung in Zeile 6 dann auch mitgeteilt wird. Möchten wir genaueres zur Exception wissen, können wir wie folgt vorgehen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">try</span><span class="p">:</span>
+<span class="linenos">2</span>  <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;nonsense.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="linenos">3</span>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Datei erfolgreich geöffnet&#39;</span><span class="p">)</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+<span class="linenos">6</span>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exception:&#39;</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Damit bekommen wir die Fehlerursache mitgeteilt und können diese ausgeben. Der gleiche Text wird im Übrigen von Python selber beim Programmabbruch angezeigt, wenn wir auf das <em>try-except</em>-Konstrukt verzichtet hätten (Ausprobieren!).</p>
+<p>Es gibt in Python eine ganze Reihe vordefinierter Fehler. Viele Programmpakete definieren aber darüberhinaus auch eigene Exceptions. Und natürlich können auch wir eigene Exceptions definieren. Dafür müssen wir eine Exception-Klasse anlegen, die mittels Vererbung von der Exception-Basisklasse abgeleitet ist. Diese Möglichkeit werden wir an dieser Stelle aber nicht weiter verfolgen.</p>
+<p>Wir können aber auch die vordefinierten Exceptions nutzen und diese selber auslösen. Dazu gibt es den Befehl <em>raise</em>, der dazu dient eine Exception auszulösen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">try</span><span class="p">:</span>
+<span class="linenos"> 2</span>  <span class="c1"># Hier belegen wir 2 Variablen absichtlich &#39;falsch&#39;</span>
+<span class="linenos"> 3</span>  <span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="linenos"> 4</span>  <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>  <span class="c1"># Als gute Programmierer prüfen wir hier ab, ob die Voraussetzungen für die</span>
+<span class="linenos"> 7</span>  <span class="c1"># weiteren Berechnungen erfüllt sind.</span>
+<span class="linenos"> 8</span>  <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="n">b</span><span class="p">:</span>
+<span class="linenos"> 9</span>    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;a muss immer kleiner als b sein!&#39;</span><span class="p">)</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span>  <span class="c1"># Hier ginge es weiter, wenn a &lt; b wäre ...</span>
+<span class="linenos">12</span><span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+<span class="linenos">13</span>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exception:&#39;</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="aufgabe-9-2">
+<h2>Aufgabe 9.2<a class="headerlink" href="#aufgabe-9-2" title="Permalink to this heading"></a></h2>
+<p>Bei unseren bisherigen Programmen zur Socket-Kommunikation war es in den meisten Fällen nicht möglich, dass wir diese durch Betätigen von 'STRG-C‘ unterbrechen konnten. Dies war immer dann nicht möglich, wenn insbesondere der Server einen Aufruf von <em>socket.recvfrom()</em> getätigt hatte: dieser Aufruf kehrt nämlich nur zurück, wenn wirklich Daten empfangen wurden und ist - außer durch das (harte) Killen des Prozesses - nicht unterbrechbar. Damit unser Programm etwas reaktiver wird, können wir für die Sockets einen Timeout setzen: wenn innerhalb des Timeouts keine Daten empfangen wurden, dann bricht die <em>recvfrom()</em>-Funktion unter Auslösung einer Exception ab. Diese können wir abfangen und  damit z.B. auf den ausbleibenden Nachrichtenempfang reagieren. Gleichzeitig ist unser Programm dann als Nebeneffekt auch wieder durch STRG-C unterbrechbar.</p>
+<p>Im folgenden Code-Fragment ist eine mögliche Abfolge von 'try-except‘-Blöcken zu sehen - je nach Lösung der Aufgaben 8.1/8.2/9.1 sieht der Code vermutlich bei jedem etwas anders aus - die Neuerungen sind jeweils durch einen Kommentar der Form '# NEU: …‘ gekennzeichnet:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># ... Klassen, Funktionen, ...</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1"># Hauptprogramm</span>
+<span class="linenos"> 4</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="linenos"> 5</span>  <span class="c1"># NEU: Dieser &#39;try&#39;-Block fängt Initialsierungsfehler beim Öffnen und</span>
+<span class="linenos"> 6</span>  <span class="c1"># Binden des Sockets ab.</span>
+<span class="linenos"> 7</span>  <span class="k">try</span><span class="p">:</span>
+<span class="linenos"> 8</span>    <span class="c1"># ... Initialisierung</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>    <span class="c1"># UDP-Socket anlegen ...</span>
+<span class="linenos">11</span>    <span class="n">UDPServerSocket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">socket</span><span class="o">.</span><span class="n">SOCK_DGRAM</span><span class="p">)</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>    <span class="c1"># ... und an IP-Adresse und Port binden</span>
+<span class="linenos">14</span>    <span class="n">UDPServerSocket</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">gfx_srv_ip</span><span class="p">,</span> <span class="n">gfx_srv_port</span><span class="p">))</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span>    <span class="c1"># NEU: Hier setzen wir einen Timeout-Wert von 1s für den UDP-Socket</span>
+<span class="linenos">17</span>    <span class="n">UDPServerSocket</span><span class="o">.</span><span class="n">settimeout</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span>    <span class="c1"># ... Initialisierung</span>
+<span class="linenos">20</span>
+<span class="linenos">21</span>    <span class="c1"># Warten auf eingehende Nachrichten von Clients</span>
+<span class="linenos">22</span>    <span class="k">while</span> <span class="ow">not</span> <span class="n">terminated</span><span class="p">:</span>
+<span class="linenos">23</span>      <span class="c1"># NEU: Dieser &#39;try&#39;-Block soll in der Hauptsache den Timeout des</span>
+<span class="linenos">24</span>      <span class="c1"># Sockets abfangen: Wenn der Socket &gt;= 1s erfolglos auf den Eingang</span>
+<span class="linenos">25</span>      <span class="c1"># einer Nachricht wartet wird eine Exception ausgelöst ...</span>
+<span class="linenos">26</span>      <span class="k">try</span><span class="p">:</span>
+<span class="linenos">27</span>          <span class="n">bytesAddressPair</span> <span class="o">=</span> <span class="n">UDPServerSocket</span><span class="o">.</span><span class="n">recvfrom</span><span class="p">(</span><span class="n">bufferSize</span><span class="p">)</span>
+<span class="linenos">28</span>
+<span class="linenos">29</span>          <span class="c1"># ... Nachricht empfangen und decodieren</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span>      <span class="c1"># NEU: ... die hier abgefangen wird ...</span>
+<span class="linenos">32</span>      <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">timeout</span> <span class="k">as</span> <span class="n">inst</span><span class="p">:</span>
+<span class="linenos">33</span>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;socket.timeout aufgetreten&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">inst</span><span class="p">))</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span>      <span class="c1"># NEU: ... bei anderen Exceptions landen wir hier</span>
+<span class="linenos">36</span>      <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">inst</span><span class="p">:</span>
+<span class="linenos">37</span>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exception aufgetreten&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">inst</span><span class="p">))</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span>  <span class="c1"># NEU: Hier fangen wir den Abbruch durch STRG-C ab ...</span>
+<span class="linenos">40</span>  <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+<span class="linenos">41</span>      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;STRG-C gedrückt&#39;</span><span class="p">)</span>
+<span class="linenos">42</span>
+<span class="linenos">43</span>  <span class="c1"># NEU: ... und hier alle Exceptions, die sonst noch auftreten können</span>
+<span class="linenos">44</span>  <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">inst</span><span class="p">:</span>
+<span class="linenos">45</span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exception aufgetreten&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">inst</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Es soll der Code der Aufgabe 9.1 durch Einfügen von 'try-except‘-Konstrukten sicherer gemacht werden:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Es soll zunächst die Serverseite analog zum o.a. Code-Fragment entsprechend ergänzt werden.</p></li>
+<li><p>Danach soll auch der Client durch Einfügen entsprechender Konstrukte abgesichert werden. Dabei soll mindestens das Hauptprogramm insgesamt als auch die Schleife zum Senden der Daten an den Server abgesichert werden.</p></li>
+</ol>
+</div></blockquote>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="exercise_08.html" class="btn btn-neutral float-left" title="8. Übung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Prof. Dr.-Ing. Volker von Holt - Fahrzeuginformatik - Ostfalia Hochschule.</p>
+  </div>
+
+  Erstellt mit <a href="https://www.sphinx-doc.org/">Sphinx</a> mit einem
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    bereitgestellt von <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
