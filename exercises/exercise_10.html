@@ -22,9 +22,11 @@
         <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../_static/copybutton.js?v=f281be69"></script>
         <script src="../_static/translations.js?v=70a09b52"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
-    <link rel="search" title="Suche" href="../search.html" /> 
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="prev" title="9. Übung" href="exercise_09.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,10 +49,37 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Inhalt:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../theory.html">Grundlagen der Programmierung</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../exer.html">Übungen</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../exer.html">Übungen</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="exercise_01.html">1. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_02.html">2. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_03.html">3. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_04.html">4. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_05.html">5. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_06.html">6. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_07.html">7. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_08.html">8. Übung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise_09.html">9. Übung</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">10. Übung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#beispiel-10-1">Beispiel 10.1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#opencv">OpenCV</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-10-1">Aufgabe 10.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-10-2">Aufgabe 10.2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nachbarschaftsoperationen-in-1d">Nachbarschaftsoperationen in 1D</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#aufgabe-10-3">Aufgabe 10.3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nachbarschaftsoperationen-in-2d">Nachbarschaftsoperationen in 2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -67,6 +96,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../exer.html">Übungen</a></li>
       <li class="breadcrumb-item active">10. Übung</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/exercises/exercise_10.rst.txt" rel="nofollow"> Quelltext anzeigen</a>
@@ -79,13 +109,12 @@
              
   <section id="ubung">
 <h1>10. Übung<a class="headerlink" href="#ubung" title="Permalink to this heading"></a></h1>
-<p>Die elementaren Grundlagen der Python-Programmierung haben wir mit den zurückliegenden 9 Übungen - soweit es diesen Kurs betrifft - hinter uns gelassen. Natürlich gibt es jede Menge Pakete, Module und Funktionen, die wir noch nicht kennengelernt haben. Aber da es so unglaublich viele Möglichkeiten in Python gibt, werden wir uns immer wieder neue Dinge (eigenständig) aneignen müssen, daher lautet die Devise Üben und Machen!</p>
-<p>In den verbleibenden Übungungen wollen wir genau dies exemplarisch noch ein wenig üben. Beginnen</p>
+<p>Die elementaren Grundlagen der Python-Programmierung haben wir mit den zurückliegenden 9 Übungen - soweit es diesen Kurs betrifft - hinter uns gelassen. Natürlich gibt es jede Menge Pakete, Module und Funktionen, die wir noch nicht kennengelernt haben. Aber da es so unglaublich viele Möglichkeiten in Python gibt, werden wir uns immer wieder neue Dinge (eigenständig) aneignen müssen, daher lautet die Devise: &quot;Üben und Machen“! In den verbleibenden Übungungen wollen wir genau dies exemplarisch noch ein wenig üben. Beginnen</p>
 <section id="beispiel-10-1">
 <h2>Beispiel 10.1<a class="headerlink" href="#beispiel-10-1" title="Permalink to this heading"></a></h2>
 <section id="opencv">
 <h3>OpenCV<a class="headerlink" href="#opencv" title="Permalink to this heading"></a></h3>
-<p>Beginnen wollen wir mit einer weit verbreiteten und sehr mächtigen Bibliothek zur Bildverarbeitung, der OpenCV-Bibliothek. Diese hat sich zum De-Facto-Standard in der Bild(folgen)verarbeitung im Bereich der Robotik entwickelt. Originär ist OpenCV aus Effizienzgründen in C++ geschrieben, verfügt aber auch über eine Python-Schnittstelle. Allerdings &quot;fühlt“ sich die Schnittstelle weniger nach Python an, als originäre Python-Module wie z.B. <em>NumPy</em>.</p>
+<p>Beginnen wollen wir mit einer weit verbreiteten und sehr mächtigen Bibliothek zur Bildverarbeitung, der OpenCV-Bibliothek. Diese hat sich zum De-Facto-Standard in der Bild(folgen)verarbeitung im Bereich der Robotik entwickelt. Originär ist die OpenCV aus Effizienzgründen in C++ geschrieben, verfügt aber auch über eine Python-Schnittstelle. Allerdings &quot;fühlt“ sich die Schnittstelle weniger nach Python an als etwa originäre Python-Module wie z.B. <em>NumPy</em>.</p>
 <p>Bevor wir loslegen, müssen wir die Bibliothek aber installieren. Dies tun wir wie gewohnt von der PyPI-Seite unter Nutzung des <em>pip</em>-Kommandos:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">pip3</span> <span class="n">install</span> <span class="n">opencv</span><span class="o">-</span><span class="n">python</span>
 </pre></div>
@@ -113,7 +142,7 @@
 <span class="linenos">20</span>
 <span class="linenos">21</span>    <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
 <span class="linenos">22</span>      <span class="c1"># Im Erfolgsfall zeigen wir das Bild an ...</span>
-<span class="linenos">23</span>      <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;grayFrame&#39;</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="linenos">23</span>      <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;Frame&#39;</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
 <span class="linenos">24</span>
 <span class="linenos">25</span>      <span class="c1"># ... und damit das auch wirklich passiert, müssen wir die Tastatur</span>
 <span class="linenos">26</span>      <span class="c1"># pollen (ähnlich wie &#39;plt.show()&#39; bei der Matplotlib)</span>
@@ -137,18 +166,290 @@
 <span class="n">vid</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">CAP_PROP_FRAME_HEIGHT</span><span class="p">,</span> <span class="mi">240</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Dadurch sollte die Auflösung des eingelesenen Bildes setzt werden. Man darf sich aber nicht wundern, wenn diese oder andere Parameter keine Wirkung zeigen, denn für jede Kamera gibt es einen anderen Treiber und nicht alle Treiber unterstützen (unter allen Betriebssystemen) alle Parameter. Ebenso kann es passiert, dass eine bestimmte Kamera einfach gar kein Bild liefert. In diesem Fall empfiehlt es sich, auf eine &quot;Standard“-Konfiguration zu setzen und das Programm damit auszuprobieren. Hier haben sich Logitech-Webcams als i.d.R. gut unterstützt gezeigt.</p>
+<p>Dadurch sollte die Auflösung des eingelesenen Bildes auf 320x240 Pixel gesetzt werden. Man darf sich aber nicht wundern, wenn diese oder andere Parameter keine Wirkung zeigen, denn für jede Kamera gibt es einen anderen Treiber und nicht alle Treiber unterstützen (unter jedem Betriebssystemen) alle Parameter. Ebenso kann es passieren, dass eine bestimmte Kamera einfach gar kein Bild liefert. In diesem Fall empfiehlt es sich, auf eine &quot;Standard“-Konfiguration zu setzen und das Programm damit auszuprobieren. Hier haben sich Logitech-Webcams als i.d.R. gut unterstützt gezeigt.</p>
+<p>In ganz ähnlicher Weise lassen sich statt Live-Bilder einer Kamera auch aufgezeichnete Videofolgen in OpenCV einlesen:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Importieren der OpenCV-Bibliothek</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">cv2</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="nn">time</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1"># Öffnen einer Videoquelle, hier einer Videodatei</span>
+<span class="linenos"> 6</span><span class="c1"># Argument: (Pfadname+)Dateiname der Videodatei</span>
+<span class="linenos"> 7</span><span class="c1"># ACHTUNG: Je nach Betriebssystem muss der Pfad eventuell unterschiedlich</span>
+<span class="linenos"> 8</span><span class="c1"># angegeben werden. Ausserdem ist zu beachten, von welchem Verzeichnis aus</span>
+<span class="linenos"> 9</span><span class="c1"># nach der Datei gesucht wird!</span>
+<span class="linenos">10</span><span class="n">vid_file_name</span> <span class="o">=</span> <span class="s1">&#39;file_0001_ts.avi&#39;</span>  <span class="c1"># Beispielvideo aus Stud.iP</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="n">file_vid</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="n">vid_file_name</span><span class="p">)</span>
+<span class="linenos">13</span><span class="k">if</span> <span class="n">file_vid</span><span class="o">.</span><span class="n">isOpened</span><span class="p">():</span>
+<span class="linenos">14</span>    <span class="n">file_vid_present</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos">15</span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Videodatei vorhanden&#39;</span><span class="p">)</span>
+<span class="linenos">16</span><span class="k">else</span><span class="p">:</span>
+<span class="linenos">17</span>    <span class="n">file_vid_Present</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos">18</span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Videodatei nicht vorhanden&#39;</span><span class="p">)</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="linenos">21</span>    <span class="c1"># Jetzt lesen wir ein Bild/Frame aus der Datei ein</span>
+<span class="linenos">22</span>    <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">file_vid</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_GRAYSCALE</span><span class="p">)</span>
+<span class="linenos">23</span>
+<span class="linenos">24</span>    <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
+<span class="linenos">25</span>      <span class="c1"># Im Erfolgsfall zeigen wir das Bild an ...</span>
+<span class="linenos">26</span>      <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;Frame&#39;</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span>      <span class="c1"># ... und damit das auch wirklich passiert, müssen wir die Tastatur</span>
+<span class="linenos">29</span>      <span class="c1"># pollen (ähnlich wie &#39;plt.show()&#39; bei der Matplotlib)</span>
+<span class="linenos">30</span>      <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
+<span class="linenos">31</span>        <span class="c1"># Wenn wir &#39;q&#39; drücken bricht unser Programm ab.</span>
+<span class="linenos">32</span>        <span class="k">break</span>
+<span class="linenos">33</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">34</span>        <span class="k">break</span>
+<span class="linenos">35</span>    <span class="c1"># Damit das Video ungefähr in Echtzeit läuft, müssen wir etwas &quot;bremsen&quot;</span>
+<span class="linenos">36</span>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.02</span><span class="p">)</span>
+<span class="linenos">37</span>
+<span class="linenos">38</span><span class="c1"># Jetzt geben wir das Videobjekt wieder frei ...</span>
+<span class="linenos">39</span><span class="n">file_vid</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+<span class="linenos">40</span>
+<span class="linenos">41</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Videodatei geschlossen&#39;</span><span class="p">)</span>
+<span class="linenos">42</span>
+<span class="linenos">43</span><span class="c1"># ... und schließen alle Fenster.</span>
+<span class="linenos">44</span><span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Bei einer Videodatei können wir natürlich im Gegensatz zu einer Kamera keine Auflösung vorgeben, da diese bereits bei der Aufzeichnung festgelegt wurde. Wir können uns aber in beiden Fällen das jeweilige Bildformat anzeigen lassen. Dazu fügen wir hinter der Zeile 23 (Kamera-Version) bzw. 27 (Video-Version) folgenden Code ein:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">channels</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+<span class="linenos">2</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Bildspalten </span><span class="si">%3d</span><span class="s1">   Bildzeilen </span><span class="si">%3d</span><span class="s1">  Farbkanäle </span><span class="si">%1d</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span>  <span class="n">channels</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Anhand der Ausgaben sehen wir, dass das eingelesene Bild in beiden Fällen aus drei Farbkanälen besteht. Im Fall der Farbkamera ist das offensichtlich, da wir die drei Farbauszüge R(=Rot), G(=Grün) und B(=Blau) haben, im Fall der Videobildfolge hingegen weniger, da diese originär nur ein Grauwertbild liefert. In letzterem Fall enthalten daher alle drei Kanäle das gleiche (Grauwert-)Bild.</p>
+<p>Bilder und insbesondere Bildfolgen stellen allerdings eine sehr große Datenmenge dar, so enthält allein ein Bild in (Standard-)VGA-Aufösung mit 640 x 480 Pixeln (als Grauwertbild mit einem Kanal) 300kb an Daten, als Farbbild dementsprechend 3 x 300kb = 900kb. Wenn wir von 25 Bildern/s ausgehen, ergibt das 7.5Mb bzw. 22.5Mb Bilddaten/s, die es zu verarbeiten gilt. Um die notwendige Verarbeitungsleistung nicht beliebig anwachsen zu lassen, versucht man technisch gesehen mit der geringestmöglichen Auflösung und möglichst einem Grauwertbild auszukommen. (Lebewesen gehen übrigens ganz genauso vor, so hat der Mensch deutlich mehr Rezeptoren für Helligkeitswahrnehmung als für Farbwahrnehmung!)</p>
+<p>Wie kommen wir aber nun von unseren drei Farbkanälen RGB auf ein Grauwertbild - natürlich mit einer Funktion der OpenCV-Bibliothek. Wenn wir unser Kamera-Beispiel wie folgt abändern, erhalten wir monochrome Bilder:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ...</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+  <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">vid</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+  <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
+    <span class="c1"># Im Erfolgsfall wandeln wir unser RGB-Bild in ein Grauwert-Bild um ...</span>
+    <span class="n">grayFrame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+
+    <span class="c1"># ... und zeigen dieses dann auch an</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;grayFrame&#39;</span><span class="p">,</span> <span class="n">grayFrame</span><span class="p">)</span>
+
+    <span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>Damit haben wir jetzt die Voraussetzungen geschaffen, um ein wenig in das Gebiet der Bildverarbeitung mit Python &quot;hineinzuschnuppern“.</p>
 </section>
 </section>
 <section id="aufgabe-10-1">
 <h2>Aufgabe 10.1<a class="headerlink" href="#aufgabe-10-1" title="Permalink to this heading"></a></h2>
+<p>Bei den Bildern, die wir im Beispiel 10.1 eingelesen und angezeigt haben, handelt es sich mathematisch gesehen um (2D-)Matrizen (je Kanal). Programmiertechnisch werden diese Matrizen in Python in Form von <em>NumPy</em>-Array repräsentiert - wie auch sonst? Der erste Kontakt mit Bildern als 2D-Signalen ist meist etwas ungewohnt - zumal Bilder ein sogenanntes &quot;Ortssignal“ (in den beiden Bildachsen) darstellen. Aus den physikalischen und technischen Grundlagenfächern sind uns aber meist eindimensionale Signale in Abhängigkeit der Zeit geläufig. Wir wollen uns daher der Bildverarbeitung aus der uns vertrauten eindimensionalen Signalverarbeitung nähern und dann das Vorgehen in zwei Dimensionen verallgemeinern.</p>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Wir wollen zunächst mit unserer Beispiel-Videodatei arbeiten und aus jedem Bild nur eine Bildzeile herausgreifen und verarbeiten. Dazu soll:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>aus jedem Bild die Bildzeile 150 in ein eindimensionales <em>NumPy</em>-Array überführt werden.</p></li>
+<li><p>die Grauwerte der Bildzeile mittels der <em>Matplotlib</em> in einem Plot-Fenster als &quot;klassischer“ Kurvenverlauf dargestellt werden.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<p>Lösungshinweise:</p>
+<ul class="simple">
+<li><p>Das eindimensionale <em>NumPy</em>-Array erhält man am einfachsten per Slicing.</p></li>
+<li><p>Da wir einen Videostream mit fortlaufenden Bildern haben, sollte auch das Plot-Fenster nur einmal angelegt und beim ersten Plotten in seinen Dimensionen festgelegt werden. Danach sollten die Daten jeweils nur noch aktualisiert werden.</p></li>
+<li><p>Nicht vergessen: damit die <em>Matplotlib</em> überhaupt etwas anzeigt, brauchen wir nach dem Plotten ein <em>plt.pause()</em> - wenn wir dort die richtige Zeit eingeben, kann dafür aber das bisherige <em>time.sleep()</em> entfallen.</p></li>
+</ul>
+<p>Wenn alles geklappt hat, sollten das Plotfenster und der Grauwertverlauf in etwa so aussehen, wie im folgenden Plot - mit dem zugehörigen Videobild als Referenz:</p>
+<span class="target" id="label-img-opencv-02"></span><figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/filter2D_01_org.png"><img alt="../_images/filter2D_01_org.png" src="../_images/filter2D_01_org.png" style="width: 433.5px; height: 357.75px;" /></a>
+<figcaption>
+<p><span class="caption-text">Abb. 10.1: Originalbild der Autobahnszene</span><a class="headerlink" href="#id1" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<span id="label-img-opencv-01"></span><a class="reference internal image-reference" href="../_images/opencv_01.png"><img alt="../_images/opencv_01.png" src="../_images/opencv_01.png" style="width: 513.6px; height: 443.20000000000005px;" /></a>
+<figcaption>
+<p><span class="caption-text">Abb. 10.2: Grauwertverlauf der Bildzeile 150</span><a class="headerlink" href="#id2" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+<p>Im Plot können wir sehr leicht die weißen Fahrstreifenmarkierungen erkennen, wobei die rechte Markierung ungefähr doppelt so breit ist wie die Mittelmarkierung. Der sonstige Signalverlauf gibt in den meisten Szenen den grauen, leicht inhomogen erscheinenden Fahrbahnbelag wieder - die Laufspuren der Räder zeichnen sich dabei etwas heller ab. Wenn wir das Video ganz durchlaufen lassen, können wir auch sehr schön beobachten, wie die Grauwerte unter Brücken absinken oder wie überholende Fahrzeuge sich vom grauen Fahrbahnbelag abheben.</p>
+</section>
+<section id="aufgabe-10-2">
+<h2>Aufgabe 10.2<a class="headerlink" href="#aufgabe-10-2" title="Permalink to this heading"></a></h2>
+<section id="nachbarschaftsoperationen-in-1d">
+<h3>Nachbarschaftsoperationen in 1D<a class="headerlink" href="#nachbarschaftsoperationen-in-1d" title="Permalink to this heading"></a></h3>
+<p>In dieser Aufgabe wollen wir einige grundlegende Signalverarbeitungsoperationen auf unser eindimensionales Bildzeilen-Signal anwenden. Dabei werden wir das Bildsignal mittels eines Filters verarbeiten um das Ausgangssignal zu erhalten. Das hierbei verwendete Prinzip ist in den folgenden Abbildungen skizziert.</p>
+<figure class="align-default" id="label-faltung-01">
+<a class="reference internal image-reference" href="../_images/faltung_01.png"><img alt="../_images/faltung_01.png" src="../_images/faltung_01.png" style="width: 742.1999999999999px; height: 232.2px;" /></a>
+</figure>
+<p>In der ersten Abbildung sehen wir einen Ausschnitt aus einer (realen) Bildzeile, die hier das Eingangssignal darstellt. Dieses Eingangssignal wird mit dem darüber dargestellten Filter der Länge 3, dessen Filterkoeffizieten in diesem Fall alle '1‘ sind, verarbeitet. Dabei wird jeder Filterkoeffizient mit dem &quot;darunter“ befindlichen Signalwert multipliziert. Anschließend werden die drei sich ergebenden Produkte aufsummiert und durch Multiplikation mit 1/3 normiert damit das Ergebnis wieder im Wertebereich unserer Grauwerte von 0…255 liegt. Das Ergebnis für die Filterung der ersten drei Signalwerte beträgt in diesem Fall 177.</p>
+<figure class="align-default" id="label-faltung-02">
+<a class="reference internal image-reference" href="../_images/faltung_02.png"><img alt="../_images/faltung_02.png" src="../_images/faltung_02.png" style="width: 742.1999999999999px; height: 207.6px;" /></a>
+</figure>
+<p>Im nächsten Schritt wird das Filter eine Signalposition &quot;weitergeschoben“, so dass der mittlere Koeffizient des Filters nun über dem dritten Signalwert liegt. Hier wiederholen wir das eben dargestellte Vorgehen mit den nun vorliegenden Signalwerten und erhalten als Ergebnis wiederum den Wert 177.</p>
+<figure class="align-default" id="label-faltung-03">
+<a class="reference internal image-reference" href="../_images/faltung_03.png"><img alt="../_images/faltung_03.png" src="../_images/faltung_03.png" style="width: 740.4px; height: 208.2px;" /></a>
+</figure>
+<p>Wir gehen in der gleichen Weise weiter und berechnen das Filterergebnis an der Signalposition 4 zu 179. Wenn wir dies für alle Signalpositionen durchgeführt haben, erhalten wir schließlich das vollständige Ausgangssignal nach der Filterung:</p>
+<figure class="align-default" id="label-faltung-04">
+<a class="reference internal image-reference" href="../_images/faltung_04.png"><img alt="../_images/faltung_04.png" src="../_images/faltung_04.png" style="width: 740.4px; height: 117.0px;" /></a>
+</figure>
+<div class="admonition-randbehandlung-bei-begrenzten-signalen admonition">
+<p class="admonition-title">Randbehandlung bei begrenzten Signalen</p>
+<p>Wie wir sehen, umfasst das Ausgangssignal insgesamt zwei Signalwerte weniger als das Eingangssignal. Der Grund hierfür sollte offensichtlich sein: Durch das Filter der Länge 3 fehlt uns an den Signalrändern jeweils der linke bzw. rechte Signalwert, um auch für die beiden Signalrandwerte ein Filterergebnis berechnen zu können. Dieses Randproblem taucht bei allen örtlich oder zeitlich begrenzten Signalen auf. In der Signalverarbeitung gibt es verschiedene Strategien, um damit umzugehen. Wir haben hier die Option gewählt, dass die Randwerte vernachlässigt werden und das Ausgangssignal damit &quot;kürzer“ wird. Bei größeren Filterlängen nehmen damit zwangsläufig auch die nicht berechenbaren Randbereiche zu, z.B. betragen diese bei der Filterlänge 5 genau 2 Signalwerte links und rechts und bei einem Filter der Länge 21 dementsprechend schon 10 Werte links und rechts. I.d.R. werden in der Bildverarbeitung andere Verfahren zur Randbehandlung eingesetzt, die Demonstration des Faltungsprinzips an sich wäre dadurch aber weniger klar gewesen.</p>
+</div>
+<p>Das grundsätzliche Prinzip nach welchem das Ausgangssignal berechnet wird kennen wir im Übrigen bereits aus der Mathematik in Zusammenhang mit der  Fourier-. Laplace- oder z-Transformation - die Faltung. Bei kontinuierlichen  Signalen wird die Faltung mathematisch durch ein Faltungsintegral beschrieben, bei diskreten Signalen wie bei unserem Bildsignal hingegen durch eine Faltungssumme der Form:</p>
+<div class="math notranslate nohighlight">
+\[y[n] = x[n] * h[n] = \sum_{k=-\infty}^{\infty} x[k] \cdot h[n-k] = \sum_{k=-\infty}^{\infty} h[k] \cdot x[n-k]\]</div>
+<p>Die untere und obere Grenze der Summe sind bei uns (in diesem Fall) allerdings nicht <span class="math notranslate nohighlight">\(\infty\)</span> sondern durch die beschränkte Länge des Filters wie folgt gegeben:</p>
+<div class="math notranslate nohighlight">
+\[y[n] = x[n] * h[n] = \sum_{k=-1}^{+1} h[k] \cdot x[n-k]\]</div>
+<p>Das hier verwendete Filter gehört übrigens zur Klasse der sogenannten FIR-Filter (Finite Impulse Response). Daneben gibt es noch die sogenannten IIR-Filter (Infinite Impulse Response), die in der Bildverarbeitung i.d.R. aber nicht eingesetzt werden.</p>
+<p>Soweit zum Prinzip und zum mathematischen Hintergrund der Faltung. Einen besseren Eindruck von der Wirkung verschiedener Filter(-Koeffizienten) erhält man, wenn man die Signale nicht numerisch, sondern graphisch darstellt. Im folgenden Diagramm (oben) ist ein Ausschnitt einer Bildzeile dargestellt, in der wir deutlich die breite rechte Fahrstreifenmarkierung erkennen können. In der Mitte sind die Filterkoeffizienten <span class="math notranslate nohighlight">\(h=\{1,1,1,1,1,1,1,1,1\}\)</span> zu sehen und der untere Graph zeigt das Filterergebnis. Wie wir leicht erkennen, wird das Signal durch das Filter geglättet mit dem Effekt, dass die relativ steilen Übergänge zwischen dem Asphalt und der Markierung deutlich verschliffen werden. Steile Übergänge entsprechen aber schnellen, hochfrequenten Änderungen des Signals, die durch unser Tiefpass-Filter unterdrückt werden. Wenn wir noch einmal an das Faltungsprinzip (s.o.) denken, dann erkennen wir, dass unser Filter nichts anderes als einen sogenannten &quot;gleitenden Mittelwert“ des Signals berechnet - unser Filter integriert das Signal sozusagen abschnittsweise.</p>
+<figure class="align-default" id="id3">
+<span id="label-img-opencv-04"></span><a class="reference internal image-reference" href="../_images/opencv_04.png"><img alt="../_images/opencv_04.png" src="../_images/opencv_04.png" style="width: 606.0px; height: 778.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Abb. 10.3: Filterung der Bildzeile 150 mit einem Tiefpassfilter der Länge 9</span><a class="headerlink" href="#id3" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+<p>Anders im nächsten Beispiel, in dem wir die gleiche Bildzeile mit einem Filter mit den Koeffizienten <span class="math notranslate nohighlight">\(h=\{-1,0,+1\}\)</span> verarbeiten. Dieses Filter macht das genaue Gegenteil des vorherigen Filters, es betont die steilen Übergänge und damit die hohen Signalfrequenzen und ist damit ein sogenanntes Hochpass-Filter. Beim Blick auf die Filterkoeffizienten fällt uns die Ähnlichkeit zum Differenzenquotienten aus der Analysis auf, von der ausgehend wir in der Mathematik das Differenzieren (über einen Grenzübergang) herleiten. Da wir hier aber direkt diskrete Signale vorliegen haben, entspricht der Differenzenquotient in diesem Fall exakt der Ableitung des diskreten Signals.</p>
+<figure class="align-default" id="id4">
+<span id="label-img-opencv-05"></span><a class="reference internal image-reference" href="../_images/opencv_05.png"><img alt="../_images/opencv_05.png" src="../_images/opencv_05.png" style="width: 606.0px; height: 778.0px;" /></a>
+<figcaption>
+<p><span class="caption-text">Abb. 10.4: Filterung der Bildzeile 150 mit einem Hochpassfilter</span><a class="headerlink" href="#id4" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Das Programm aus Aufgabe 10.1 soll so erweitert werden, dass die Bildzeile 150 mittels verschiedener Filter verarbeitet werden kann:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Tiefpassfilter mit den Längen 3, 5, 7, 9 und den Filterkoeffizienten <span class="math notranslate nohighlight">\(h=\{1,\dots,1\}\)</span></p></li>
+<li><p>Hochpassfilter den Filterkoeffizienten <span class="math notranslate nohighlight">\(h=\{-1,0,+1\}\)</span></p></li>
+<li><p>Filter mit der den Filterkoeffizienten <span class="math notranslate nohighlight">\(h=\{1,6,15,20,15,6,1\}\)</span></p></li>
+</ol>
+</div></blockquote>
+<p>Was für eine Filtercharakteristik besitzt das dritte Filter?</p>
+<p>Die Signale sollen wie oben als 3 Graphen in einem Fenster untereinander dargestellt werden: Eingangssignal, Filterkoeffizienten, Ausgangssignal.</p>
+</div>
+<p>Lösungshinweise:</p>
+<ul class="simple">
+<li><p>Die Berechnung des Ausgangssignals durch Faltung des Eingangssignals mit den Filterkoeffizienten kann sowohl &quot;händisch“ als auch durch Funktionen der <em>NumPy</em>- oder <em>OpenCV</em>-Bibliothek realisiert werden.</p></li>
+<li><p>Die &quot;Lollipop“-Darstellung der Signale wird mit der <em>stem()</em>-Methode der Matplotlib realisiert. Sie ist aber nur sinnvoll, wenn nicht die ganze Bildzeile ausgegeben wird. Ansonsten ist ein &quot;normaler“ Graph meist anschaulicher.</p></li>
+</ul>
+</section>
+</section>
+<section id="aufgabe-10-3">
+<h2>Aufgabe 10.3<a class="headerlink" href="#aufgabe-10-3" title="Permalink to this heading"></a></h2>
+<p>in dieser Aufgabe wollen wir den Sprung von der eindimensionalen Filterung hin zur zweidimensionalen Filterung von Bildbereichen machen. Dazu schauen wir uns zunächst an, wie wir die Signalverarbeitung und insbesondere die Faltung auf zwei Dimensionen ausdehnen können.</p>
+<section id="nachbarschaftsoperationen-in-2d">
+<h3>Nachbarschaftsoperationen in 2D<a class="headerlink" href="#nachbarschaftsoperationen-in-2d" title="Permalink to this heading"></a></h3>
+<p>In der folgenden Abbildung ist ein Bildausschnitt unserer Autobahnsequenz gezeigt, die die rechte Fahrstreifenmarkierung enthält. Wir wollen uns das Prinzip wieder am Beispiel eines Tiefpassfilters - jetzt aber in 2D - anschauen. Dann wird aus unserem eindimensionalen Filterkoeffizientenvektor eine zweidimensionale Filterkoeffizientenmatrix. Diese wird jetzt wiederum auf jeden Signalwert unseres 2D-Eingangssignals angewendet indem wir jeden Koeffizienten des Filters mit dem &quot;darunterliegenden“ Signalwert multiplizieren. Dies ist in der darunterstehenden Gleichung für den ersten Wert explizit aufgeführt. Das Ergebnis ist der Wert des Ausgangssignals an der gezeigten Position, in diesem Fall der Wert 178.</p>
+<figure class="align-default" id="label-faltung2d-01">
+<a class="reference internal image-reference" href="../_images/faltung2D_01.png"><img alt="../_images/faltung2D_01.png" src="../_images/faltung2D_01.png" style="width: 719.5px; height: 434.0px;" /></a>
+</figure>
+<p>Im Anschluss verschieben wir unseren Filter um eine Position und berechnen auch hier in gleicher Weise den Wert des Ausgangssignals für den korrespondierenden Wert des Ausgangssignals.</p>
+<figure class="align-default" id="label-faltung2d-02">
+<a class="reference internal image-reference" href="../_images/faltung2D_02.png"><img alt="../_images/faltung2D_02.png" src="../_images/faltung2D_02.png" style="width: 720.0px; height: 434.0px;" /></a>
+</figure>
+<p>Wenn wir dies in gleicher Weise für alle Positionen unseres 2D-Eingangssignals durchführen, erhalten wir ein 2D-Ausgangssignal, dem jeweils die erste und letzte Zeile bzw. Spalte fehlen, weil uns für deren Berechnung bei Anwendung unseres 3x3-Filters wieder die Randwerte fehlen.</p>
+<figure class="align-default" id="label-faltung2d-03">
+<a class="reference internal image-reference" href="../_images/faltung2D_03.png"><img alt="../_images/faltung2D_03.png" src="../_images/faltung2D_03.png" style="width: 815.5px; height: 395.0px;" /></a>
+</figure>
+<p>Das Tiefpassfilter führt wie im eindimensionalen Fall zu einer Glättung des Signalverlaufs, nun aber in zwei Dimensionen. In der numerischen Matrixdarstellung ist der Effekt nur bedingt erkennbar, daher werden wir uns die Wirkung nun in der Grauwertdarstellung anschauen. Zuvor aber der Vollständigkeit halber noch die Formel für die 2D-Faltung:</p>
+<div class="math notranslate nohighlight">
+\[O[u,v] = I * F = \sum_{i=-\infty}^{+\infty} \sum_{j=-\infty}^{+\infty} I[u+i,v+j] \cdot F[i,j]\]</div>
+<p>In unserem Beispiel für ein 3x3-Filter konkret:</p>
+<div class="math notranslate nohighlight">
+\[O[u,v] = I * F = \sum_{i=-1}^{+1} \sum_{j=-1}^{+1} I[u+i,v+j] \cdot F[i,j]\]</div>
+<p>Außer, dass wir es jetzt mit einer Doppelsumme zu tun haben, bleibt das Faltungsprinzip gegenüber dem eindimensionalen Fall im Kern unverändert.</p>
+<p>In den folgenden Abbildungen sind verschiedene Filterungen desselben Originalbildes (Abb. 10.5) gezeigt. In Abb. 10.6 haben wir einen 3x3-Tiefpassfilter auf das Bild angewendet und sehen einen leichten Glättungs-/Verwaschungseffekt. Bei einem 9x9-Tiefpassfilter wie in Abb. 10.7 tritt der Glättungseffekt wesentlich deutlicher in Erscheinung. Und in Abb. 10.8 haben wir einen 3x3-Hochpassfilter zur Bestimmung des horizontalen Gradienten angewendet. Da der Gradient - wie auch schon in Abb. 10.4 zu sehen war - sowohl positive wie negative Werte annehmen kann, haben wir in diesem Fall den Gradientenbetrag im Bild dargestellt, da negative Werte sich der direkten Darstellung in Form eines Grauwertbildes entziehen. (Der Gradient stellt einen Vektor dar, der als solcher über Betrag <strong>und</strong> Richtung definiert wird. Wir beschränken uns daher hier auf den Aspekt des Gradientenbetrags.)</p>
+<figure class="align-default" id="id5">
+<span id="label-filter2d-org"></span><a class="reference internal image-reference" href="../_images/filter2D_01_org.png"><img alt="../_images/filter2D_01_org.png" src="../_images/filter2D_01_org.png" style="width: 433.5px; height: 357.75px;" /></a>
+<figcaption>
+<p><span class="caption-text">Abb. 10.5: Originalbild der Autobahnszene</span><a class="headerlink" href="#id5" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id6">
+<span id="label-filter2d-3x3"></span><a class="reference internal image-reference" href="../_images/filter2D_01_3x3.png"><img alt="../_images/filter2D_01_3x3.png" src="../_images/filter2D_01_3x3.png" style="width: 433.5px; height: 357.75px;" /></a>
+<figcaption>
+<p><span class="caption-text">Abb. 10.6: Filterung mit einem 3x3 Tiefpassfilter</span><a class="headerlink" href="#id6" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id7">
+<span id="label-filter2d-9x9"></span><a class="reference internal image-reference" href="../_images/filter2D_01_9x9.png"><img alt="../_images/filter2D_01_9x9.png" src="../_images/filter2D_01_9x9.png" style="width: 433.5px; height: 357.75px;" /></a>
+<figcaption>
+<p><span class="caption-text">Abb. 10.7: Filterung mit einem 9x9 Tiefpassfilter</span><a class="headerlink" href="#id7" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id8">
+<span id="label-filter2d-gradh"></span><a class="reference internal image-reference" href="../_images/filter2D_01_gradH.png"><img alt="../_images/filter2D_01_gradH.png" src="../_images/filter2D_01_gradH.png" style="width: 433.5px; height: 357.75px;" /></a>
+<figcaption>
+<p><span class="caption-text">Abb. 10.8: Filterung mit einem horizontalen Gradientenfilter - Darstellung des Gradientenbetrags</span><a class="headerlink" href="#id8" title="Link zu diesem Bild"></a></p>
+</figcaption>
+</figure>
+<p>Im Wesentlichen sehen wir, dass die uns aus dem Eindimensionalen bekannten Filtereffekte auch bei der 2D-Filterung in gleicher Weise auftreten.</p>
+<p>Die Implementierung von 2D-Filtern in Python wird durch die <em>OpenCV</em>-Bibliothek recht einfach. Die vorstehenden Beispiele lassen sich z.B. durch folgendes Codefragment realisieren, welches nur in das schon vorhandene Rahmenprogramm integriert werden muss. Neben der in diesem Beispiel verwendeten Funktion <em>cv2.filter2D()</em> gibt es eine ganze Reihe weiterer Funktionen, die gezielt spezielle Filter realisieren und oftmals laufzeitoptimiert sind.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bild einlesen</span>
+<span class="c1"># ...</span>
+
+<span class="c1"># Bild in (1-Kanal-)Grauwertbild konvertieren ...</span>
+<span class="n">inputFrame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+<span class="c1"># .. und ausgeben</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;Original&#39;</span><span class="p">,</span> <span class="n">inputFrame</span><span class="p">)</span>
+
+<span class="c1"># 3x3-Tiefpassfilter anwenden und Ergebnis ausgeben</span>
+<span class="n">kernel_3x3_tp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span><span class="o">/</span><span class="mf">9.0</span>
+<span class="n">frame_3x3_tp</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">filter2D</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="n">inputFrame</span><span class="p">,</span> <span class="n">ddepth</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="n">kernel_3x3_tp</span><span class="p">)</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;Convolution 3x3 blur&#39;</span><span class="p">,</span> <span class="n">frame_3x3_tp</span><span class="p">)</span>
+
+<span class="c1"># 9x9-Tiefpassfilter anwenden und Ergebnis ausgeben</span>
+<span class="n">kernel_9x9_tp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mf">9.0</span><span class="o">*</span><span class="mf">9.0</span><span class="p">)</span>
+<span class="n">frame_9x9_tp</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">filter2D</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="n">inputFrame</span><span class="p">,</span> <span class="n">ddepth</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="n">kernel_9x9_tp</span><span class="p">)</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;Convolution 9x9 blur&#39;</span><span class="p">,</span> <span class="n">frame_9x9_tp</span><span class="p">)</span>
+
+<span class="c1"># 3x3-Hochpassfilter anwenden und Ergebnis ausgeben</span>
+<span class="n">kernel_3x3_hp_h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span><span class="o">/</span><span class="mf">3.0</span>
+<span class="n">frame_3x3_hp_h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">filter2D</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="n">inputFrame</span><span class="p">,</span> <span class="n">ddepth</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="n">kernel_3x3_hp_h</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">128</span><span class="p">)</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s1">&#39;Convolution Gradient H&#39;</span><span class="p">,</span> <span class="n">frame_3x3_hp_h</span><span class="p">)</span>
+
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+<div class="admonition-to-do admonition">
+<p class="admonition-title">To Do</p>
+<p>Entsprechend der Bearbeitung der 1D-Filterung in Aufgabe 10.2 soll es in dieser Aufgabe um die Anwendung von 2D-Filtern gehen. Es sollen folgende Punkte realisiert werden:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>vorstehende Beispiel-Filter</p></li>
+<li><p>3x3-Hochpassfilter zur Bestimmung des vertikalen Gradienten</p></li>
+<li><p>Gesamtgradienten-Betragsbild aus horizontalem <strong>und</strong> vertikalem Gradienten</p></li>
+<li><p>Sobel-, Laplace- und Canny-Filter mittels der entsprechenden OpenCV-Funktionen</p></li>
+</ol>
+</div></blockquote>
+</div>
+<p>Lösungshinweise:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Das Filter zur Bestimmung des vertikalen Gradienten ist orthogonal zur Filtermaske des horizontalen Gradienten ausgerichtet. Es gibt eine Matrixoperation mit der man die Elemente einer Matrix (Zeilen und Spalten) &quot;tauschen“ kann …</p></li>
+<li><p>Der Gradient stellt einen Vektor dar. Sofern wir für ein Bild den horizontalen und den vertikalen Gradienten vorliegen haben, erhalten wir den Gesamtgradienten daher durch die uns bekannte Vektoraddition - einmal für den Betrag und einmal für die Richtung. (Hier ist aber nur der Betrag gefragt!)</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition-bildverarbeitungs-operatoren admonition">
+<p class="admonition-title">Bildverarbeitungs-Operatoren</p>
+<p>In unserem kleinen Ausflug in die Bildverarbeitung haben wir uns gezielt auf eine (bseonders wichtige) Klasse von Bildverarbeitungsoperationen beschränkt: die sogenannten Nachbarschafts-Operatoren. Innerhalb dieser Operatoren-Klasse weiterhin auf die Faltungsoperatoren. Daneben gibt es sowohl viele weitere Nachbarschaftsoperatoren als auch Punktoperationen, die nur jeweils einen Wert des Eingangssignals in die Berechnung einfließen lassen, als auch globale Operationen, die alle Werte eines Bildes in eine Berechnungs einfließen lassen.</p>
+<p>Das Gebiet der Bildverarbeitung ist extrem vielschichtig und wird in vielen verschiedenen Anwendungskontexten eingesetzt, die ihre jeweils eigenen spezifischen Anforderungen haben. Daher gibt es eine breite Literatur zur Bildverarbeitung, die oft sehr anwendungsbezogen ist. Den <strong>einen</strong> globalen Lösungsansatz für Bildverarbeitungsaufgaben gibt es in jedem Fall <strong>nicht</strong>.</p>
+</div>
+</section>
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="exercise_09.html" class="btn btn-neutral float-left" title="9. Übung" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Zurück</a>
+    </div>
 
   <hr/>
 
